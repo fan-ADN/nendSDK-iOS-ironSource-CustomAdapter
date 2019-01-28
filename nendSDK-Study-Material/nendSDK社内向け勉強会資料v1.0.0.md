@@ -1,5 +1,5 @@
 # nendSDK 社内向け勉強会資料 v1.0.0
-- [created 2018/09/19 pdf]([nendSDK社内向け勉強会資料ver1.0.0.pdf](https://github.com/fan-ADN/nendSDK-Document-Private/files/2801999/nendSDK.ver1.0.0.pdf))
+- [created 2018/09/19 pdf](https://github.com/fan-ADN/nendSDK-Document-Private/files/2801999/nendSDK.ver1.0.0.pdf)
 
 ## 目次
 - [SDKとは](#about_sdk)
@@ -13,7 +13,7 @@
 - [マニュアルやサンプルについて](#about_samples)
 - [Q&A](#q&a)
 
-## [SDKとは](#about_sdk)
+## <a name ="about_sdk">SDKとは
 - `Software Development Kit`の略
 - ソフトウェアを開発するためのツール群のこと
 - SDKの中身はものによって様々
@@ -23,7 +23,7 @@
   - AndroidのnendSDK
     - [nendSDK-5.0.1.aar](https://github.com/fan-ADN/nendSDK-Android-pub/releases/download/5.1.0/nendSDK-5.1.0.aar)
 
-## [nendSDKの仕組み](#nendSDK_structure)
+## <a name ="nendSDK_structure">nendSDKの仕組み
 ![](https://user-images.githubusercontent.com/9563506/51819831-34e2a780-2317-11e9-90df-79d766bf00d5.png)
 ### nendSDKの特徴
 - アプリ側で広告をいろいろ制御できる
@@ -39,7 +39,7 @@
   - 必ずしも新しいSDKのリリース毎に更新してもらう必要はない
   - SDKの更新内容を確認してから、更新するか判断
 
-## [JSタグ利用の仕組み](#js_tag_structure)
+## <a name ="js_tag_structure">JSタグ利用の仕組み
 ![](https://user-images.githubusercontent.com/9563506/51819832-37450180-2317-11e9-8f06-f3ef8da9e26e.png)
 
 ### JSタグの特徴
@@ -51,7 +51,7 @@
 - アプリ内でJSタグをベタ書きやローカルに保持などをしている場合
   - JSタグを変更（apiKeyやspotId変更など）したらストアへアップデートも必要
 
-## [Unity、Cocos2d-xなどのプラグイン](#plugins)
+## <a name ="plugins">Unity、Cocos2d-xなどのプラグイン
 アプリケーションの機能を拡張したり追加するためのプログラム（ソースコードや設定ファイルなど）のこと。  
 nendSDKでは、以下3つのマルチプラットフォームのアプリ開発環境で利用するためのプラグインを提供している。
 
@@ -97,7 +97,7 @@ nendSDKでは、以下3つのマルチプラットフォームのアプリ開発
 
 そのため、nendSDKのプラグインは提供していませんので、問い合わせがあった場合は、`Alfort（サーバーチーム等）`にご相談下さい。
 
-## [広告のメディエーションとは](#mediation)
+## <a name ="mediation">広告のメディエーションとは
 複数のアドネットワークの広告をアプリに配信できる機能。  
 <img width="817" alt="2019-01-28 16 27 04" src="https://user-images.githubusercontent.com/9563506/51820576-960b7a80-2319-11e9-9be1-0aa39e151a63.png">
 
@@ -117,7 +117,7 @@ nendSDKでは、以下3つのマルチプラットフォームのアプリ開発
   - 対応フォーマットが充実 : バナー、インタースティシャル、動画広告
 - AdMobのスマートバナーには未対応
 
-## [カスタムイベントとは](#custom_event)
+## <a name ="custom_event">カスタムイベントとは
 メディエーション連携でサポートされていないアドネットワークを利用するための機能。  
 現在、nendでカスタムイベントが利用できるのは以下の2つ。
 
@@ -141,7 +141,7 @@ nendSDKでは、以下3つのマルチプラットフォームのアプリ開発
   - メディエーションの正式連携版を使ってもらう
 
 
-## [nendSDKのSSP接続先](#ssp)
+## <a name ="ssp">nendSDKのSSP接続先
 これ以外の静止画広告（バナー、ネイティブ）はJSタグでの連携。
 
 |SSP|動画リワード|動画インタースティシャル|動画ネイティブ|
@@ -152,15 +152,15 @@ nendSDKでは、以下3つのマルチプラットフォームのアプリ開発
 |fluct|○|×|×|
 |Geniee|○|×|×|
 
-## [SDK導入実演](#demonstration)
+## <a name ="demonstration">SDK導入実演
 iOSを例にして、実際にSDKをアプリに導入する様子を簡単にお見せします。  
 https://github.com/fan-ADN/nendSDK-iOS-pub
 
-## [マニュアルやサンプル](#about_samples)
+## <a name ="about_samples">マニュアルやサンプル
 GitHubのwikiやFAQやサンプルの記載場所や見方などを説明します。  
 https://github.com/fan-ADN
 
-## [Q&A](#q&a)
+## <a name ="q&a">Q&A
 
 #### メディエーションとカスタムイベントはアダプタの設定みたいなのが必要か？
 
