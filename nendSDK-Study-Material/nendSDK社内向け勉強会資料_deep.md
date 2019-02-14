@@ -4,7 +4,7 @@
 ## 目次
 - [nendSDKの裏側の出来事](#about_back_side)
 - [IDFA / GAIDの取得タイミング](#idfa_gaid)
-- [AdMobメデェーションとカスタムイベントの違い](#difference_mediation_customevent)
+- [AdMobメディエーションとMoPubカスタムイベントの違い](#difference_mediation_customevent)
 - [レスポンスが早い理由は？](#response)
 
 ## <a name ="about_back_side">広告の読み込みから表示されるまで間に裏側の出来事</a>
