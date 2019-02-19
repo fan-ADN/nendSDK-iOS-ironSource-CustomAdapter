@@ -6,7 +6,6 @@
 - [IDFA / GAIDの取得タイミング](#idfa_gaid)
 - [AdMobメディエーションとMoPubカスタムイベントの違い](#difference_mediation_customevent)
 - [レスポンスが早い理由は？](#response)
-- [その他Q&A](#q_a)
 
 ## <a name ="about_back_side">広告の読み込みから表示されるまで間に裏側の出来事</a>
 ### バナー
@@ -54,10 +53,3 @@ https://github.com/fan-ADN/nendSDK-iOS-MoPub-CustomEvent/wiki/導入方法
 ## <a name ="response">レスポンスが早い（＝レイテンシーがない）のはなぜか？他社SDKとの違いは？</a>
 - 他社と比較や調査をしたわけではなく、明確な違いを答えるのは難しい
 - 基本的に、端末性能や通信状況などによってレスポンスの速度は異なるもの
-
-## <a name ="q_a">その他Q&A</a>
-#### アプリ内で広告SDKを直接組み込む方法とは別に、ディベロッパー側のアドサーバー上で広告SDKを組む場合、広告に関する通信の詳細（経路や流れ）がアプリに直接組み込むのと比べて、どう違うのか知りたい
-- nendSDKはアプリに直接組み込んで使用するもの
-- 想定されるケースとして、nendや他社のSDKを複数利用するアプリがあり、そのディベロッパーが用意したサーバー側で、広告配信の制御を行うとか（呼び出すSDKの切り替え、自前のSSPのようなイメージ）
-- 基本的にweb向けが適しているはずだが、ディベロッパーが用意したサーバー側で`nendの広告取得API`を利用して、広告配信をwebやアプリに行うとか
-  - https://www.nend.net/doc/jpn/adspot_feed_api.html#rule_section
