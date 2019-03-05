@@ -30,14 +30,29 @@
   - 広告のロード、表示、破棄などのタイミングの制御やイベント検知
 - 広告取得失敗、在庫切れなどのエラー検知ができる
 - 自動更新ができる（バナー、静止画ネイティブ）
-- Advertising IDが利用できる
-  - iOS：IDFA
-  - Android：GAID
+- Advertising ID（広告識別子）が利用できる
+  - iOS：Advertising Identifier（IDFA）
+  - Android：Advertising ID（AAID、GAID）
 - アプリターゲティングが利用できる
   - iOS 9未満とAndroidで利用可能
 - SDKを更新したらストアへのアップデートも必要
   - 必ずしも新しいSDKのリリース毎に更新してもらう必要はない
   - SDKの更新内容を確認してから、更新するか判断
+    - 例：利用していない広告フォーマットの修正や機能追加などは更新の必要性は低い
+
+#### Advertising ID（広告識別子）について
+||名称|ユーザーによるリセット|オプトアウト時の値※|ユーザーによるIDの確認|webブラウザで取得|
+|:-:|:-:|:-:|:-:|:-:|:-:|
+|iOS|Advertising Identifier（IDFA）|○|すべてゼロ|×|×|
+|Android|Advertising ID（AAID、GAID）|○|取得できない|○|×|
+
+※ **オプトアウト時、SDK内部では空文字に置き換えてnendサーバーに送っている**
+
+##### 参考情報
+- https://developer.apple.com/documentation/adsupport/asidentifiermanager?language=objc
+- https://support.apple.com/ja-jp/HT205223
+- https://growthhackjournal.com/what-you-need-to-know-about-mobile-device-ids/
+- https://www.intage.co.jp/glossary/240/
 
 ## <a name ="js_tag_structure">JSタグ利用の仕組み
 ![](https://user-images.githubusercontent.com/9563506/51819832-37450180-2317-11e9-8f06-f3ef8da9e26e.png)
