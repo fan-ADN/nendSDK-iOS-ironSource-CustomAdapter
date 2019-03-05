@@ -34,6 +34,7 @@
   - iOS：Advertising Identifier（IDFA）
   - Android：Advertising ID（AAID、GAID）
 - アプリターゲティングが利用できる
+  - URLスキームを利用し、特定のアプリをインストールしているユーザーに対してのみ広告を配信する
   - iOS 9未満とAndroidで利用可能
 - SDKを更新したらストアへのアップデートも必要
   - 必ずしも新しいSDKのリリース毎に更新してもらう必要はない
