@@ -31,6 +31,7 @@
 - 広告取得失敗、在庫切れなどのエラー検知ができる
 - 自動更新ができる（バナー、静止画ネイティブ）
 - Advertising ID（広告識別子）が利用できる
+  - 広告識別子とは、端末を特定し、関連性のある広告を配信することができる
   - iOS：Advertising Identifier（IDFA）
   - Android：Advertising ID（AAID、GAID）
 - アプリターゲティングが利用できる
