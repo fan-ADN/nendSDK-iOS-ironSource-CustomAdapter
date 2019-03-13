@@ -1,5 +1,6 @@
-# nendSDK 社内向け勉強会資料 v1.0.0
+# nendSDK 社内向け勉強会資料 - 初級編 -
 - [created 2018/09/19 pdf](https://github.com/fan-ADN/nendSDK-Document-Private/files/2801999/nendSDK.ver1.0.0.pdf)
+- [created 2019/03/13 gist](https://gist.github.com/fan-t-fukuoka/914157b6d18ef05d2705eeeb8f83ac06)
 
 ## 目次
 - [SDKとは](#about_sdk)
@@ -19,9 +20,9 @@
 - SDKの中身はものによって様々
   - ソースコード、設定ファイル、画像ファイル、他...
   - iOSのnendSDK
-    - [nendSDK_iOS.zip](https://github.com/fan-ADN/nendSDK-iOS-pub/releases/download/5.1.0/nendSDK_iOS.zip)
+    - [nendSDK_iOS.zip](https://github.com/fan-ADN/nendSDK-iOS-pub/releases/download/5.1.1/nendSDK_iOS.zip)
   - AndroidのnendSDK
-    - [nendSDK-5.0.1.aar](https://github.com/fan-ADN/nendSDK-Android-pub/releases/download/5.1.0/nendSDK-5.1.0.aar)
+    - [nendSDK-5.1.0.aar](https://github.com/fan-ADN/nendSDK-Android-pub/releases/download/5.1.0/nendSDK-5.1.0.aar)
 
 ## <a name ="nendSDK_structure">nendSDKの仕組み
 ![](https://user-images.githubusercontent.com/9563506/51819831-34e2a780-2317-11e9-90df-79d766bf00d5.png)
