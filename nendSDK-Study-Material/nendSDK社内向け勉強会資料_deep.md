@@ -1,6 +1,7 @@
 # nendSDK 社内向け勉強会資料 -Deep編-
 この資料は、事前にnend営業サイドからの質問を元に作成しています。
 
+#### 勉強会開催日と営業サイドへの共有用
 - [created 2019/03/20](https://gist.github.com/fan-t-fukuoka/6449180fbfd1fe047eec9bbea7af6e77)
 
 ## 目次

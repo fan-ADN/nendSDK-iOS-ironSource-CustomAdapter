@@ -1,4 +1,5 @@
 # nendSDK 社内向け勉強会資料 - 初級編 -
+#### 勉強会開催日と営業サイドへの共有用
 - [created 2018/09/19 pdf](https://github.com/fan-ADN/nendSDK-Document-Private/files/2801999/nendSDK.ver1.0.0.pdf)
 - [created 2019/03/13 gist](https://gist.github.com/fan-t-fukuoka/914157b6d18ef05d2705eeeb8f83ac06)
 
