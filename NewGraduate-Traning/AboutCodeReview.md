@@ -12,16 +12,16 @@ https://ja.wikipedia.org/wiki/コードレビュー
 ### プルリクエストの流れのイメージ
 
 - 修正内容を記述したIssueの作成
-![issue](images/CodeReview/Issue.png)
+![issue](https://user-images.githubusercontent.com/9563320/53868448-6d258600-4039-11e9-97d3-4bfe29acc85b.png)
 
 - プルリクエストによるレビュー依頼
-![pullrequest](images/CodeReview/PullRequest.png)
+![pullrequest](https://user-images.githubusercontent.com/9563320/53868531-9b0aca80-4039-11e9-90fe-bede8e5b528f.png)
 
 - プルリクエスト上での指摘
-![feedback](images/CodeReview/Feedback.png)
+![feedback](https://user-images.githubusercontent.com/9563320/53868568-aeb63100-4039-11e9-8cc1-37b0c0348b53.png)
 
 - 指摘の修正 〜 レビュー終了＆プルリクエストクローズ
-![close](images/CodeReview/Close.png)
+![close](https://user-images.githubusercontent.com/9563320/53868604-c2619780-4039-11e9-9dd0-9d19500f4f4e.png)
 
 
 ## コードレビューのやり方
@@ -32,12 +32,12 @@ GitHubのプルリクエストの`Files changed`を確認してレビュー
 
 
 <!-- PRのサンプル画像 -->
-![GitHub Files changed](images/CodeReview/GitHubFilesChangeed.png)
+![GitHub Files changed](https://user-images.githubusercontent.com/9563320/53868665-df966600-4039-11e9-8694-445d73f41bee.png)
 
 その他、必要に応じてツール等を利用する  
 (例：デバッガで動作確認しながらコードレビューを行いたい場合にXcodeのVersion Editorを利用)
 <!-- Xcodeのサンプル -->
-![Xcode Diff](images/CodeReview/XcodeDiff.png)
+![Xcode Diff](https://user-images.githubusercontent.com/9563320/53868721-fdfc6180-4039-11e9-9255-c4a837645489.png)
 
 ### コードレビューの観点
 
