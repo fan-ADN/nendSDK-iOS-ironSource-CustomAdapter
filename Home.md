@@ -6,8 +6,10 @@ SDK関連Wiki
 
 ## 開発環境関連
 
-* 共有マシン
-* リモートワーク中のVPNから可能なこと
+* [[共有マシン|Machines]]
+  * [[起動の順番|BootingMachines]]
+* [[Jenkinsセットアップ|SetupJenkins]]
+* [[リモートワーク中のVPNから可能なこと|AvailablesForRemoteWork]]
 
 ## その他
 
