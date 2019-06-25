@@ -12,7 +12,7 @@ GitHubにプッシュする都合上、念の為パスワード類はzip暗号�
 * ID
   * fancs.adndev01@gmail.com
 * PW
-  * 9から始まるやつ（一部、大文字のやつ）
+  * 別ファイル参照
 
 #### 審査用Apple ID
 
