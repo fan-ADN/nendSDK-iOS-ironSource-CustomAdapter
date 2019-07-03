@@ -66,3 +66,11 @@ GitHubにプッシュする都合上、念の為パスワード類はzip暗号�
   * fancs.adndev01@gmail.com
 * PW
   * servicedev-npm-＜9から始まるやつ＞
+
+## Google
+* username
+  * oss dev
+* email
+  * ossdev@fancs.com
+* PW
+  * 9から始まるやつ
