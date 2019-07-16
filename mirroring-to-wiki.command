@@ -1,3 +1,5 @@
+#!/bin/sh
+
 git clone --mirror git@github.com:fan-ADN/nendSDK-Document-Private.git
 cd nendSDK-Document-Private.git
 git remote set-branches origin 'heads/*'
