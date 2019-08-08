@@ -34,6 +34,12 @@ GitHubにプッシュする都合上、念の為パスワード類はzip暗号�
 * PW
   * 別ファイル参照
 
+#### IronSource
+
+* ID
+  * fancs.adndev01@gmail.com
+* PW
+  * 9から始まるやつ
 
 ## CI関連
 
