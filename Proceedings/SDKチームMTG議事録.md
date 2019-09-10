@@ -57,7 +57,7 @@
 
 ### 今週の対応予定
 - GitHub Actions調査
-- androidX 対応終わったので　Android SDK 5.3.0リリース
+- android10 対応終わったので　Android SDK 5.3.0リリース
 
 ### 問い合わせ対応
 - 26531
@@ -67,7 +67,7 @@
 
 ## 福岡
 ### 先週の進捗
-- androidX の動作検証
+- android10 の動作検証
 - SDK導入フローチャート作成
 - レビュー
 - 上期フィードバック
