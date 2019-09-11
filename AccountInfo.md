@@ -69,14 +69,24 @@ GitHubにプッシュする都合上、念の為パスワード類はzip暗号�
 * username
   * fan-communications
 * email
-  * fancs.adndev01@gmail.com
+  * ossdev@fancs.com
 * PW
   * servicedev-npm-＜9から始まるやつ＞
 
-## Google
+## Google (flutter publish)
 * username
   * oss dev
 * email
   * ossdev@fancs.com
 * PW
   * 9から始まるやつ
+
+## GitHub (CI/CD用)
+* username
+  * fan-bot-a8kun
+* email
+  * fancs.adndev01@gmail.com
+* PW
+  * a8kun-＜9から始まるやつ＞
+* 2FA Authentication
+  * Jenkins付属のiPod Touch 5th(`9.3.5`)にGoogle Authenticatorをセット
