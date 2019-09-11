@@ -14,6 +14,15 @@ GitHubにプッシュする都合上、念の為パスワード類はzip暗号�
 * PW
   * 別ファイル参照
 
+#### 検証用Apple ID (SDKチーム用)
+
+* ID
+  * fancs.adndev01+sdkteam@gmail.com
+* PW
+  * <9から始まるやつ>-SDK-Team
+* 秘密の質問
+  * 別ファイル参照
+
 #### 審査用Apple ID
 
 念には念、でここに書かない（誰かに聞く）
