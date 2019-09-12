@@ -26,6 +26,8 @@ function mirroring {
     done
 
     git push --mirror
+    cd ..
+    rm -rf ${SOURCE_REPOSITORY_NAME}.git
 }
 
 mirroring ${SOURCE_REPOSITORY_NAME} ${TARGET_REPOSITORY_NAME}
