@@ -99,3 +99,4 @@ GitHubにプッシュする都合上、念の為パスワード類はzip暗号�
   * a8kun-＜9から始まるやつ＞
 * 2FA Authentication
   * Jenkins付属のiPod Touch 5th(`9.3.5`)にGoogle Authenticatorをセット
+  * Recovery-codeは`9から始まるやつ`で解凍
