@@ -8,7 +8,7 @@ SDK関連Wiki
 
 * [[共有マシン|Machines]]
   * [[起動の順番|BootingMachines]]
-* [[Jenkinsセットアップ|SetupJenkins]]
+* [Jenkinsセットアップ](https://github.com/fan-ADN/nendSDK-CI-CD-backups/wiki/Jenkinsの使い方)
 * [[リモートワーク中のVPNから可能なこと|AvailablesForRemoteWork]]
 
 ## その他
