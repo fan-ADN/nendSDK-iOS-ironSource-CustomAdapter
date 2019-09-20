@@ -4,6 +4,14 @@ SDK関連Wiki
 
 * [[動作確認とかで使う共有アカウント|AccountInfo]]
 
+## SDKチームの開発について
+
+* [[開発フローについて|Workflow-Of-Development]]
+  * [[レビューについて|About-Review]]
+    * [[非公開→公開リポジトリへのミラーリングやUpstreamについて|Mirroring-automation]]
+* [CI/CD](https://github.com/fan-ADN/nendSDK-CI-CD-backups/wiki)
+* [Serverチームへの提供アプリなど](https://github.com/fan-ADN/app-From-SDKTeam-To-ServerTeam/wiki)
+
 ## 開発環境関連
 
 * [[共有マシン|Machines]]
