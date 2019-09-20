@@ -14,8 +14,10 @@ TARGET_REPOSITORY_NAME="$2"
 function upstreaming {
     git clone --mirror git@github.com:fan-ADN/${SOURCE_REPOSITORY_NAME}.git
     cd ${SOURCE_REPOSITORY_NAME}.git
-    git fetch -p origin
+    git config user.name "fan-bot-a8kun"
+    git config user.email "bot-a8kun@fancs.com" # <- このメルアドは存在しません(・∀・)b
 
+    git fetch -p origin
     git for-each-ref --format="ref=%(refname)" --shell refs/pull | \
     while read entry
     do
