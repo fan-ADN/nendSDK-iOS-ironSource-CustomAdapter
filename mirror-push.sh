@@ -14,6 +14,9 @@ TARGET_REPOSITORY_NAME="$2"
 function mirroring {
     git clone --mirror git@github.com:fan-ADN/${SOURCE_REPOSITORY_NAME}.git
     cd ${SOURCE_REPOSITORY_NAME}.git
+    git config user.name "fan-bot-a8kun"
+    git config user.email "bot-a8kun@fancs.com" # <- このメルアドは存在しません(・∀・)b
+
     git remote set-branches origin 'heads/*'
     git remote set-url --push origin git@github.com:fan-ADN/${TARGET_REPOSITORY_NAME}.git
     git fetch -p origin
