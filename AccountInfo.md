@@ -82,11 +82,19 @@ GitHubにプッシュする都合上、念の為パスワード類はzip暗号�
 * PW
   * servicedev-npm-＜9から始まるやつ＞
 
-## Google (flutter publish)
+## Google
+
+#### flutter publish
 * username
   * oss dev
 * email
   * ossdev@fancs.com
+* PW
+  * 9から始まるやつ
+
+#### 検証端末Googleアカウント
+* ID
+  * fancs.adndev01@gmail.com
 * PW
   * 9から始まるやつ
 
