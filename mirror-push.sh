@@ -11,7 +11,7 @@ fi
 SOURCE_REPOSITORY_NAME="$1"
 TARGET_REPOSITORY_NAME="$2"
 
-function mirroring {
+function mirroring() {
     git clone --mirror git@github.com:fan-ADN/${SOURCE_REPOSITORY_NAME}.git
     cd ${SOURCE_REPOSITORY_NAME}.git
     git config user.name "fan-bot-a8kun"
