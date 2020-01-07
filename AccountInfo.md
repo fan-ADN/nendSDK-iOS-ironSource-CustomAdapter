@@ -90,6 +90,9 @@ GitHubにプッシュする都合上、念の為パスワード類はzip暗号�
   * ossdev@fancs.com
 * PW
   * servicedev-npm-＜9から始まるやつ＞
+* Gravatar（npmアカウントのprofile管理で利用）
+  * https://en.gravatar.com/emails/
+  * `fancs.adndev01@gmail.com`でgoogleアカウント連携を利用
 
 ## Google
 
