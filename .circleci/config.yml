@@ -14,9 +14,16 @@ jobs:
           command: mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
 
       - run:
-          name: Clone then push to other repository if exists tag
+          name: Mirroring
           command: |
-            ./mirror-push.sh "nendSDK-Document-Private" "nendSDK-Document-Private.wiki"
+            echo "Deploy! ${CIRCLE_TAG}"
+            export NENDSDK_DOCUMENT="nendSDK-Document-Private"
+            export NENDSDK_SCRIPT="mirror-push.sh"
+            git clone git@github.com:fan-ADN/${NENDSDK_DOCUMENT}.git
+            mv "${NENDSDK_DOCUMENT}/${NENDSDK_SCRIPT}" "${NENDSDK_SCRIPT}"
+            rm -rf "${NENDSDK_DOCUMENT}"
+            ./"${NENDSDK_SCRIPT}" "nendSDK-Document-Private" "nendSDK-Document-Private.wiki"
+            rm "${NENDSDK_SCRIPT}"
 
 workflows:
   build-test-and-deploy:
