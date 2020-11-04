@@ -1,29 +1,34 @@
 # リモートワークから使えること
 
 現状では以下のことが行えます。
+- [VNC](#vnc)によるリモートデスクトップ接続
 - [OpenSTF](#openstf)を利用した特定端末でのapk実行
+  - **新しいVPN設定方法に変わってから使えるか試せていません**
+    - 利用できる事が確認出来た人はこのページの内容も更新してください
+  - VNC用に新しくVPN設定したMac mini(team-section-third)にはOpenSTFをセットアップしていません
+
+## VPN接続準備
+- 情シスから支給されているPC（Windows/Mac）でSonicWall VPN Connectionに接続
+  - 接続先情報
+    - ホスト名:`wap2020.fancs.com`
+    - ログイングループ:`FANCS-ALL`
+
+## <a name="vnc">VNCの利用方法</a>
+
+### 事前準備
+- Real VNC Viewerをインストールする
+  - https://www.realvnc.com/en/connect/download/viewer/
+  - 無料で使えます
+
+### 使い方
+- 参考記事
+  - https://www.ipentec.com/document/mac-os-x-remote-connection-from-windows-using-vnc
+- 接続情報
+  - VNC Server: `192.168.88.32`
+  - Username: `sdkteam-macmini`
+  - Password: 9～のやつ
 
 ## <a name="openstf">OpenSTFの利用方法</a>
-
-### 事前に準備が必要なもの
-- リモートからアクセスするVPNアカウント
-  - 情シスから払い出してもらう必要があります
-  - 依頼後、個別にGmailへアカウントの連絡が来るので、これを利用します。
-
-### VPNセットアップ
-以下の情報を参考にセットする。  
-なお社内ネットワークからは接続できないので、もし社内で事前にテストしたい場合はテザリングなどで実施。
-- [Windows向け](http://www.vpngate.net/ja/howto_l2tp.aspx#windows)
-- [Mac向け](http://www.vpngate.net/ja/howto_l2tp.aspx#mac)
-
-#### VPNセットアップ例
-![img](mac_vpn_setting_001.png)
-![img](mac_vpn_setting_002.png)
-![img](mac_vpn_setting_003.png)
-
-##### もし、こういう表示が出たら
-情シスに問い合わせてください（アカウント情報に間違いがある可能性もあるので）
-![img](mac_vpn_setting_004.png)
 
 ### OpenSTF起動方法
 1. オフィス出社済みの方に使いたい端末をSlackで連絡して共有マシンに`adb`接続
