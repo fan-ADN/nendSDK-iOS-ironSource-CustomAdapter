@@ -7,12 +7,43 @@ CIやリモートワークに使っているマシンに関する情報です。
 
 
 ## iMac（21.5インチ）
+- コンピュータの名前
+  - sdkteam-no-iMac
 * ID
   * teamsdk
 - こちらにJenkins本体がインストールされています（master）
 - Adobeアカウントが必要な作業は、こちらのiMacを使います。
 
+## Galleria（Windowsマシン）
+- コンピュータの名前
+  - Win10-Galleria
+* ID
+  * teamsdk
+- 主にAndroid向けにビルドに使用（nendSDKとUnityのAndroidビルド）
+- 起動する順番とJenkins接続には少々ハックの上で接続しています。
+
+## mac mini（CI用、リモート用）
+- コンピュータの名前
+  - team-section-third
+* ID
+  * sdkteam-macmini
+- 情シスからのレンタル品
+- リモートワーク環境でVNCにて共有PCを操作したい時にこのMac miniを経由して使います。
+  - リモート用VPN設定情報
+  - IPアドレス:192.168.88.32
+  - Gateway(ルーター):192.168.88.1
+
+## mac mini（CI用、OpenSTF用）
+- コンピュータの名前
+  - sdkteam-no-mac-mini-beside-mlteam
+* ID
+  * NendSDK
+  * F@N-Taroは情シス用に作ったアカウントなので基本的には使わない
+- OpenSTFとか使う用です
+
 ## mac mini（CI用）
+- コンピュータの名前
+  - slower-mac-mini
 * ID
   * SDKTeam
 - 年季が入っているので動作が緩慢です。
@@ -22,16 +53,7 @@ CIやリモートワークに使っているマシンに関する情報です。
   - 比較的軽いビルドジョブ
   - 時間がやや掛かっても構わないジョブ
 
-## Galleria（Windowsマシン）
-* ID
-  * teamsdk
-- 主にAndroid向けにビルドに使用（nendSDKとUnityのAndroidビルド）
-- 起動する順番とJenkins接続には少々ハックの上で接続しています。
-
-## mac mini（リモート用）
-* ID
-  * NendSDK
-  * F@N-Taroは情シス用に作ったアカウントなので基本的には使わない
-- 本棚側にあって、普段は電源入っていません。
-- 使うときは出社メンバーに電源入れてもらうように連絡してください。
-- OpenSTFとか使う用です。
+# Self-hosted runnersのマシン
+- GitHub Actionsの実行にこれらの共有PC（Windows/Mac）を利用しています。
+- RNxxx(WidnowsノートPC)はオフィスではなく自宅にて追加マシンとして割り当てて利用しています。
+![img](images/self-hosted-runners-machine-list.png)
