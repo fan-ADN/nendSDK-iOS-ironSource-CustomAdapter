@@ -1,35 +1,34 @@
-# 2021/01/25 SDKチームMTG議事録
+# 2021/02/01 SDKチームMTG議事録
 
 # 全体共有事項
-- IntelliJライセンス更新
-  - https://github.com/fan-ADN/nendSDK-Document-Private/tree/master/zippings
-- Appleデベロッパープログラムのデバイス登録台数
-  - 2021年3月24日に契約更新でリセット予定
-- 2020年下期評価
-  - カオナビで提出して頂いた内容で、もし何か確認したいことなどあれば個別に面談など設定します
-- 2021年目標設定
-  - 後ほど詳細をSlackでご案内します
-- 作業時間集計
-  - プロジェクト別に時間集計も必要になる
-  - 後ほど詳細をSlackでご案内します
+- 外山さん
+  - 今月から1課→3課に異動
+  - 1課のOpenBidding対応のテスト業務が残っている
+    - 2週間~1ヶ月以内には完了見込み
+  - その後、3課の業務に参加予定
+- 上期目標設定
+  - 2月3日までにカオナビで提出
+- GERA
+  - 木南さん、外山さんにレビュワー参加準備
+    - 事前に加納さんにレクチャーしてもらう
+      - タイミングは、外山さんの1課の業務完了次第
+    - （于さんはSDK関連のタスクになるべく集中してもらう）
 
 # 各自対応の進捗、予定
 ## 于
 ### 先週の進捗
 - レビュー
 - https://github.com/fan-ADN/nendSDK-Unity-admob-mediation-source/issues/3
-  - エラーログを残す、進捗のコミット
-- https://github.com/fan-ADN/nendSDK-Unity-admob-mediation-source/issues/1
-  - issueの対応内容、関連issueなどコメントして、他の人にも分かるようにしておく
+  - Androidでビルドエラーの調査
+- 問い合わせ対応
 
 ### 今週の対応予定
 - AdMobメディエーションのUnity向けのタスク
   - https://github.com/fan-ADN/nendSDK-Unity-admob-mediation-source/issues/3
-- 木南さんから依頼のあったiOSのタスク
-  - https://fancs-dev.slack.com/archives/C0J80E2F8/p1611131705045500
 
 ### 問い合わせ対応
-- なし
+- https://pjmanage.adn-mobasia.net/issues/27195
+  - 調査継続中
 
 ### 問題点、課題
 - なし
@@ -38,19 +37,37 @@
 ## 木南
 ### 先週の進捗
 - iOS14/SKA
-  - v7.0.4の対応
-  - サーバーサイドの検証用アプリを配布
-- 地域情報パラメータ追加の検証
-  - 田村さんの方でも反映されたことを確認済み
+  - SDKバージョン7.0.4の残り対応
 - レビュー
-
-### 今週の対応予定
-- iOS14関連の残タスク対応
-- v7.0.4のリリース準備
-  - サーバーサイドのテスト完了次第
 - LINEマンガのクラッシュの件
   - https://github.com/fan-ADN/nendSDK-iOS-source/issues/739
-  - 修正版を先方に渡して様子を見てもうようにする
+  - 修正版を先方に配布済み
+
+### 今週の対応予定
+- v7.0.4のリリース準備
+  - 2月8日リリース予定
+  - adjust連絡周りはSDKに影響なさそう
+  - wikiの更新予定
+
+### 問い合わせ対応
+- https://pjmanage.adn-mobasia.net/issues/27206
+
+### 問題点、課題
+- なし
+
+
+## 加納
+### 先週の進捗
+- GERA
+  - nendSDKの差し替え対応
+  - v1.5.1のリリース準備
+  - リファクタリング
+
+### 今週の対応予定
+- GERA
+  - レビュー
+  - 残っているissue
+  - CI環境のエラー調査
 
 ### 問い合わせ対応
 - なし
@@ -59,53 +76,50 @@
 - なし
 
 
+## 外山
+### 先週の進捗
+-
+
+### 今週の対応予定
+- 1課のOpenBidding対応のテスト業務
+  - 2週間~1ヶ月以内には完了見込み
+  - AdMob管理画面で設定できるようにする
+    - アカウント情報は後で共有
+
+### 問い合わせ対応
+-
+
+### 問題点、課題
+-
+
+
 ## 福岡
 ### 先週の進捗
 - 各種レビュー
-- adobeAirプラグインv3.0.0を特定メディアへ配布済み
+- 問い合わせ対応
+- 評価関連
 
 ### 今週の対応予定
 - 各種レビュー
-- cocos2d-xプラグインv3.0.0のリリース準備
 - Androidのバグ修正対応
-- 2020年下期評価と2021年上期目標設定
-- CI環境のエラー調査
+- 2021年上期目標設定
 
 ### 問い合わせ対応
-- https://pjmanage.adn-mobasia.net/issues/27200
-- https://pjmanage.adn-mobasia.net/issues/27192
+- https://pjmanage.adn-mobasia.net/issues/27219
+- https://pjmanage.adn-mobasia.net/issues/27206
 - https://pjmanage.adn-mobasia.net/issues/27085
-  - 調査方法を再検討中
+- https://pjmanage.adn-mobasia.net/issues/27203
+- https://pjmanage.adn-mobasia.net/issues/27202
 
 ### 問題点、課題
 - 27085の問い合わせ対応が残っている
   - 現状は解決方法が見つかっていない
   - 先方にも調査に時間かかる、解決できるか分からないと伝えている
 
-## 加納
-### 先週の進捗
-- GERA
-  - v1.5.1のリリース準備
-    - テスト配布済み
-  - リファクタリング
-    - レビュー依頼中
-- CI環境のエラー調査
-
-### 今週の対応予定
-- GERA
-  - v1.5.1のリリース対応
-  - 残っているissue
-
-### 問い合わせ対応
-- なし
-
-### 問題点、課題
-- なし
-
-# その他
-- なし
-
 ----
 
-# 補足
+## その他
+- なし
+
+## 補足
 - なし
