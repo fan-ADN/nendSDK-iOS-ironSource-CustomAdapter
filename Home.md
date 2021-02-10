@@ -3,6 +3,16 @@ SDK関連Wiki
 ## アカウント関連
 
 * [[動作確認とかで使う共有アカウント|AccountInfo]]
+* [[業務で使用するアカウントの説明|AccountInfo-dev]]
+
+## GitHubリポジトリ
+* [[3課で管理しているリポジトリ一覧|GitHubRepositories]]
+
+## Slackチャンネル
+* [[業務で使用する各チャンネルの説明|Slack-channels]]
+
+## Googleドライブ共有
+* [[業務で使用する共有フォルダなどの説明|GoogleDriveInfo]]
 
 ## SDKチームの開発について
 
