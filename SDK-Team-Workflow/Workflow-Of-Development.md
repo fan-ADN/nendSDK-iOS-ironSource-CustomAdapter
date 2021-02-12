@@ -31,7 +31,7 @@
 ここで扱うソースコードはnend内部で扱い、公開は行いません。  
 ※一部スクリプトやブリッジ用のコードは隠していませんが・・
 
-![img](Workflow-Of-Develop-Private.png)
+![img](https://github.com/fan-ADN/nendSDK-Document-Private/blob/master/SDK-Team-Workflow/Workflow-Of-Develop-Private.png)
 
 <a name="public_repo"></a>
 ## 公開リポジトリの開発フロー
@@ -39,11 +39,11 @@
 ユーザにリポジトリ一式（Git履歴含めて）公開する成果物の開発フローです。  
 不要なGit履歴や内部情報を公開しないようにするため、不明点や疑問点は逐次挙げてください。
 
-![img](Workflow-Of-Develop-Public.png)
+![img](https://github.com/fan-ADN/nendSDK-Document-Private/blob/master/SDK-Team-Workflow/Workflow-Of-Develop-Public.png)
 
 <a name="publishing"></a>
 ## リリース作業フロー
 
 [非公開→公開リポジトリへのミラーリングやUpstreamについて](https://github.com/fan-ADN/nendSDK-Document-Private/wiki/Mirroring-automation)は、順次自動化していきます。
 
-![img](Workflow-Of-Publishing.png)
+![img](https://github.com/fan-ADN/nendSDK-Document-Private/blob/master/SDK-Team-Workflow/Workflow-Of-Publishing.png)

@@ -66,4 +66,4 @@ CIやリモートワークに使っているマシンに関する情報です。
 - RNxxx(WidnowsノートPC)はオフィスではなく自宅にて追加マシンとして割り当てて利用しています。
   - `RN0878`はfan-t-fukuokaの家で動かしています
 - `Offline`になっているものは、単純にネットワーク未接続、または、マシンのOSアップデートが動いた時に再起動待ちになっている可能性があります。
-![img](images/self-hosted-runners-machine-list.png)
+![img](https://github.com/fan-ADN/nendSDK-Document-Private/blob/master/DevelopmentEnvironment/images/self-hosted-runners-machine-list.png)

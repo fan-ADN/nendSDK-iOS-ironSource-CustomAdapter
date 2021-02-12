@@ -35,7 +35,7 @@ GitHubで行うことのメリットとしては以下が考えられます。
     - [公式のフォーマットで](https://flutter.dev/docs/development/tools/formatting)
     - ブリッジ用のコードはAndroidとiOSでのやり方と同じ。
 
-![img](Workflow-Of-Develop-Private.png)
+![img](https://github.com/fan-ADN/nendSDK-Document-Private/blob/master/SDK-Team-Workflow/Workflow-Of-Develop-Private.png)
 
 <a name="reviewer"></a>
 ## レビュワーについて
@@ -45,7 +45,7 @@ GitHubで行うことのメリットとしては以下が考えられます。
 - 改修内容の規模や緊急対応などでレビュワーが1人となる場合は、マネージャーや他のメンバーに相談して下さい。
   - もし緊急時で相談できる人が誰も居なかった場合は、山本さんに相談して下さい。
 
-![img](Workflow-Of-Develop-Public.png)
+![img](https://github.com/fan-ADN/nendSDK-Document-Private/blob/master/SDK-Team-Workflow/Workflow-Of-Develop-Public.png)
 
 <a name="testing"></a>
 ## テストについて
