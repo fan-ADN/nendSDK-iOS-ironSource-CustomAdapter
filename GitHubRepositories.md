@@ -108,10 +108,6 @@
 - https://github.com/fan-ADN/app-mraid-preview-Android
 - https://github.com/fan-ADN/app-SkaApiChecker
 
-### WebView広告の検証用アプリ
-- https://github.com/fan-ADN/app-plane-webview-iOS
-  - 詳細は木南さんに確認し、READMEに説明を追記してもらう
-
 ### 世界遺産ビューア
 - https://github.com/fan-ADN/app-WorldHeritageViewer-iOS
   - OpenBiddingなどnendの検証に利用されることが多い
@@ -137,7 +133,6 @@
 - https://github.com/fan-ADN/nendSDK-backups
 
 ## 不要そうなやつ
-- nendSDK-game-test（不明）
 - app-Ossan（現在は3課の管理下ではない。何かする時はA8のスズケンさんへ連絡）
 - app-VideoApiChecker-Android（不要かも）
 - app-VideoApiChecker-iOS（不要かも）
@@ -145,4 +140,3 @@
 - app-nend-ad-unit-suite-iOS（もう不要かも）
 - app-banner-api-checker-iOS（不要かも）
 - app-nend-ad-unit-suite-Android（もう不要かも）
-- app-Hairdresser-prototype-iOS（無くなった企画）
