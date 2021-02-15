@@ -66,7 +66,8 @@
 - モジュールを提供
   - 呼び方はプラグインでも良いが、昔はcocos2d-x関連ではモジュールという呼び名がよく使われれいた感じだったのでそれに沿っているだけ
 - 対応プラットフォーム
-  - iOS、Android
+  - iOS
+  - Android
 - 利用しているメディアは複数あるが売り上げインパクトは小さい
 - 今後も開発コストをかけ続けるか？判断しても良さそうな時期
 - クローズ提供するか(一般公開をやめて要望があるメディアのみ提供とか)、サポート終了を検討予定
@@ -77,6 +78,7 @@
 
 ### Flutter
 - プラグインを提供
+  - [dart package](https://pub.dev/packages/nend_plugin#-readme-tab-)
 - 対応プラットフォーム
   - iOS
   - Android
@@ -85,4 +87,6 @@
 - 需要はありそうなので、開発体制を整え次第、正式リリースに着手するのが良さそう
 
 ### React Native
-- Flutterと同様
+- プラグインを提供
+  - [npm package](https://www.npmjs.com/package/react-native-nend-bridger)
+- その他はFlutterと同様
