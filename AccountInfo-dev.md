@@ -65,6 +65,8 @@
   - https://www.nend.net/f/media
 
 ## メール
-マネージャーTODO:(メーリングリストの招待など確認中)
 - ossdev@fancs.com
-- fancs.adndev01@gmail.com
+  - FlutterやReactNatieのプラグインのpublishに使用している
+    - 今後もOSSの運用で使用していく予定
+  - 各自の`@fancs.com`メールアドレスをメーリングリストに設定済み
+    - このアドレス宛のメールが各自にも届くので、Gmailとかでフィルタリングしてメールをチェックできるようにしておく  
