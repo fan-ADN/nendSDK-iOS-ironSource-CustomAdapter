@@ -11,7 +11,7 @@ CIやリモートワークに使っているマシンに関する情報です。
   - sdkteam-no-iMac
 - コンピュータ名
   - sdkteamのiMac
-* ID
+* ユーザ名
   * teamsdk
 - こちらにJenkins本体がインストールされています（master）
 - Adobeアカウントが必要な作業は、こちらのiMacを使います。
@@ -19,7 +19,7 @@ CIやリモートワークに使っているマシンに関する情報です。
 ## Galleria（Windowsマシン）
 - Runner名
   - Win10-Galleria
-* ID
+* ユーザ名
   * teamsdk
 - 主にAndroid向けにビルドに使用（nendSDKとUnityのAndroidビルド）
 - 起動する順番とJenkins接続には少々ハックの上で接続しています。
@@ -29,7 +29,7 @@ CIやリモートワークに使っているマシンに関する情報です。
   - team-section-third
 - コンピュータ名
   - sdkteam Mac mini
-* ID
+* ユーザ名
   * sdkteam-macmini
 - 情シスからのレンタル品
 - リモートワーク環境でVNCにて共有PCを操作したい時にこのMac miniを経由して使います。
@@ -42,7 +42,7 @@ CIやリモートワークに使っているマシンに関する情報です。
   - sdkteam-no-mac-mini-beside-mlteam
 - コンピュータ名
   - NendSDK の Mac mini
-* ID
+* ユーザ名
   * Self-hosted-Runner
   * F@N-Taroは情シス用に作ったアカウントなので基本的には使わない
 - OpenSTFとか使う用です
@@ -52,7 +52,7 @@ CIやリモートワークに使っているマシンに関する情報です。
   - slower-mac-mini
 - コンピュータ名
   - SDKteam の Mac mini
-* ID
+* ユーザ名
   * SDKTeam
 - 年季が入っているので動作が緩慢です。
 - 主にiOS向けにビルド補助に使用（nendSDKのFramework生成とUnityのiOSビルド）
