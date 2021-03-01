@@ -1,85 +1,80 @@
-# 2021/02/22 SDKチームMTG議事録
+# 2021/03/01 SDKチームMTG議事録
 ## 参加者
 - 木南
-- 于
+- 加納
 - 外山
 - 福岡
 
 ## 全体共有事項
-- [検証端末リスト](https://fancsdev.qiita.com/shared/items/286d004d351608bd09a3)
-  - 端末管理番号の命名規則を`Fan-SDXXX`に変更
-  - 手元にある端末のシール記載の命名と異なるかもしれませんが、番号は同じです。
+- 2月分の経費申請、本日まで。
+  - 交通費なども
+- プロジェクト別計算シート記入
+  - 3/4木曜日まで
+- 3/31サービス開発部全体MTG
+  - 3課が進行役担当
+  - 各自ネタ考えておきましょう
 - SDK
-  - **以下2つとも最優先でレビューや動作確認をご協力をお願いします**
   - 木南さん対応中のSKA対応
-    - リリースを2/25〜2/26に間に合えばベスト
-      - 無理しない範囲で。
-    - 3/3までにはリリース目標
-  - 福岡対応中のMoPubアダプタ対応
-    - 2/25〜2/26にはリリース必須な状況
+    - 3/3までにはリリース出来る状態にする
+    - **最優先でレビューや動作確認をお願いします**
+  - iOS14対応のテスト方法の説明など
+    - 後ほど木南さんから共有あり
 - GERA
-  - 今週2/24 GERA説明 + 顔合わせ予定
+  - v1.5.2リリース済み
+  - v1.5.3リリース準備中
 - 1on1
   - しばらく隔週はやめて月1回でお願いします
-  - 3課タスクが立て込んでいるため
+  - 業務が立て込んでいるため
+- 採用
+  - 1名、面談日を調整中
+  - スカウト以外にも、求人媒体や求人票をアップデート予定
+    - 内田さんに協力してもらっている
 
 ## 各自対応の進捗、予定
 ## 于
 ### 先週の進捗
-- https://github.com/fan-ADN/nendSDK-Unity-admob-mediation-source/issues/1
-- https://github.com/fan-ADN/nendSDK-Unity-admob-mediation-source/issues/3
-  - 調査中
-- https://github.com/fan-ADN/nendSDK-Unity-source/issues/111
-  - ビルドエラー調査中
-- https://github.com/fan-ADN/nendSDK-iOS-source/issues/675
-  - 調査完了？
+- お休み
 
 ### 今週の対応予定
-- レビュー
-- https://github.com/fan-ADN/nendSDK-iOS-source/issues/675
-  - 調査結果の内容に応じて、nendで対応した方が良い内容があるかどうかを確認して進める
-- https://github.com/fan-ADN/nendSDK-Unity-admob-mediation-source/issues/1
-- https://github.com/fan-ADN/nendSDK-Unity-admob-mediation-source/issues/3
-  - 調査中
-- 上記が完了したら、木南さんから以前依頼のあったタスクも進める
-  - https://fancs-dev.slack.com/archives/C0J80E2F8/p1611131705045500
-- https://github.com/fan-ADN/nendSDK-Unity-source/issues/111
-  - 上記までのタスクを完了してから着手した方がやりやすいのか、並行して出来そうなら進めるでも構いません
 
 ### 問い合わせ対応
-- なし
 
 ### 問題点、課題
-- 調査系タスクは調査内容のコメントのみではなく、継続中or完了の報告も必要
 
 ## 木南
 ### 先週の進捗
 - SKA2.2対応関連
-  - SDK内部を実装
-  - 静止画は視聴完了は対応しないことになった
-  - 抽選レスポンス実装中
-  - 動画のNend2ApiCheckerでテスト配布済み
+  - 抽選レスポンス対応完了
+  - Xcode11切る対応完了
 
 ### 今週の対応予定
 - SKA2.2対応関連
-  - 抽選レスポンス実装中
-  - その他タスク対応
-  - iOS14.5とSKA2.2の組み合わせでコールバックが戻らない問題あり
-    - iOS14.5beta2に問題ありの可能性あり
+  - パラメータ変更対応
+  - SKA2.2は動画広告のみ対応
+  - ポストバックが来ない問題はそのまま
+- iOS14.5GM版相当がリリースされたSDKリリース準備
 
 ### 問い合わせ対応
 - なし
 
 ### 問題点、課題
-- Xcode11切り捨てできるか早めに判断欲しい
-  - https://github.com/fan-ADN/nendSDK-request/issues/2
+- なし
 
 ## 加納
 ### 先週の進捗
-- 休み
+- GERA
+  - レビュー
+- SDK
+  - レビュー
 
 ### 今週の対応予定
-- 休み
+- GERA
+  - 1.5.3の準備
+  - レビュー
+- SDK
+  - レビュー
+  - MoPub、AdMobのタスク着手
+  - 開発環境準備
 
 ### 問い合わせ対応
 - なし
@@ -90,15 +85,15 @@
 
 ## 外山
 ### 先週の進捗
-- 1課のタスク完了
-- SDKの開発環境準備、学習タスク
-- SDKレビュー参加
+- SDK
+  - iOS14レビュー
+  - MoPubレビュー
 
 ### 今週の対応予定
-- SDKレビュー
-- 学習タスク
-- GERA説明後、徐々に参加準備
-- Androidの問い合わせ絡みで調査依頼あるかも
+- SDK
+  - レビュー
+  - 開発環境準備
+  - MoPub、AdMobのタスク着手
 
 ### 問い合わせ対応
 - なし
@@ -112,28 +107,28 @@
 - 各種レビュー
 - 問い合わせ対応
 - 3課wiki整理
-- JCenterシャットダウンの影響版の調査
-  - gradle pluginのアップデート待ち
-- MoPubアダプタ調査
+- MoPubアダプタリリース
 
 ### 今週の対応予定
 - 各種レビュー
 - 問い合わせ対応
-- MoPubアダプタ対応、リリース
+- Unityプラグインアップデート準備
 
 ### 問い合わせ対応
-- https://pjmanage.adn-mobasia.net/issues/27178
+- https://pjmanage.adn-mobasia.net/issues/27263
 - https://pjmanage.adn-mobasia.net/issues/27247
 
 ### 問題点、課題
-- https://pjmanage.adn-mobasia.net/issues/27085
-  - SSPエンジニアとやり取りする予定で調整中
+- 問い合わせ対応継続中
+  - https://pjmanage.adn-mobasia.net/issues/27263
+  - https://pjmanage.adn-mobasia.net/issues/27085
+  - https://pjmanage.adn-mobasia.net/issues/27247
 
 ----
 
 ## その他
-- 木南さん
-  - 2/23 休日出勤
+- 加納さん、福岡
+  - 今日か明日に出社予定、新しいMac取りに行く
 
 ## 補足
 - なし
