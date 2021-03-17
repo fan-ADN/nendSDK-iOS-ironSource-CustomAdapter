@@ -18,7 +18,8 @@
   - ただし、nendSDK側の不具合などでアダプタの修正が必要な場合は、我々からプルリクするスタンス
   - アダプタに問題点を見つけた場合は、上記リポジトリでissue作成や我々で修正したものをプルリクする
 - プルリク出す場合は、GoogleのCLA(Contributor License Agreement)に署名して認証してもらう必要がある
-  - コミットやプルリクはファンコミでCLAのグループに所属しているメールアドレスを使う(g.fancs.com)
+  - コミットやプルリクはファンコミでCLAのグループに所属しているメールアドレスを使う(`@fancs.com`)
+  - [詳細はこちらを参照](https://github.com/fan-ADN/nendSDK-Document-Private/wiki/AccountInfo-dev#googleグループcla)
 - UnityでAdMobメディエーションを利用する場合は、[nendSDKのUnity向けプラグイン](https://github.com/fan-ADN/nendSDK-Unity-pub)ではなく、[AdMobが提供しているUnity向けプラグイン](https://developers.google.com/admob/unity/quick-start)を利用する
   - 混同しやすいので注意。この間違い絡みの問い合わせも過去に何度かあった。
 
@@ -64,7 +65,7 @@
 
 ### cocoa2d-x
 - モジュールを提供
-  - 呼び方はプラグインでも良いが、昔はcocos2d-x関連ではモジュールという呼び名がよく使われれいた感じだったのでそれに沿っているだけ
+  - cocos2d-x（C++）とnendSDK(iOS・Android)を連携するためのソースコードをモジュールとして配布している
 - 対応プラットフォーム
   - iOS
   - Android
