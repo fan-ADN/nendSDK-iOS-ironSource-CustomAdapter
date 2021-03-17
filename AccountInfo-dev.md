@@ -65,8 +65,20 @@
   - https://www.nend.net/f/media
 
 ## メール
-- ossdev@fancs.com
+- `ossdev@fancs.com`
   - FlutterやReactNatieのプラグインのpublishに使用している
     - 今後もOSSの運用で使用していく予定
   - 各自の`@fancs.com`メールアドレスをメーリングリストに設定済み
     - このアドレス宛のメールが各自にも届くので、Gmailとかでフィルタリングしてメールをチェックできるようにしておく  
+
+## Googleグループ/CLA
+- [fancs-dev](https://groups.google.com/g/fancs-dev/)
+  - [メンバー](https://groups.google.com/g/fancs-dev/members)
+  - メーリングリスト
+    - `fancs-dev@googlegroups.com`
+  - グループに招待・登録するメールアドレスは各自の`@fancs.com`を使う
+  - このグループに登録したメールアドレスが[CLA](https://cla.developers.google.com/about) (Contributor License Agreements)に署名して関連付けられるようになっている。
+  - 主に3課では、SDKがAdMobメディエーションのオープンソースプロジェクトと連携しており、Googleのリポジトリにプルリクエストを送って受け付けてもらうために、このグループに登録したメールアドレスのGitHubアカウントを使用する。  
+  - Slack過去スレッド(参考情報)
+    - https://fancs-dev.slack.com/archives/C0J80E2F8/p1510546360000101
+    - https://fancs-dev.slack.com/archives/C0J80E2F8/p1510557188000126
