@@ -65,7 +65,7 @@
 - https://github.com/fan-ADN/nendSDK-Document-Private/wiki/Plugins
 
 ## 問い合わせ対応
-ToDo
+* [[問い合わせ対応|Knowledge-inquiries]]
 
 ## その他お役立ち情報
 - [SDKチームのOSS活動について](https://fancsdev.qiita.com/WataruSuzuki/items/515869e5bc4b74c2427f)
