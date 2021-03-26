@@ -93,6 +93,10 @@
 - https://github.com/fan-ADN/PrivateLib-NendSDK_iOS
   - 詳細は要確認
 
+### mraid
+- https://github.com/fan-ADN/nend-mraid-js
+  - mraid.jsの様々な検証に使うリポジトリなのか？（詳細は要確認）
+
 
 ## 3課で管理しているアプリ
 ### nendサーバーサイド向け検証用アプリ
