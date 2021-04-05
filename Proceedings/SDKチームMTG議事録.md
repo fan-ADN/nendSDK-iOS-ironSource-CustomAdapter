@@ -1,4 +1,4 @@
-# 2021/03/29 SDKチームMTG議事録
+# 2021/04/05 SDKチームMTG議事録
 ## 参加者
 - 木南
 - 加納
@@ -9,26 +9,29 @@
 ### SDK
 - iOS
   - iOS14対応（木南）
-    - ポストバックの問題は解消済み
     - Apple正式リリース待ち
-    - その後、v7.0.4としてSDKリリース
+    - v7.0.4としてSDKリリース予定
 - Android
-    - v7.0.3のリリース準備（外山）
-      - らくらくホン向け改修含む
+    - v7.0.3のリリース済み（外山）
+    - 状況を見てKotlin対応のプルリク取り組みを確認、検討したい
 - アダプタ（加納、外山）
   - MoPub
     - nendSDKとMoPubSDKのアップデート
-    - [iOS](https://github.com/fan-ADN/nendSDK-iOS-CustomEvents/issues/77)
-    - [Android](https://github.com/fan-ADN/nendSDK-Android-CustomEvents/issues/96)
+      - [iOS](https://github.com/fan-ADN/nendSDK-iOS-CustomEvents/issues/77)
+      - [Android](https://github.com/fan-ADN/nendSDK-Android-CustomEvents/issues/96)
   - AdMob
     - 新しいバージョンが出たら動作検証
+      - [iOS](https://github.com/fan-ADN/nendSDK-iOS-admob-mediation-source)
+      - [Android](https://github.com/fan-ADN/nendSDK-Android-admob-mediation-source)
     - 基本的にgoogle側でアップデートはやってくれる
     - 何か問題をあれば改修方針を検討・対応する
       - googleリポジトリでissue作るとかプルリク出すなど
       - nendSDK側の修正が必要なら我々で改修必要
 - プラグイン系（福岡）
-  - Unityをアップデートリリースする
-    - nendSDKのリリース待ち
+  - Unity
+    - [v4.0.3](https://github.com/fan-ADN/nendSDK-Unity-source/issues/148)リリース準備
+    - iOSはnendSDKのリリース待ち
+    - AndroidはnendSDKのアップデート対応着手
   - cocos2d-x、AdobeAirは優先度低め
     - 対応するかプロダクトと相談
 - 全体の細かいタスク（于）
@@ -39,24 +42,25 @@
 
 ### 新規事業アプリ支援
 - GERA
-  - 機能開発（加納）
-    - キリの良い所で竹尾さんに引き継ぐ
-    - 今後、開発は竹尾さんと業務委託者で進めてもらう
+  - 機能開発
+    - 加納さんから竹尾さんに引き継ぎ完了
   - コードレビュー（加納、外山、福岡）
-    - 主に竹尾さんや業務委託者のレビュー
     - 今後も3課メンバーで継続する
 
 ## 共有事項
-- 3/31サービス開発部全体MTG
-  - 3課が進行役担当
-  - 3課の発表内容
-    - 業務内容・メンバー紹介・トピックなど（福岡）
-    - iOS14対応について（木南）
-  - 発表順
-    - 最初は片桐さん（業務に関係ない方のネタでアイスブレイク）
-    - 以降の順番は後で調整
-- 3/12までの期間はjinjerでの打刻修正などの申請が必要
-  - もし心当たりある人は申請をお願いします
+- 3月のプロジェクト別計算シート入力をお願いします
+  - 3/7（今週水曜）まで
+- 勤怠
+  - 4月からkinnosukeのみ利用
+  - 出社時はkinnosukeでオフィス出勤/退勤を押す
+    - これで出社日数分の交通費が支給される仕様
+    - 交通費の別途経費精算は不要
+    - 翌々月の給与と一緒に振り込まれる
+- プロダクトに要望出したい内容を整理（他にもあれば随時知らせてください）
+  - Android4.4のサポート切りたい？
+  - iOS9のサポートも切れるか？
+  - CoreMotion,CoreLocationを外したい
+  - nend動画のIP制限の条件（GDPR,CCPA）などをwikiのFAQにも開示しても良いか？
 
 ## 各自対応の進捗、予定
 ## 于
@@ -74,22 +78,20 @@
 
 ## 木南
 ### 先週の進捗
-- iOS14.5 beta検証中
-- SKA2.2対応関連
-  - ポストバックの件をAppleに問い合わせていたが、結果自己解決した（nendサーバーサイド）
-  - AppleのTSIが今年は3つに増えた!
-- iOS14.4.2
-  - SKA2.2ポストバックがうまくいっていない？
-    - 調査中
+- iOS14.4.2の検証
+  - 問題なし
+- iOS14.5 beta6の検証
+  - SKA2.0/2.2ともに問題なし
+- XCFramework対応
+  - 対応中
+  - ResourceBundleの取り込みがおかしいかも？
 - レビュー
-- 全体MTGの資料作成
+- サービス開発部全体会議の資料作成
 
 ### 今週の対応予定
-- SKA2.2対応関連
-- iOS14.5 beta検証
-- nendSDK v7.0.4リリース準備
-  - GM相当がリリースされたら準備開始
-- レビュー
+- iOS14.5検証
+- XCFramework対応
+- SKAナレッジ共有会
 
 ### 問い合わせ対応
 - なし
@@ -99,23 +101,16 @@
 
 ## 加納
 ### 先週の進捗
-- GERA
-  - 音声フィード機能実装
-    - まだAPI出来ていない
-    - リファクタリング
-  - レビュー
-- SDK
-  - レビュー
+- GERA音声フィードの引き継ぎ
+- AdMob,MoPubの検証
+- MoPubのissue対応
+- レビュー
 
 ### 今週の対応予定
-- GERA
-  - 音声フィード機能実装
-    - リファクタリング
-    - 引き継ぎ準備
-  - レビュー
-- SDK
-  - AdMob GoogleAds v8.3.0検証
-  - レビュー
+- 問い合わせ対応
+  - M1 Macでのビルドエラーの件
+- AdMobドキュメント更新されたいた
+  - ネイティブ広告のサンプルの実装
 
 ### 問い合わせ対応
 - なし
@@ -126,20 +121,14 @@
 
 ## 外山
 ### 先週の進捗
-- SDK
-  - MoPubSDK最新に更新
-  - nendSDKv7.0.3リリース準備
-  - レビュー
-- GERA
-  - レビュー
+- AndroidのnendSDK7.0.3リリース
+- MoPubのアップデート準備
 
 ### 今週の対応予定
-- SDK
-  - nendSDKv7.0.3リリース
-  - その後、MoPubアダプタ対応
-  - AdMob GoogleAds v19.8.0検証
-- GERA
-  - レビュー
+- MoPubアップデート対応
+- nendSDKのKotlinのプルリクの件も見る
+- AdMobのSDK検証
+- レビュー
 
 ### 問い合わせ対応
 - なし
@@ -151,20 +140,22 @@
 ## 福岡
 ### 先週の進捗
 - 各レビュー
-- 問い合わせ対応
-  - [ReactNativeの件](https://pjmanage.adn-mobasia.net/issues/27206)
-- Unityプラグインアップデート準備
-- GoogleAdsv8.2.0検証
+- Unity+AdMobメディエーションの動画インステ用バンドルのリリース
+- Unityプラグインv4.0.3準備
+  - AndroidのSDKからアップデート着手
+- サービス開発部全体会議の準備
+- codecov状況確認
 
 ### 今週の対応予定
 - 各種レビュー
-- 問い合わせ対応
-- Unityプラグインアップデート準備
-- その他issue
+- Unityプラグインv4.0.3準備
+- codecov状況確認
+
+### 問い合わせ対応
+- https://pjmanage.adn-mobasia.net/issues/27305
+  - Unity,Androidでアプリ内のタップが出来なくなる件
 
 ### 問題点、課題
-- nend動画のIP制限の条件（GDPR,CCPA）などをwikiのFAQにも開示しても良いか？
-  - プロダクトに相談して進める
 - 問い合わせ対応（進展がなく様子見）
   - https://pjmanage.adn-mobasia.net/issues/27263
   - https://pjmanage.adn-mobasia.net/issues/27085
@@ -173,13 +164,7 @@
 ----
 
 ## その他
-- 適宜、有給取得
-- 出社
-  - 3/31(水曜)
-    - 外山、福岡
-- 休み
-  - 4/2(金曜)
-    - 外山
+- 有給取得
 
 ## 補足
 - なし
