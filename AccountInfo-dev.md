@@ -50,8 +50,8 @@
 ## Readmine
 - https://pjmanage.adn-mobasia.net
 - マネージャーがアカウント作成
-- Redmine証明書インストール
-  - `\\file02.is.fancs.com\project\nend-adjapon-サービス開発部\Redmine（マニュアル・証明書）`
+- [Redmine証明書インストール](https://pjmanage.adn-mobasia.net/projects/satellite/wiki/【Redmine_関連まとめ】#Redmine接続用クライアント証明書インストール手順)
+  - `\\file02.is.fancs.com\public\ADプラットフォーム事業部\契約社員・アルバイト\共用\redmineクライアント証明書\2021`
   - ここからファイルをダウンロードして証明書をインストールする必要あり
 - 使い方の情報など
   - 主にSDKの問い合わせがRedmineのチケットで依頼が来ることが多い
