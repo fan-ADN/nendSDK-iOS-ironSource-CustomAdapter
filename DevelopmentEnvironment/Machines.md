@@ -16,13 +16,15 @@ CIやリモートワークに使っているマシンに関する情報です。
 - こちらにJenkins本体がインストールされています（master）
 - Adobeアカウントが必要な作業は、こちらのiMacを使います。
 
-## Galleria（Windowsマシン）
+## Galleria（Windowsマシン、CI用）
 - Runner名
   - Win10-Galleria
 * ユーザ名
   * teamsdk
 - 主にAndroid向けにビルドに使用（nendSDKとUnityのAndroidビルド）
-- 起動する順番とJenkins接続には少々ハックの上で接続しています。
+- ~~起動する順番とJenkins接続には少々ハックの上で接続しています。~~
+  - 現在Jenkinsは動かしていません。
+- 現在、実機端末は繋がっておらず、Emulatorだけ立ち上げています
 
 ## mac mini（CI用、リモート用）
 - Runner名
@@ -61,6 +63,14 @@ CIやリモートワークに使っているマシンに関する情報です。
   - Unityなど容量でかいものを置いておく場所
   - 比較的軽いビルドジョブ
   - 時間がやや掛かっても構わないジョブ
+
+## mac mini M1（M1検証用、CI用）
+- Runner名
+  - 準備中
+- コンピュータ名
+  - sdkteamのMac mini m1
+* ユーザ名
+  * sdkteam-macmini-m1
 
 # Self-hosted runnersのマシン
 - GitHub Actionsの実行にこれらの共有PC（Windows/Mac）を利用しています。
