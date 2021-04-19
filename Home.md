@@ -24,6 +24,7 @@
   * [[レビューについて|About-Review]]
     * [[非公開→公開リポジトリへのミラーリングやUpstreamについて|Mirroring-automation]]
 * [CI/CD](https://github.com/fan-ADN/nendSDK-CI-CD-backups/wiki)
+* [[Code Coverage|CodeCoverage]]
 * [Serverチームへの提供アプリなど](https://github.com/fan-ADN/app-From-SDKTeam-To-ServerTeam/wiki)
 
 ## 開発環境関連
