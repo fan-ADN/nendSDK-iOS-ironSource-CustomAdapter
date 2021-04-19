@@ -66,15 +66,18 @@ CIやリモートワークに使っているマシンに関する情報です。
 
 ## mac mini M1（M1検証用、CI用）
 - Runner名
-  - 準備中
+  - sdkteam-no-mac-mini-m1
 - コンピュータ名
   - sdkteamのMac mini m1
 * ユーザ名
   * sdkteam-macmini-m1
+- GitHub ActionsのRunnerで使用したい場合
+  - jobsで`runs-on: [self-hosted, macos, m1]`のようにラベルを指定する
 
 # Self-hosted runnersのマシン
 - GitHub Actionsの実行にこれらの共有PC（Windows/Mac）を利用しています。
 - RNxxx(WidnowsノートPC)はオフィスではなく自宅にて追加マシンとして割り当てて利用しています。
+  - 主にAndroid向けのビルドやテストに使用しています
   - `RN0878`はfan-t-fukuokaの家で動かしています
 - `Offline`になっているものは、単純にネットワーク未接続、または、マシンのOSアップデートが動いた時に再起動待ちになっている可能性があります。
-![img](https://github.com/fan-ADN/nendSDK-Document-Private/blob/master/DevelopmentEnvironment/images/self-hosted-runners-machine-list.png)
+![img](https://user-images.githubusercontent.com/9563506/115136353-3c0e4100-a05a-11eb-86a7-732c03018976.png)
