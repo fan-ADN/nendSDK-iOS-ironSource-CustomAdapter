@@ -7,56 +7,73 @@ CIやリモートワークに使っているマシンに関する情報です。
 
 
 ## iMac（21.5インチ）
-- Runner名
-  - sdkteam-no-iMac
 - コンピュータ名
   - sdkteamのiMac
 * ユーザ名
   * teamsdk
+- Runner名
+  - sdkteam-no-iMac
+  - カスタムラベル
+    - iMac
+    - flutter
 - こちらにJenkins本体がインストールされています（master）
 - Adobeアカウントが必要な作業は、こちらのiMacを使います。
 
 ## Galleria（Windowsマシン、CI用）
-- Runner名
-  - Win10-Galleria
+- コンピュータ名
+  - DESKTOP-PGM4RTG
 * ユーザ名
   * teamsdk
+- Runner名
+  - Win10-Galleria
+  - カスタムラベル
+    - desktop
 - 主にAndroid向けにビルドに使用（nendSDKとUnityのAndroidビルド）
+- 現在、実機端末は繋げておらず、AndroidのEmulatorだけ立ち上げています。
 - ~~起動する順番とJenkins接続には少々ハックの上で接続しています。~~
   - 現在Jenkinsは動かしていません。
-- 現在、実機端末は繋がっておらず、Emulatorだけ立ち上げています
 
 ## mac mini（CI用、リモート用）
-- Runner名
-  - team-section-third
 - コンピュータ名
   - sdkteam Mac mini
 * ユーザ名
   * sdkteam-macmini
+- Runner名
+  - team-section-third
+  - カスタムラベル
+    - Mac-mini
+    - fast
 - 情シスからのレンタル品
+- Intelチップの共有Macの中では動作が速い方です
 - リモートワーク環境でVNCにて共有PCを操作したい時にこのMac miniを経由して使います。
   - リモート用VPN設定情報
   - IPアドレス:192.168.88.32
   - Gateway(ルーター):192.168.88.1
 
 ## mac mini（CI用、OpenSTF用）
-- Runner名
-  - sdkteam-no-mac-mini-beside-mlteam
 - コンピュータ名
   - NendSDK の Mac mini
 * ユーザ名
   * Self-hosted-Runner
   * F@N-Taroは情シス用に作ったアカウントなので基本的には使わない
+- Runner名
+  - sdkteam-no-mac-mini-beside-mlteam
+  - カスタムラベル
+    - Mac-mini
+    - normal
+    - Catalina
 - OpenSTFとか使う用です
 
 ## mac mini（CI用）
 **動作遅くて限界のため、現在は電源OFFにしています。**
-- Runner名
-  - slower-mac-mini
 - コンピュータ名
   - SDKteam の Mac mini
 * ユーザ名
   * SDKTeam
+- Runner名
+  - slower-mac-mini
+  - カスタムラベル
+    - 未使用
 - 年季が入っているので動作が緩慢です。
 - 主にiOS向けにビルド補助に使用（nendSDKのFramework生成とUnityのiOSビルド）
 - ストレージの容量だけが取り柄なので、以下を基準に使うことをオススメします。
@@ -65,19 +82,27 @@ CIやリモートワークに使っているマシンに関する情報です。
   - 時間がやや掛かっても構わないジョブ
 
 ## mac mini M1（M1検証用、CI用）
-- Runner名
-  - sdkteam-no-mac-mini-m1
 - コンピュータ名
   - sdkteamのMac mini m1
 * ユーザ名
   * sdkteam-macmini-m1
+- Runner名
+  - sdkteam-no-mac-mini-m1
+  - カスタムラベル
+    - Mac-mini
+    - m1
 - GitHub ActionsのRunnerで使用したい場合
   - jobsで`runs-on: [self-hosted, macos, m1]`のようにラベルを指定する
 
 # Self-hosted runnersのマシン
+![img](https://user-images.githubusercontent.com/9563506/117761197-ec3e2680-b261-11eb-8f86-d910dafbbb28.png)
+
 - GitHub Actionsの実行にこれらの共有PC（Windows/Mac）を利用しています。
-- RNxxx(WidnowsノートPC)はオフィスではなく自宅にて追加マシンとして割り当てて利用しています。
+- [カスタムラベル](https://docs.github.com/ja/actions/hosting-your-own-runners/using-labels-with-self-hosted-runners)を作成して利用できます
+  - GitHub ActionsのRunnerでカスタムラベルを使用したい場合
+    - jobsで`runs-on: [self-hosted, macos, m1]`とか`runs-on: [self-hosted, Windows, laptop]`のようにラベルを指定する
+  - ラベル追加や削除などしたい場合はマネージャーに依頼してください
+- RNxxx(WidnowsノートPC)はオフィスで共有マシンとしてではなく、自宅にてRunnerマシンとして割り当てて利用しています。
   - 主にAndroid向けのビルドやテストに使用しています
   - `RN0878`はfan-t-fukuokaの家で動かしています
 - `Offline`になっているものは、単純にネットワーク未接続、または、マシンのOSアップデートが動いた時に再起動待ちになっている可能性があります。
-![img](https://user-images.githubusercontent.com/9563506/115136353-3c0e4100-a05a-11eb-86a7-732c03018976.png)
