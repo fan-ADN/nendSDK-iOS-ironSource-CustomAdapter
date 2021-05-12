@@ -15,6 +15,7 @@ CIやリモートワークに使っているマシンに関する情報です。
   - sdkteam-no-iMac
   - カスタムラベル
     - iMac
+    - normal
     - flutter
 - こちらにJenkins本体がインストールされています（master）
 - Adobeアカウントが必要な作業は、こちらのiMacを使います。
@@ -42,6 +43,7 @@ CIやリモートワークに使っているマシンに関する情報です。
   - team-section-third
   - カスタムラベル
     - Mac-mini
+    - normal
     - fast
 - 情シスからのレンタル品
 - Intelチップの共有Macの中では動作が速い方です
@@ -95,7 +97,7 @@ CIやリモートワークに使っているマシンに関する情報です。
   - jobsで`runs-on: [self-hosted, macos, m1]`のようにラベルを指定する
 
 # Self-hosted runnersのマシン
-![img](https://user-images.githubusercontent.com/9563506/117761197-ec3e2680-b261-11eb-8f86-d910dafbbb28.png)
+![img](https://user-images.githubusercontent.com/9563506/117904567-8f4b7a80-b30c-11eb-8a6d-a2987ba4b41d.png)
 
 - GitHub Actionsの実行にこれらの共有PC（Windows/Mac）を利用しています。
 - [カスタムラベル](https://docs.github.com/ja/actions/hosting-your-own-runners/using-labels-with-self-hosted-runners)を作成して利用できます
