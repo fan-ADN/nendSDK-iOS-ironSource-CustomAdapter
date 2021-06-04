@@ -29,12 +29,14 @@
 ## GERA
 - neobiz_gera_dev
   - GERAのアプリ開発に関するコミュニケーション全般
-- neobiz_gera_github
+- neobiz_gera-flutter_github
   - GERAのアプリ開発用リポジトリのコミットやプルリクなどをSlackに通知
 - neobiz_gera_biz
   - GERAのビジネスサイド、プロダクトサイドも含めたコミュニケーション全般
 - neobiz_gera_業務委託エンジニア
   - GERAのアプリ開発に関して業務委託エンジニアとやり取りする場合に利用
+- neobiz_gera_app_developers
+  - GERAのアプリ開発に関するコミュニケーション全般
 
 ## アプリ関連
 - app-developers
@@ -61,6 +63,12 @@ nendに関わる部署全員が参加
   - nendに関する問い合わせの報告、調査依頼などをするチャンネル
   - 基本的にnendの営業部署の担当者からの調査依頼が来る
   - `@sdk_team`のメンションが付いた内容はSDKチームで担当
+- nend-sdk-request
+  - プロダクトサイドとSDKチーム間の要望や開発依頼などのIssueを作成・管理するリポジトリ
+- nend_sales-all
+  - nend営業全般
+- nend_media-all
+  - nendメディア営業チーム
 
 ## サービス開発部
 - service-dev
@@ -73,4 +81,7 @@ nendに関わる部署全員が参加
 - mail_to_all
 - general
 - 人事
+- 人事_従業員説明
 - 経理
+- 総務
+- 行政処分-コンプラニュース配信
