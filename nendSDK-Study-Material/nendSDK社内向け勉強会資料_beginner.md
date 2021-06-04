@@ -1,105 +1,192 @@
 # nendSDK 社内向け勉強会資料 - 初級編 -
-#### 勉強会開催日と営業サイドへの共有用
-- [created 2018/09/19 pdf](https://github.com/fan-ADN/nendSDK-Document-Private/files/2801999/nendSDK.ver1.0.0.pdf)
-- [created 2019/03/13 gist](https://gist.github.com/fan-t-fukuoka/914157b6d18ef05d2705eeeb8f83ac06)
-
 ## 目次
 - [SDKとは](#about_sdk)
 - [nendSDKの仕組み](#nendSDK_structure)
 - [JSタグ利用の仕組み](#js_tag_structure)
-- [Unity、Cocos2d-xなどのプラグイン](#plugins)
+- [周辺プラットフォーム向けプラグイン](#plugins)
 - [メディエーション](#mediation)
 - [カスタムイベント](#custom_event)
 - [nendSDKのSSP接続先](#ssp)
 - [SDK導入の実演](#demonstration)
 - [マニュアルやサンプルについて](#about_samples)
 - [Q&A](#q&a)
+- [過去の勉強会資料](#history)
 
 ## <a name ="about_sdk">SDKとは
 - `Software Development Kit`の略
 - ソフトウェアを開発するためのツール群のこと
 - SDKの中身はものによって様々
   - ソースコード、設定ファイル、画像ファイル、他...
-  - iOSのnendSDK
-    - [nendSDK_iOS.zip](https://github.com/fan-ADN/nendSDK-iOS-pub/releases/download/5.1.1/nendSDK_iOS.zip)
-  - AndroidのnendSDK
-    - [nendSDK-5.1.0.aar](https://github.com/fan-ADN/nendSDK-Android-pub/releases/download/5.1.0/nendSDK-5.1.0.aar)
+  - [iOSのnendSDK](https://github.com/fan-ADN/nendSDK-iOS-pub/releases)
+  - [AndroidのnendSDK](https://github.com/fan-ADN/nendSDK-Android-pub/releases)
 
 ## <a name ="nendSDK_structure">nendSDKの仕組み
 ![](https://user-images.githubusercontent.com/9563506/51819831-34e2a780-2317-11e9-90df-79d766bf00d5.png)
+
+### 提供している広告フォーマット
+https://user-images.githubusercontent.com/9563506/120431368-5b1b2500-c3b3-11eb-9099-099fde56f6b4.mp4
+
+#### 静止画
+- バナー
+- アイコン（Androidのみ）
+- インタースティシャル
+- ネイティブ
+- フルボード
+
+#### 動画
+- インタースティシャル
+- リワード
+- ネイティブ
+
+#### インタラクティブ広告
+- 動画インタースティシャル
+- 動画リワード
+
+#### 備考
+QiitaTeam記事の[アドテクノロジー基礎](https://fancsdev.qiita.com/ygoodspeed/items/48637a07078cf8c68027)も参照
+
 ### nendSDKの特徴
 - アプリ側で広告をいろいろ制御できる
   - 広告のロード、表示、破棄などのタイミングの制御やイベント検知
 - 広告取得失敗、在庫切れなどのエラー検知ができる
-- 自動更新ができる（バナー、静止画ネイティブ）
+- 自動更新ができる
+  - バナー
+  - ネイティブ（静止画）
 - Advertising ID（広告識別子）が利用できる
   - 広告識別子とは、端末を特定し、関連性のある広告を配信することができる
   - iOS：Advertising Identifier（IDFA）
   - Android：Advertising ID（AAID、GAID）
 - アプリターゲティングが利用できる
   - URLスキームを利用し、特定のアプリをインストールしているユーザーに対してのみ広告を配信する
-  - iOS 9未満とAndroidで利用可能
+  - 現在はAndroidのみ利用可能
+    - iOSのnendSDKでは、iOS 9未満でURLスキームに制限があるため利用できない
+- インタラクティブ広告
+  - 見るだけでなく、ユーザー自ら触れられる広告
+  - [広告主様向け提案資料](https://board.nend.net/wp-content/uploads/2020/09/nend_Interactive-Guide-for-Advertiser-Jpn.pdf)
+  - [用語集](https://github.com/fan-ADN/nend-request/blob/master/specs/issue84/用語集.md)
+    - 主にnend開発サイドで使用している用語や参考情報など
 
 #### Advertising ID（広告識別子）について
 ||名称|ユーザーによるリセット|オプトアウト時の値※|ユーザーによるIDの確認|webブラウザで取得|
 |:-:|:-:|:-:|:-:|:-:|:-:|
 |iOS|Advertising Identifier（IDFA）|○|すべてゼロ|×|×|
-|Android|Advertising ID（AAID、GAID）|○|取得できない|○|×|
+|Android|Advertising ID（AAIDまたはGAID）|○|取得できない|○|×|
 
 ※ **オプトアウト時、SDK内部では空文字に置き換えてnendサーバーに送っている**
 
 ##### 参考情報
-- https://developer.apple.com/documentation/adsupport/asidentifiermanager?language=objc
-- https://support.apple.com/ja-jp/HT205223
-- https://growthhackjournal.com/what-you-need-to-know-about-mobile-device-ids/
-- https://www.intage.co.jp/glossary/240/
+- [広告ID,広告識別子とは](https://www.intage.co.jp/glossary/240/)
+- [モバイル端末の広告識別子について知っておくべきこと](https://repro.io/contents/what-you-need-to-know-about-mobile-device-ids/)
+- [Appleの広告とプライバシー](https://support.apple.com/ja-jp/HT205223)
+- [ASIdentifierManager](https://developer.apple.com/documentation/adsupport/asidentifiermanager?language=objc)
+- URLスキーム
+  - [iOS](https://developer.apple.com/documentation/xcode/defining-a-custom-url-scheme-for-your-app)
+  - [Android](https://developer.android.com/training/app-links?hl=ja)
+
+### iOS14
+iOS14でプライバシーポリシーについて大きな変更が発表されました。  
+IDFAの使用が制限されるように変更されました。  
+[Appのプライバシーに関する詳細情報](https://developer.apple.com/jp/news/?id=hx9s63c5)
+
+#### SKAdNetwork
+- IDFAを使わずにアプリのインストールやトラッキングの計測を行うためのフレームワーク
+  - AppleのStoreKitと連携しており、Apple独自の計測ロジック
+- SKAdNetworkに対応する場合はアプリ側で設定が必要
+  - https://github.com/fan-ADN/nendSDK-iOS/wiki/iOS14以降の対応について#skadnetwork-を設定する
+- nendSDKでSKAdNetworkに対応した広告が配信される条件
+  - SKAdNetwork v2.0
+    - iOS14.0以降
+    - 静止画広告と動画広告
+  - SKAdNetwork v2.2
+    - iOS14.5以降
+    - 動画広告のみ
+- その他参考記事
+  - [SKAdNetwork - Appleの広告規格](https://note.com/nendadnetwork/n/n5d81054ddbd8)
+
+#### ATT (App Tracking Transparency)
+- アプリのユーザーに対してトラッキングの許諾を求めるための仕組みを提供するフレームワーク
+- nendSDKでIDFAを利用して広告を配信したい場合、ATTを利用するためにアプリ側で設定が必要
+  - https://github.com/fan-ADN/nendSDK-iOS/wiki/iOS14以降の対応について#app-tracking-transparency-の承認リクエスト
+- その他参考記事
+  - [ATT (AppTrackingTransparency) について](https://note.com/nendadnetwork/n/nbfd6f08105b4)
 
 ## <a name ="js_tag_structure">JSタグ利用の仕組み
 ![](https://user-images.githubusercontent.com/9563506/51819832-37450180-2317-11e9-8f06-f3ef8da9e26e.png)
 
 ### JSタグの特徴
 - webブラウザでJavaScriptを利用して広告を表示する仕組み
-- アプリではWebViewで利用する
+- アプリでは**WebView**で利用する
 - SDKよりも導入が簡単
 - 広告取得エラーや在庫切れなどの検知はできない
 - 広告の自動更新はできない
-- アプリ内でJSタグをベタ書きやローカルに保持などをしている場合
-  - JSタグを変更（apiKeyやspotId変更など）したらストアへアップデートも必要
+- 例
+  - アプリ内でJSタグをベタ書き、ローカルに保持などをしている場合
+    - JSタグを変更（apiKeyやspotId変更など、アプリ内の実装を変更）したらストアにアップロードし直しが必要
 
-## <a name ="plugins">Unity、Cocos2d-xなどのプラグイン
+## <a name ="plugins">周辺プラットフォーム向けプラグイン
 アプリケーションの機能を拡張したり追加するためのプログラム（ソースコードや設定ファイルなど）のこと。  
-nendSDKでは、以下3つのマルチプラットフォームのアプリ開発環境で利用するためのプラグインを提供している。
+nendSDKでは、以下のクロスプラットフォームのアプリ開発環境で利用するためのプラグインを提供している。
 
-<img width="795" alt="2019-01-28 16 17 48" src="https://user-images.githubusercontent.com/9563506/51820186-4a0c0600-2318-11e9-99e4-e3a30e86fae2.png">
+<img width="795" src="https://user-images.githubusercontent.com/9563506/51820186-4a0c0600-2318-11e9-99e4-e3a30e86fae2.png">
+</br>
+<img width="256" src="https://user-images.githubusercontent.com/9563506/120066461-7b946800-c0b1-11eb-8e42-544ef32199c5.png">
+</br>
+</br>
+<img width="256" src="https://user-images.githubusercontent.com/9563506/120066451-71726980-c0b1-11eb-9026-b01935dc625b.png">
+</br>
 
 ### Unityの特徴
 - 世界最大規模のシェアを誇るゲーム開発ツール
-- マルチプラットフォーム（クロスプラットフォーム）
+- クロスプラットフォーム
   - 同じソースコードから複数のプラットフォームのアプリが作れる
   - iOS、Android、他モバイル、web、PC、ゲーム機などに対応
 - 2D、3D、AR、VRのゲーム開発が可能
-- 無料で利用可能（年間収益が10万米ドル超は有料版必須）
+- 無料で利用可能
+  - 年間収益が10万米ドル超は有料版必須
 - 開発を支援するサービスやコミュニティが充実
-- 開発にはC#を利用（JavaScript、Booでもできるがもう使われなくなる傾向）
+- 開発言語はC#
+  - 以前はJavaScript、Booも利用できたが今は使われなくなった
 
 ### Cocos2d-xの特徴
 - 2D向けのゲーム開発のフレームワーク
   - 3Dも対応しているが2Dの方が得意
-- マルチプラットフォーム
-  - 同じソースコードから複数のプラットフォームのアプリが作れる
-  - iOS、Android、他モバイル、PC などに対応
+- クロスプラットフォーム
 - オープンソース
 - 商用利用でも無料
-- 開発にはC++、Lua、JavaScript が利用可能
+- 開発言語はC++
+  - 以前はJavaScript、Luaも利用できたが今は使われなくなった
+- 利用しているメディアは少ない
+  - nendでは現在は積極的に運用やサポートをしていない
 
 ### AdobeAIRの特徴
 - アドビシステムズが提供しているアプリ開発環境
-- マルチプラットフォーム
-  - 同じソースコードから複数のプラットフォームのアプリが作れる
-  - iOS、Android、他モバイル、web、PCなどに対応
+- クロスプラットフォーム
 - 3Dやゲーム開発も可能
-- Adobe AIR SDKは無料。他のAdobeの開発ツールなどは有料ライセンス
-- 開発にはActionScriptを利用
+- Adobe AIR SDK自体は無料で、他のAdobeの開発ツールなどは有料ライセンス
+- 現在のAIR SDKはAdobeではなく[Harman](https://airsdk.harman.com)が提供している
+- 開発言語はActionScript
+- 利用しているメディアは少ない
+  - nendでは現在は積極的に運用やサポートをしていない
+
+### Flutterの特徴
+- Googleが提供しているアプリ開発フレームワーク
+- クロスプラットフォーム
+- オープンソース
+- モダンなUIを柔軟に開発しやすい環境や機能が提供されている
+- 市場は拡大傾向で、注目度も高くなってきている
+- 開発言語はDart
+- nendとしては正式リリースはしておらず、実験的にオープンソースでプラグインを公開している
+  - nendSDKでは正式リリースを目指してアップデート対応中
+
+### React Nativeの特徴
+- Facebookが開発しているアプリ開発フレームワーク
+- クロスプラットフォーム
+- オープンソース
+- React（JavaScriptライブラリ）の開発スキルが活かせる
+- シンプルにUIを開発しやすい環境や機能が提供されている
+- 開発言語はJavaScript
+- nendとしては正式リリースはしておらず、実験的にオープンソースでプラグインを公開している
+  - nendSDKでは当面アップデートの予定なし
 
 ### nendプラグインの仕組み
 アプリはnendプラグインを利用することで、開発ツールや言語が異なる環境でもnendSDKの機能が利用できる。
@@ -108,58 +195,75 @@ nendSDKでは、以下3つのマルチプラットフォームのアプリ開発
 
 ### プラグインについての補足
 以下のようなwebの技術を利用したアプリ開発ツール（ハイブリットアプリ開発）では、SDKではなく`JSタグ`を利用します。  
+そのため、nendSDKのプラグインは提供していません。  
+問い合わせがあった場合は、`@alfort（サーバーチーム等）`にご相談下さい。
+
 <img width="792" alt="2019-01-28 16 22 38" src="https://user-images.githubusercontent.com/9563506/51820407-f8b04680-2318-11e9-919a-bf04065821e8.png">
 
-そのため、nendSDKのプラグインは提供していませんので、問い合わせがあった場合は、`Alfort（サーバーチーム等）`にご相談下さい。
-
 ## <a name ="mediation">広告のメディエーションとは
-複数のアドネットワークの広告をアプリに配信できる機能。  
+1つのSDKの実装だけで複数アドネットワークの広告をアプリに配信できる機能。  
 <img width="817" alt="2019-01-28 16 27 04" src="https://user-images.githubusercontent.com/9563506/51820576-960b7a80-2319-11e9-9be1-0aa39e151a63.png">
 
 ### メディエーションなしのイメージ
 <img width="877" alt="2019-01-28 16 27 40" src="https://user-images.githubusercontent.com/9563506/51820592-aae80e00-2319-11e9-8bcf-efc28ad48945.png">
 
 ### AdMobメディエーションのイメージ
+- アプリ側で実装するのは基本的に**AdMob SDK**だけ
+- アドネットワークの種類によっては、独自の機能を利用するためにアダプタのAPIを追加で実装する場合もある
+
 <img width="867" alt="2019-01-28 16 28 30" src="https://user-images.githubusercontent.com/9563506/51820633-c9e6a000-2319-11e9-855e-acaeea58d47a.png">
 
 ### メディエーションのまとめ
-- 複数のアドネットワークの広告を配信できる機能
+- 複数のアドネットワークの広告を配信できる
 - 一般的なメリット
-  - 開発コスト（時間、人件費など）が少ない → 1つのSDKの実装
-  - 在庫切れになりにくい → 収益安定
+  - 開発コスト（時間、人件費など）が少ない
+    - 1つのSDKの実装
+  - 在庫切れになりにくい
+    - 収益安定
 - AdMobメディエーションでnendSDKを利用するメリット
   - 正式連携対応
-  - 対応フォーマットが充実 : バナー、インタースティシャル、動画広告
-- AdMobのスマートバナーにはiOSの一部のみ対応（詳細はマニュアルを）
-  - iPhone（縦向きのみ）: 320×50
-  - iPad: 320×50, 728×90
+  - 対応フォーマットが充実
+    - バナー
+    - インタースティシャル
+    - ネイティブ
+    - 動画広告
+- デメリット
+  - 運用するアドネットワークの数が多いと管理や運用のコストもかかる
+  - AdMobの仕様やスケジュールに依存する
 
 ## <a name ="custom_event">カスタムイベントとは
-メディエーション連携でサポートされていないアドネットワークを利用するための機能。  
-現在、nendでカスタムイベントが利用できるのは以下の2つ。
+- メディエーション連携でサポートされていないアドネットワークを利用するための仕組み
+- 機能としてはメディエーションと同様
+- 現在、nendでカスタムイベントが利用できるのはMoPubのみ
 
-<img width="683" alt="2019-01-28 16 31 12" src="https://user-images.githubusercontent.com/9563506/51820758-29dd4680-231a-11e9-9525-edac2cefc3a1.png">
+<img width="256" src="https://user-images.githubusercontent.com/9563506/120419649-cc4fdd80-c39d-11eb-8995-7cfb3737d8e5.png">
 
 ### MoPubカスタムイベントのイメージ
+- アプリ側で実装するのは基本的に**MoPub SDK**だけ
+- アドネットワークの種類によっては、独自の機能を利用するためにアダプタのAPIを追加で実装する場合もある
+
 <img width="875" alt="2019-01-28 16 31 52" src="https://user-images.githubusercontent.com/9563506/51820792-40839d80-231a-11e9-869c-51ab3b1d99ef.png">
 
 ### カスタムイベントのまとめ
 - メディエーション連携でサポートされていないアドネットワークを利用するための機能
 - 一般的なメリット
-  - メディエーションと同等の機能が利用可能
-  - 開発コスト（時間、人件費など）が少ない → 1つのSDKの実装 + カスタムイベントの設定
-  - 在庫切れになりにくい → 収益安定
-
-- MoPubカスタムイベントについて
-  - 現在、メディエーション連携していないためカスタムイベント機能を利用している
-  - 対応フォーマット : バナー、インタースティシャル、動画広告
-
-- AdMobカスタムイベントについて
-  - メディエーションの正式連携版を使ってもらう
-
+  - 開発コスト（時間、人件費など）が少ない
+    - 1つのSDKの実装 + カスタムイベント設定
+  - 在庫切れになりにくい
+    - 収益安定
+- 対応フォーマット
+  - バナー
+  - インタースティシャル
+  - 動画広告
+- デメリット
+  - 運用するアドネットワークの数が多いと管理や運用のコストもかかる
+      - AdMobの仕様やスケジュールに依存する
 
 ## <a name ="ssp">nendSDKのSSP接続先
-これ以外の静止画広告（バナー、ネイティブ）はJSタグでの連携。
+- SSPとは？
+  - QiitaTeam記事の[アドテクノロジー基礎](https://fancsdev.qiita.com/ygoodspeed/items/48637a07078cf8c68027)を参照
+- SSP事業者側でメディエーション機能を提供している
+- 静止画広告（バナー、ネイティブ）はJSタグでメディエーション連携している
 
 |SSP|動画リワード|動画インタースティシャル|動画ネイティブ|
 |:-:|:-:|:-:|:-:|
@@ -232,3 +336,7 @@ https://github.com/fan-ADN
 
 #### アプリの通信内容から利用している広告を調べたりできるか？
 - どの程度の精度で調べられるかやってみないと分からない
+
+## <a name ="history">過去の勉強会資料
+- [created 2018/09/19 pdf](https://github.com/fan-ADN/nendSDK-Document-Private/files/2801999/nendSDK.ver1.0.0.pdf)
+- [created 2019/03/13 gist](https://gist.github.com/fan-t-fukuoka/914157b6d18ef05d2705eeeb8f83ac06)
