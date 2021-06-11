@@ -337,6 +337,23 @@ https://github.com/fan-ADN
 #### アプリの通信内容から利用している広告を調べたりできるか？
 - どの程度の精度で調べられるかやってみないと分からない
 
+#### 現在は積極的に運用やサポートをしていないプラグインの話は公言しない方がよいか？
+- 正式なアナウンスは行っていないため公言は控えておいてください
+- 長期間アップデートされていない様子はGitHubのリポジトリを見れば分かるので、察しているデベロッパーやメディアはいるかもしれません
+
+#### Advertising IDはユーザーによってリセットされる度に一意となり、重複はないものか？
+- 重複しないものになります
+
+#### AdMobなどのメディエーションとSSPの棲み分けや違いは？
+- どちらもメディエーション機能を提供している事業者です
+- 現在のAdMobメディエーションはアダプタをgoogle側で開発や保守、リリースを行っています
+- MoPubのアダプタはnendで開発や保守、リリースを行っています
+- アドフリくんやAd GenerationなどはSSP事業者側でアダプタの開発や保守、リリースを行っています
+
+#### TD(Treasure Data)にIDFAが空になっているデータがあるが、それはオプトアウト時とJSタグのどちらの場合のデータか？
+- その判別はSDKチーム側では分かりません。
+
 ## <a name ="history">過去の勉強会資料
 - [created 2018/09/19 pdf](https://github.com/fan-ADN/nendSDK-Document-Private/files/2801999/nendSDK.ver1.0.0.pdf)
 - [created 2019/03/13 gist](https://gist.github.com/fan-t-fukuoka/914157b6d18ef05d2705eeeb8f83ac06)
+- [created 2021/06/11 pdf (Google Drive)](https://drive.google.com/drive/folders/11rIP0HCd7K288I3YCBU1dTVocoeTMT3l?ths=true)
