@@ -27,6 +27,9 @@
 * [[Code Coverage|CodeCoverage]]
 * [Serverチームへの提供アプリなど](https://github.com/fan-ADN/app-From-SDKTeam-To-ServerTeam/wiki)
 
+## 定例MTG
+* [[議事録|SDKチームMTG議事録]]
+
 ## 開発環境関連
 * [検証端末](https://fancsdev.qiita.com/shared/items/286d004d351608bd09a3)
 * [[Apple Developer デバイス登録|AppleDeveloperDevices]]
