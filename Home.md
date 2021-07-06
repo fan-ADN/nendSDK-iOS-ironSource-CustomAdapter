@@ -13,6 +13,9 @@
 ## GitHubリポジトリ
 * [[3課で管理しているリポジトリ一覧|GitHubRepositories]]
 
+## Firebaseプロジェクト
+* [[3課で管理しているFirebaseプロジェクト一覧|FirebaseProjects]]
+
 ## Slackチャンネル
 * [[業務で使用する各チャンネルの説明|Slack-channels]]
 
