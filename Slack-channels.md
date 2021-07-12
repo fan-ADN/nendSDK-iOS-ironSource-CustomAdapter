@@ -69,6 +69,11 @@ nendに関わる部署全員が参加
   - nend営業全般
 - nend_media-all
   - nendメディア営業チーム
+- ios14-dev
+  - iOS14の開発に関する全般をやり取りする
+- ios15-dev
+  - iOS15の開発に関する全般をやり取りする
+
 
 ## サービス開発部
 - service-dev
