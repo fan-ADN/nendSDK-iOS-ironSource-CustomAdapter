@@ -6,6 +6,12 @@
 ## 業務知識
 * [[業務知識まとめ|Knowledge]]
 
+## 業務・担当マップ（miro）
+- 業務マップ
+  - https://miro.com/app/board/o9J_lKx1F40=/
+- タスク担当者マップ
+  - https://miro.com/app/board/o9J_l7XSXo4=/
+
 ## アカウント関連
 * [[動作確認とかで使う共有アカウント|AccountInfo]]
 * [[業務で使用するアカウントの説明|AccountInfo-dev]]
