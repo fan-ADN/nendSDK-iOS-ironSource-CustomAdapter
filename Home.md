@@ -38,6 +38,15 @@
 
 ## 定例MTG
 * [[議事録|SDKチームMTG議事録]]
+  - 議事録の運用手順
+    - 事前準備
+      1. https://github.com/fan-ADN/nendSDK-Document-Private をクローンする
+      2. masterブランチをチェックアウトする
+    - 議事録を書く
+      1. [SDKチームMTG議事録.md](https://github.com/fan-ADN/nendSDK-Document-Private/blob/master/Proceedings/SDKチームMTG議事録.md)ファイルを編集する
+    - 議事録をwikiに反映する  
+      1. masterブランチにコミット, プッシュする
+      2. [mirroring-to-wiki.command](https://github.com/fan-ADN/nendSDK-Document-Private/blob/master/mirroring-to-wiki.command)コマンドを実行する
 
 ## 開発環境関連
 * [検証端末](https://fancsdev.qiita.com/shared/items/286d004d351608bd09a3)
