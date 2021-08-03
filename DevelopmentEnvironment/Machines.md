@@ -33,6 +33,9 @@ CIやリモートワークに使っているマシンに関する情報です。
 - 現在、実機端末は繋げておらず、AndroidのEmulatorだけ立ち上げています。
 - ~~起動する順番とJenkins接続には少々ハックの上で接続しています。~~
   - 現在Jenkinsは動かしていません。
+- 2021年8月以降、PCの電源を切ってあります
+  - リモートワーク環境からOSアップデートやシミュレーターなどのメンテナンスが出来ないため
+  - リモートワークでの良い活用方法が見つかれば利用再開してもいいかも
 
 ## mac mini（CI用、リモート用）
 - コンピュータ名
@@ -97,7 +100,7 @@ CIやリモートワークに使っているマシンに関する情報です。
   - jobsで`runs-on: [self-hosted, macos, m1]`のようにラベルを指定する
 
 # Self-hosted runnersのマシン
-![img](https://user-images.githubusercontent.com/9563506/117904567-8f4b7a80-b30c-11eb-8a6d-a2987ba4b41d.png)
+![img](https://user-images.githubusercontent.com/9563506/127966384-4eeb8b12-52ef-44f4-ba62-c43c9e7aeb22.png)
 
 - GitHub Actionsの実行にこれらの共有PC（Windows/Mac）を利用しています。
 - [カスタムラベル](https://docs.github.com/ja/actions/hosting-your-own-runners/using-labels-with-self-hosted-runners)を作成して利用できます
@@ -106,8 +109,12 @@ CIやリモートワークに使っているマシンに関する情報です。
   - ラベル追加や削除などしたい場合はマネージャーに依頼してください
 - RNxxx(WidnowsノートPC)はオフィスで共有マシンとしてではなく、自宅にてRunnerマシンとして割り当てて利用しています。
   - 主にAndroid向けのビルドやテストに使用しています
-  - `RN0878`はfan-t-fukuokaの家で動かしています
-- `Offline`になっているものは、単純にネットワーク未接続、または、マシンのOSアップデートが動いた時に再起動待ちになっている可能性があります。
+  - `RN1541`はfan-t-fukuokaの家で動かしています
+- `Offline`になっている場合の可能性
+  - ネットワーク未接続
+  - OSアップデートによる再起動後のログイン待ち
+  - 未使用
+  - など
 - マシンが自動的にスリープ状態にならないように設定しておく
   - [Macのスリープ/スリープ解除を設定する](https://support.apple.com/ja-jp/guide/mac-help/mchle41a6ccd/mac)
     - Macが自動的にスリープ状態にならないようにする: 「ディスプレイがオフのときはコンピュータを自動でスリープさせない」を選択します。
