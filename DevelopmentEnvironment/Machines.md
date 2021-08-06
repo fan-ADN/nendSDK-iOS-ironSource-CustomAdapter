@@ -121,3 +121,18 @@ CIやリモートワークに使っているマシンに関する情報です。
   - Windowsのやり方はググる
 - 参考記事など
   - [GitHub Actions のデバッグをローカルで行う](https://zenn.dev/snowcait/articles/2b4a903b9fd584)
+- Self-hosted runnersにマシンを追加する手順
+  - https://docs.github.com/ja/actions/hosting-your-own-runners/adding-self-hosted-runners#adding-a-self-hosted-runner-to-an-organization
+  - WindowsPC
+    - 上記Docsの手順に沿って設定する
+      - アクセストークンの発行はマネージャーに依頼
+      - シェルを管理者権限で実行する必要があり
+    - JDKインストール
+      - Java8が入ったバージョン
+    - Android Studioをインストール
+      - AndroidのSDK、adbも同梱されている
+    - 環境変数の設定
+      - JAVA_HOME
+      - ANDROID_SDK_ROOT
+      - Pathに追加
+        - adb.exeのパス
