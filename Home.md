@@ -51,7 +51,7 @@
 ## 開発環境関連
 * [検証端末](https://fancsdev.qiita.com/shared/items/286d004d351608bd09a3)
 * [[Apple Developer デバイス登録|AppleDeveloperDevices]]
-* [Appleデバイス証明書(.p12)](https://pjmanage.adn-mobasia.net/projects/developer/wiki/Apple証明書)
+* [[Apple証明書|AppleCertificate]]
 * [[共有マシン|Machines]]
 * [Jenkinsセットアップ](https://github.com/fan-ADN/nendSDK-CI-CD-backups/wiki/Jenkinsの使い方)
 * [[リモートワーク中のVPNから可能なこと|AvailablesForRemoteWork]]
