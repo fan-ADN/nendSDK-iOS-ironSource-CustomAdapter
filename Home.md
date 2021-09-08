@@ -55,3 +55,6 @@
 * [[共有マシン|Machines]]
 * [Jenkinsセットアップ](https://github.com/fan-ADN/nendSDK-CI-CD-backups/wiki/Jenkinsの使い方)
 * [[リモートワーク中のVPNから可能なこと|AvailablesForRemoteWork]]
+
+## 採用活動
+- [[採用活動についての説明|RecruitmentActivity]]
