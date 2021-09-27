@@ -64,6 +64,16 @@
 ### SDKプラグイン・アダプタ
 - https://github.com/fan-ADN/nendSDK-Document-Private/wiki/Plugins
 
+### cookie(個人情報関連)
+- 2022年4月に個人情報保護法が改正される
+  - [参考サイト](https://portal.bizrisk.iij.jp/article/16)
+  - nendに絡む改正のポイント
+    - > cookie(個人関連情報)の取り扱いについて従来通り個人関連情報(≠個人情報)扱いなのは変わりないですが、提供先で個人情報として扱われる場合は利用者に同意を得ることが義務付けられることとなります。
+  - nendの結論
+    - > nendの場合は、その他情報を紐付けて個人情報として扱う予定はありませんし、第三者への提供も行っておりません。従って、今回の法改正に関する対応は不要であると判断しております。
+- 参照スレッド
+  - https://fancs-dev.slack.com/archives/C0L7YAW3E/p1632448015071200
+
 ## 問い合わせ対応
 * [[問い合わせ対応|Knowledge-inquiries]]
 

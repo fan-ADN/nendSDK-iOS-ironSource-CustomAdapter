@@ -73,7 +73,10 @@ nendに関わる部署全員が参加
   - iOS14の開発に関する全般をやり取りする
 - ios15-dev
   - iOS15の開発に関する全般をやり取りする
-
+- prj-nend-ios15
+  - iOS15のプロジェクト全般をやり取りする
+- nend-dev-emergency
+  - nendのシステム的な問題が見つかった際にやり取りする
 
 ## サービス開発部
 - service-dev
