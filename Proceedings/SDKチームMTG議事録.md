@@ -1,28 +1,27 @@
-# 2021/09/27 SDKチームMTG議事録
+# 2021/10/04 SDKチームMTG議事録
 ## 参加者
 - 外山
 - 加納
 - 福岡
 - 木南
+- 船越
 
 ## 担当状況と直近予定
 ### SDK
 - iOS（木南、加納）
   - 正式版検証
       - iPad関連のユーザーエージェント周りで問題
-      - サーバー側が修正完了次第再度検証
+      - サーバー側が修正完了
+      - 解消済み
   - SKA検証(SKA3.0対応)アプリの改修
     - サーバーサイドの対応方針待ち
   - iOS15周り
     - 週次報告
     - 調査・対応依頼があればそちらも
 - Android（外山、福岡）
-  - Android 12の検証継続
-    - 細かいエラー周りの調査・対応
-      - nendSDKの対応は完了
-      - 近日中に Android12対応版としてリリース予定
-      - GAIDの扱いについてのwiki追記はすぐリリース
-    - あと１〜２週ほどで正式リリースされる模様
+  - Android 12の検証(完)
+    - 10/4 午後リリース
+      - 今日リリースらしい？
   - VASTエラーの調査
     - SDK側の調査では再現できなかった
     - 草開さんにリマインド済み、情報待ち
@@ -36,7 +35,8 @@
 - プラグイン
   - Unity（福岡）
     - 新バージョンがリリースされたら動作検証しておく
-    - AndroidのnendSDKがアップデートされたらアップデートする
+    - AndroidのnendSDKをリリース後追従
+      - iOSを待たないで一旦Androidだけでリリース
   - Flutter（加納、外山）
     - iOS側はアップデート完了
     - Android側をアップデート中
@@ -56,21 +56,10 @@
   - 適宜サポート、アドバイス
 
 ## 共有事項
-- #nend-dev-emergencyチャンネルについて
-  - https://fancs-dev.slack.com/archives/C0L7YAW3E/p1632275108067600?thread_ts=1632223158.066500&cid=C0L7YAW3E
-  - 3課wikiに追記
-    - https://github.com/fan-ADN/nendSDK-Document-Private/wiki/Slack-channels#nend
-- SDKリリースの周知
-  - https://fancs-dev.slack.com/archives/C0L7YAW3E/p1631599424043700
-  - iOSとAndroidの下記wikiに追記
-    - https://github.com/fan-ADN/nendSDK-iOS-source/wiki#リリース手順
-    - https://github.com/fan-ADN/nendSDK-Android-source/wiki/SDKのリリース手順#4リリース周知
-- 2022年4月に個人情報保護法が改正
-  - https://fancs-dev.slack.com/archives/C0L7YAW3E/p1632448015071200
-  - 3課wikiに追記
-    - https://github.com/fan-ADN/nendSDK-Document-Private/wiki/Knowledge#cookie個人情報関連
-- 10/1 17:30~
-  - 船越さん顔合わせ予定
+- 2021年度個人情報保護テスト 10/15まで（全員対象）
+  - https://fancs-dev.slack.com/archives/C014J5WSVAA/p1633050127129000
+- プロジェクト別計算シート記入
+  - 10/5 まで（仮、早めに）
 
 ## 各自対応の進捗、予定
 
@@ -81,10 +70,11 @@
     - iPad周りでバグ
 - iOS15.1検証/調査
   - 今のところ問題なし
-- iOS12.5.5検証/調査
-  - セキュリティ周りのパッチなので動作には問題なし
+- iOS15.2検証/調査
+  - SKANのポストバックがエラーになって飛ばない
+    - フィードバックを送るかも
+- Appleの証明書のアップデート
 - レビュー
-- 面接準備
 
 ### 今週の対応予定
 - iOS15 調査＆検証
@@ -108,7 +98,6 @@
 - レビュー
 
 ### 今週の対応予定
-- iOS15検証/調査続き
 - nendSDK-Flutter
   - ドキュメント整備
 - レビュー
@@ -123,24 +112,25 @@
 
 ### 先週の進捗
 - nendSDK-Android
-   - Android12周りの修正
-    - PiPの修正(PR merge済)
+  - Android12向けのwikiの更新
+  - 8.0.0のリリース準備
 - nendSDK-Flutter
-  - InterstitialのAndroid側 (PR出している)
+  - 動画リワードの実装(Android) PR済み
+- 面接参加
 
 ### 今週の対応予定
 - nendSDK-Android
-  - nendSDKのリリース準備
-  - 動画広告で誤った広告フォーマットのIDを設定してもロード成功してしまう
+  - 8.0.0 リリース
+  - 残タスクをなにかやる
 - nendSDK-Flutter
-  - Androidの動画リワード実装
+  - Androidの動画リワード実装, PR対応
+  - 動画インステやるかも
 - VASTエラーの調査
   - 草開さんからの情報待ち
 - レビュー
 
 ### 問い合わせ対応
-- https://pjmanage.adn-mobasia.net/issues/27178
-- https://pjmanage.adn-mobasia.net/issues/27464
+- なし
 
 ### 問題点、課題
 - なし
@@ -152,21 +142,21 @@
 - VASTエラーの調査
   - 草開さんにリマインド済み
     - 動きなし
+- 新入社員の方の整備
 - 採用
-  - １名内定承諾
-    - 入社日 10/1
-  - Androidエンジニアと面談
   - 書類選考
   - スカウト継続
 
 ### 今週の対応予定
-- 新入社員の方の整備
 - 各種レビュー
 - Chrome
   - 新しいバージョンの動作検証
 - 採用(注力)
   - 面談
   - 書類選考
+  - スカウト継続
+  - 10/8 Androidエンジニア
+    - カジュアル面談予定
 
 
 ### 問い合わせ対応
@@ -181,16 +171,16 @@
   - サイボウズ登録時はサービス開発部の欄にも登録する
 - 木南
   - 10月から週1で有給を取る予定
-  - 10/11(月) 有給
+  - 10/11,12 有給
 - 福岡
-  - 明日(火)午後通院
-  - 今日14時～15時くらいネット周りで離席
+  - なし
+  - 来週以降有給取得するかも
 - 加納
-  - 明日(火)ワクチン接種予定
+  - 明日(火) はやく始めて17時ごろ終了予定
 - 外山
   - なし
 
 ----
 
 ## 次回ファシリテーター（木南->外山->加納->福岡の順番で）
-- 加納さん
+- 福岡さん
