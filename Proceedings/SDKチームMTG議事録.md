@@ -1,4 +1,4 @@
-# 2021/10/25 SDKチームMTG議事録
+# 2021/11/01 SDKチームMTG議事録
 ## 参加者
 - 加納
 - 福岡
@@ -12,41 +12,33 @@
   - SKA検証(SKA3.0対応)アプリの改修
     - サーバーサイドの対応方針待ち
   - iOS15周り
-    - iOS15.1 RC
-      - 動作上に問題はなし
+    - iOS15.2 beta
+      - 確認中
+        - 動作に問題なし
     - 週次報告
     - 調査・対応依頼があればそちらも
 - Android（外山、福岡）
-  - Android 12 が正式配信された
-    - 検証端末での動作検証済み
-    - issueもclose済み
   - VASTエラーの調査
     - SDK側の調査では再現できなかった
     - 草開さんにリマインド済み、情報待ち
-  - Applovinからの要望
-    - 依存性を削除する対応中
 - アダプタ（加納、外山、木南）
   - MoPub
     - 新しいMoPubSDKがリリースされたら優先して追従対応しリリースする
     - 他のissue対応は余裕ある時にでも出来ればOK
-    - iOS側がアップデート来ている
+    - iOSの方対応中
+      - v7.1.0.0
   - AdMob
     - 新バージョンがリリースされたら動作検証しておく
     - 他のissue対応は余裕ある時にでも出来ればOK
     - iOS側がアップデート来ている
+      - 今週どこかでやる予定(木南さん) 
 - プラグイン
   - Unity（福岡）
     - 新バージョンがリリースされたら動作検証しておく
-    - AndroidのnendSDKをリリース後追従
-      - v8.0.1に追従予定
-    - iOSのSDKのリリースにも追従予定
-      - v7.1.0に追従予定
+    - v4.2.0 リリース準備 レビュー待ち
   - Flutter（加納、外山）
     - iOS側はアップデート完了
-      - 一部修正対応などはあり
-    - Android側をアップデート中
-      - 実装中
-      - あとはリファクタリング予定
+    - Android側をアップデート完了
     - リリースに向けたドキュメント整備
   - cocos2d-x、AdobeAir、React Native は優先度低め
     - 対応するかプロダクトと相談
@@ -63,46 +55,49 @@
   - 適宜サポート、アドバイス
 
 ## 共有事項
-- 10/29(金)サービス開発部全体会議
-  - 進行役は3課担当
-    - 進行：加納さん
 - 2021年度年末調整
-  - 情報入力期限：2021年10月25日（月）23:59まで
   - 年末調整関係書類 提出期限：2021年11月1日（月）18:00まで
-  - https://fancs-dev.slack.com/archives/C014J5WSVAA/p1633586559164000
+  - 未到着分の控除証明書 到着期限：2021年11⽉19⽇（金）必着
+  - https://fancs-dev.slack.com/archives/C014J5WSVAA/p1635124116030500
+- 経費精算
+  - 11月1日締め日
+  - https://fancs-dev.slack.com/archives/C014J5WSVAA/p1635726836069100
+- 10月勤怠締め
+  - 11月5日締め日
+- 10月分のプロジェクト別計算シート入力
+  - 11月5日まで
+  - https://docs.google.com/spreadsheets/d/1wUb1ayRsQ704oKfLswhcCXZ_jZCWzNM7ddbXRGZF1mQ/edit#gid=1817599120
+- ストレスチェック
+  - 11月12日まで
+  - https://fancs-dev.slack.com/archives/C014J5WSVAA/p1635728401070500
 
 ## 各自対応の進捗、予定
 
 ## 木南
 ### 先週の進捗
 - nendSDK-iOS
-  - インターステシャルでdismissするとクラッシュする不具合
-  - v7.1.0リリース
-  - iOS 15.1 RC検証
+  - iOS 15.2 beta検証
     - 影響はなし
-  - 検証端末の整理
-    - 詳細はQiita-teamで
+  - ナレッジ共有
 - レビュー
 
 ### 今週の対応予定
-- nendSDK-iOS-sample
-  - 今週中にリリース
-- nendSDK-iOS-mopub-customevent
-  - SDKのアップデート
 - nendSDK-iOS-admob-mediation
-  - google側でアップデートが来たら検証
+  - 検証
 - ナレッジ共有
   - nendSDK-iOS
 - 各種レビュー
 
 ### 問い合わせ対応
-- https://pjmanage.adn-mobasia.net/issues/27485
-  - 【iOSSDK】ネイティブ広告の画像が表示されない
-    - AdMobメディエーション関連
-      - iconから取得していたためimageから取得するようにしてもらうことで解決
-- https://pjmanage.adn-mobasia.net/issues/27487
-  - バナーでバッテリー消耗が激しい
-    - リロードを行わないように設定してもらうことで改善できないか提案
+- https://pjmanage.adn-mobasia.net/issues/27495
+  - 【iOSSDK】広告が表示されない件について
+    - 動画インステが表示されない
+      - 広告枠が間違っているという回答
+- https://pjmanage.adn-mobasia.net/issues/27496
+  - 【iOSSDK】Admobメディエーション利用時のバナーサイズ
+    - Bannerの調整がうまくいかないという内容
+      - adaptive広告にnendが対応していないので対応してませんという回答
+        - googleの方にはadaptiveに○がついてた
 
 ### 問題点、課題
 - なし
@@ -110,13 +105,16 @@
 ## 加納
 ### 先週の進捗
 - nendSDK-Flutter
-  - ネイティブ実装削除
-  - AndroidのlogLevel設定
+  - READMEを書く
+- nendSDK-iOS-MoPub-CustomEvent
+  - リリース準備
 - レビュー
 
 ### 今週の対応予定
 - nendSDK-Flutter
-  - READMEまとめる
+  - READMEを書く
+- nendSDK-iOS-MoPub-CustomEvent
+  - リリース準備
 - レビュー
 
 ### 問い合わせ対応
@@ -128,47 +126,49 @@
 ## 外山
 ### 先週の進捗
 - nendSDK-Android
-  - v8.0.1 リリース
-  - kotlinx-coroutine-androidの削除
-    - PRレビュー中
-  - ネイティブ動画の全画面表示時のエラー
-    - レビュー、マージ済み
+  - テストの調査、修正
+  - 動画広告で誤った広告フォーマットのIDを設定してもロードできてしまう件
+    - 対応中
+  - access deniedがでる件の調査 
+    - 今は保留
 - nendSDK-Flutter
-  - Refactoring for Android
-
+  - iOSでいらない定義を削除
 ### 今週の対応予定
 - nendSDK-Android
   - 並列処理時のエラーの原因を見つける
+  - テストの調査、修正
+  - 動画広告で誤った広告フォーマットのIDを設定してもロードできてしまう件
 - 世界遺産ビューア for Android
   - アップデート
-- nendSDK-Flutter
-  - リファクタリング
-  - iOS側のメソッド定義を削除する
 - VASTエラーの調査
   - 草開さんからの情報待ち
 - レビュー
 
 ### 問い合わせ対応
-- なし
+- https://pjmanage.adn-mobasia.net/issues/27491
+  - 【AndroidSDK】Android11だけnendインタースティシャルが2回目以降表示されなくなる
+    - 原因わからないので実装を相手に見せてとお願い中
 
 ### 問題点、課題
 - なし
 
 ## 船越
 ### 先週の進捗
-- 練習用アプリ開発
-  - ネイティブ広告の実装
-    - xibを使わない実装
-      - 一旦保留
-- Flutterチュートリアル
-  - 完了
-  - ソースコードを読む(不明な点は加納さんに聞きつつ行った)
 - nendSDK-iOS
   - ソースコード閲覧中
-
+- nendSDK-Unity
+  - サンプルアプリの動作確認(iOS, Android)
+  - 新規プロジェクトに組み込んで確認する
+    - 途中まで
+- レビュー
 ### 今週の対応予定
 - nendSDK-iOS
-  - ソースコード閲覧
+  - issueの対応
+    - https://github.com/fan-ADN/nendSDK-iOS-source/issues/811
+- nendSDK-Unity
+  - 新規プロジェクトに組み込んで確認する
+    - 続き
+- レビュー
 
 ### 問い合わせ対応
 - なし
@@ -179,15 +179,15 @@
 ## 福岡
 ### 先週の進捗
 - 各種レビュー
-- Android 12が正式配信された
-  - 動作検証済み
 - VASTエラーの調査
   - 草開さんにリマインド済み
     - 動きなし
 - 採用
   - スカウト
+    - Androidエンジニア二次面接終了
 - nendSDK-Unity
   - SDKのアップデート対応
+    - PR作成 レビュー待ち
 
 ### 今週の対応予定
 - 各種レビュー
@@ -195,39 +195,28 @@
   - 新しいバージョンの動作検証
 - nendSDK-Unity
   - アップデート対応
+  - 今週リリースしたい
 - 採用
-  - 10/27 2次面接予定（Androidエンジニア）
-    - リスケ中
   - 11/5 カジュアル面談予定（Androidエンジニア）
+    - 前日に事前打ち合わせ
   - スカウト継続
 
 ### 問い合わせ対応
 - https://pjmanage.adn-mobasia.net/issues/27483
-- https://pjmanage.adn-mobasia.net/issues/27486
+  - 【Android SDK】動画リワード枠でエラーが発生
+    - 調査は中断
 
 
 ### 問題点、課題
-- 問い合わせが多かった
-  - あまりにも多い場合は改善できるよう取り組む必要があるかも
+- なし
 
 ## その他
 - 適宜有給取得
   - 休暇申請&サイボウズ登録をお願いします
   - サイボウズ登録時はサービス開発部の欄にも登録する
-- 木南
-  - 10/27(水) 休み予定
 - 福岡
-  - 10/28(木) 休み予定
-- 外山
-  - 今週のどこかに出社予定
-
-### 加納さんから
-
-## 年内に異動します！！
-
-- タイミングは未定・・・(年始予定)
-
-----
+  - 11/02(火) 休み予定
+  - 11/12(金) 休み予定
 
 ## 次回ファシリテーター（木南->外山->加納->福岡の順番で）
-- 加納さん
+- 福岡さん
