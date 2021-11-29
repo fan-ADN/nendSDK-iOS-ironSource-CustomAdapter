@@ -236,7 +236,7 @@
     - 月曜日から出社はｼﾀｸﾅｲﾖﾈｰ
   - 木南さん
     - 予定わかったら調整さんに入れる
-      - https://fancs-dev.slack.com/archives/C016QKKF95E/p1637146830069800
+      - https://chouseisan.com/s?h=2094d3927a084f6dbad40819e6c6b519
 
 ## 次回ファシリテーター（木南->外山->加納->福岡の順番で）
 
