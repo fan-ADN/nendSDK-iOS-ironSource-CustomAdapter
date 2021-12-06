@@ -58,3 +58,4 @@
 
 ## 採用活動
 - [[採用活動についての説明|RecruitmentActivity]]
+- [[採用面接勉強会|recruiting]]
