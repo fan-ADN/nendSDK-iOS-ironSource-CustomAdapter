@@ -38,26 +38,35 @@ GitHubにプッシュする都合上、念の為パスワード類はzip暗号�
 
 ## 検証用の他社広告アカウント関連
 
-#### AdMob
+#### [AdMob](https://admob.google.com/home/)
 
 * ID
   * fancs.adndev01@gmail.com
 * PW
   * 9から始まるやつ
 
-#### MoPub
+#### [MoPub](https://app.mopub.com/dashboard)
 
 * ID
   * fancs.adndev01@gmail.com
 * PW
   * 別ファイル参照
 
-#### IronSource
+#### [IronSource](https://platform.ironsrc.com/partners/dashboard)
 
 * ID
   * fancs.adndev01@gmail.com
 * PW
   * 9から始まるやつ
+
+#### [AppLovin/MAX](https://dash.applovin.com/o/mediation/ad_units/579536)
+
+* ID
+  * fancs.adndev01@gmail.com
+* PW
+  * 別ファイル参照
+* 2FA
+  * 検証端末`Fan-SD122`利用(電話番号でセキュリティコード認証)
 
 ## CI関連
 
