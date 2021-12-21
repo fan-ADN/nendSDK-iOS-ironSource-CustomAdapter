@@ -12,9 +12,12 @@
 - タスク担当者マップ
   - https://miro.com/app/board/o9J_l7XSXo4=/
 
+## 新入社員向け準備項目
+- [入社後の準備項目](https://docs.google.com/spreadsheets/d/1SIkB-qQ8i1uztdORpsn1rP7cB8Y2FZ1Ay6a6QTyv_Yg/edit#gid=0)
+
 ## アカウント関連
-* [[動作確認とかで使う共有アカウント|AccountInfo]]
-* [[業務で使用するアカウントの説明|AccountInfo-dev]]
+* [[動作検証、CI用などの共有アカウント|AccountInfo]]
+* [[業務で使用するアカウント、メール|AccountInfo-dev]]
 
 ## GitHubリポジトリ
 * [[3課で管理しているリポジトリ一覧|GitHubRepositories]]
