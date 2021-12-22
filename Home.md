@@ -62,6 +62,7 @@
 ## 採用活動
 - [[採用活動についての説明|RecruitmentActivity]]
 - [[採用面接勉強会|recruiting]]
+- [[参考情報|recruiting-references]]
 
 ## 部門別オフィス利用体制
 - https://fancs-dev.slack.com/archives/C2GCVN198/p1633658706043300
