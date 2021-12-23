@@ -28,6 +28,10 @@
 ## Slackチャンネル
 * [[業務で使用する各チャンネルの説明|Slack-channels]]
 
+## Google Chat スペース
+* [dev3rd](https://mail.google.com/mail/u/0/#chat/space/AAAAeaKPUb0)
+  * Slackが使えない時の連絡用に使います
+
 ## Googleドライブ共有
 * [[業務で使用する共有フォルダなどの説明|GoogleDriveInfo]]
 
