@@ -49,9 +49,9 @@ nendに関わる部署全員が参加
 - nend
   - nendに関する全般的なコミュニケーションや共有
   - SDKをリリースした場合はここに投稿して周知する
-- nend_dev
+- nend-dev
   - nendサーバーサイドの開発とやり取りする
-- nend_release
+- nend-release
   - nendサーバーサイドのリリース業務用
 - nend_mraid
   - nendのmraidの開発に関するやり取りをする
@@ -82,6 +82,8 @@ nendに関わる部署全員が参加
 - service-dev
 - qiita_team
 - サ開ラウンジ
+- チームフォーティ
+- 酒
 - times_XXX
 
 ### ファンコミ全体
@@ -93,3 +95,4 @@ nendに関わる部署全員が参加
 - 経理
 - 総務
 - 行政処分-コンプラニュース配信
+- スマホ_pc紛失_情報漏洩緊急連絡
