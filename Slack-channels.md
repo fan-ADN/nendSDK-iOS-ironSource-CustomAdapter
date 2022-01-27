@@ -25,6 +25,8 @@
   - 現在未使用
   - 以前はjenkinsでAdMobやMoPubのリポジトリでリリース情報をチェック->更新あればテスト実行->テスト結果の通知をしていた
   - 現在jenkinsは使っていない
+- team_sdk_ios
+  - iOS/iPadOSに関する情報収集やディスカッションに利用
 
 ## GERA
 - neobiz_gera_dev
@@ -73,6 +75,8 @@ nendに関わる部署全員が参加
   - iOS14の開発に関する全般をやり取りする
 - ios15-dev
   - iOS15の開発に関する全般をやり取りする
+- ios16-dev
+  - iOS16に関する情報収集、共有、必要に応じて開発に関するやり取りをする
 - prj-nend-ios15
   - iOS15のプロジェクト全般をやり取りする
 - nend-dev-emergency
