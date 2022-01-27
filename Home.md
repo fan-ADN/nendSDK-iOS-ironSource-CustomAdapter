@@ -1,5 +1,8 @@
 # 開発3課wiki
 
+## 事業方針資料
+* [[事業方針|BusinessPlans]]
+
 ## 職務内容
 * [[職務内容|JobDesctiption]]
 
