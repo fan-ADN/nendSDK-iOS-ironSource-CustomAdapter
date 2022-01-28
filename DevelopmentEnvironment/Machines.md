@@ -17,6 +17,8 @@ CIやリモートワークに使っているマシンに関する情報です。
     - iMac
     - normal
     - flutter
+- OSバージョン
+  - macOS Big Sur
 - こちらにJenkins本体がインストールされています（master）
 - Adobeアカウントが必要な作業は、こちらのiMacを使います。
 
@@ -48,6 +50,8 @@ CIやリモートワークに使っているマシンに関する情報です。
     - Mac-mini
     - normal
     - fast
+- OSバージョン
+  - macOS Catalina
 - 情シスからのレンタル品
 - Intelチップの共有Macの中では動作が速い方です
 - リモートワーク環境でVNCにて共有PCを操作したい時にこのMac miniを経由して使います。
@@ -67,6 +71,8 @@ CIやリモートワークに使っているマシンに関する情報です。
     - Mac-mini
     - normal
     - Catalina
+- OSバージョン
+  - macOS Catalina
 - OpenSTFとか使う用です
 
 ## mac mini（CI用）
@@ -96,6 +102,8 @@ CIやリモートワークに使っているマシンに関する情報です。
   - カスタムラベル
     - Mac-mini
     - m1
+- OSバージョン
+  - macOS Big Sur
 - GitHub ActionsのRunnerで使用したい場合
   - jobsで`runs-on: [self-hosted, macos, m1]`のようにラベルを指定する
 
