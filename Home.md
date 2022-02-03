@@ -47,7 +47,11 @@
 * [Serverチームへの提供アプリなど](https://github.com/fan-ADN/app-From-SDKTeam-To-ServerTeam/wiki)
 
 ## 定例MTG
-* [[議事録|SDKチームMTG議事録]]
+- SDKチームMTG
+  - 開発3課全員参加
+  - 毎週月曜日11時〜12時
+    - 祝日、休みの人が過半数などの場合は別日に実施
+  - [[議事録|SDKチームMTG議事録]]
   - 議事録の運用手順
     - 事前準備
       1. https://github.com/fan-ADN/nendSDK-Document-Private をクローンする
@@ -57,6 +61,16 @@
     - 議事録をwikiに反映する  
       1. masterブランチにコミット, プッシュする
       2. [mirroring-to-wiki.command](https://github.com/fan-ADN/nendSDK-Document-Private/blob/master/mirroring-to-wiki.command)コマンドを実行する
+- サービス開発部全体会議
+  - サービス開発部全員参加
+    - 他部署の人が参加する場合もある
+  - 毎月月末11時〜12時
+  - 進行役は課でローテーション
+  - 過去の実施内容
+    - [2022/01](https://fancs-dev.slack.com/archives/C2GCVN198/p1643589991129079)
+    - [2021/12](https://fancs-dev.slack.com/archives/C2GCVN198/p1640308529023400)
+    - [2021/11](https://fancs-dev.slack.com/archives/C2GCVN198/p1638234771008100)
+    - [2021/10](https://fancs-dev.slack.com/archives/C2GCVN198/p1635469249002900)
 
 ## 開発環境関連
 * [検証端末](https://fancsdev.qiita.com/shared/items/286d004d351608bd09a3)
