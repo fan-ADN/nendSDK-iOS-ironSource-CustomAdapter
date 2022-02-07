@@ -1,11 +1,11 @@
-# 2022/01/31 SDKチームMTG議事録
+# 2022/02/07 SDKチームMTG議事録
 
 ## 参加者
 
 - 福岡
 - 船越
-- 木南
-- (外山)
+- 木南(お休み)
+- 外山
 
 ## 担当状況と直近予定
 
@@ -19,18 +19,13 @@
     - iOS 14は継続して報告を行う
     - 調査・対応依頼があればそちらも
 - Android（外山、福岡）
-  - v8.1.0リリース済み
-  - nendSDK-Android-sourceのkotlinサンプルアップデート対応
+  - 細かいタスクを消化中
 - アダプタ（外山、木南）
   - MoPub
-    - クローズに伴う影響調査
-      - 完了
-      - クローズに伴うお知らせの対応を行う (主にサーバサイド)
-        - 草開さんに今後の対応方針について確認中
-    - 直近のSDKリリースが落ち着いたら上記確認して進める
+    - クローズの対応中
   - AdMob
     - 新バージョンがリリースされたら動作検証しておく
-      - Android側 テスト実装＆マージ済み。さらに新しいverあり。
+      - Android側 さらに新しいverあり。
     - 他のissue対応は余裕ある時にでも出来ればOK
     - adaptive bannerのドキュメント記載の件はgoogleに確認中
       - 直近タスクが落ち着いたら確認してみる
@@ -52,6 +47,7 @@
     - ReactNativeリポジトリのdependapotのPRは適宜マージ
     - cocos2d-x
       - 近々リポジトリをアーカイブする方針
+        - MoPubのカスタムイベントのクローズ(2/14(月))と同時に行う
       - 残っているIssueに関してはPendingとする
 - 問い合わせ（全員）
   - 詳細は[3課wikiの問い合わせ対応](https://github.com/fan-ADN/nendSDK-Document-Private/wiki/Knowledge-inquiries)を参照
@@ -60,18 +56,25 @@
 
 - GERA（外山、木南）
   - 適宜サポート、アドバイス
+  - `#neobiz_gera_app_developers` について
+    - https://fancs-dev.slack.com/archives/C01N3E2ASEP/p1643618772437329
+- ハイパーカジュアルゲーム事業
+  - 2022/2/21以降始動予定
+  - slackチャンネル作成
+    - `#fanglobal_publishing_service-development`
 
 ## 共有事項
+- ハイパーカジュアルの開発について
+  - 2/21から始動予定
+    - https://fancs-dev.slack.com/archives/C0J08LR7F/p1643788281540819
+    - メイン開発担当：船越さん
+    - 適宜サポート：3課全員
+  - Slackチャンネル
+    - `#fanglobal_publishing_service-development`
 - iOS16チャンネルについて
   - https://fancs-dev.slack.com/archives/C03083REV8W
-- iOS15のカスタムプロダクトページ
-  - https://fancs-dev.slack.com/archives/C2GD5U9L2/p1643276631156500
-- 経費精算について
-  - https://fancs-dev.slack.com/archives/C014J5WSVAA/p1643272709105200
-- 感染拡大対策モード強化（1/24〜）
+- 感染拡大対策モード「警戒モードI」（1/24〜）
   - https://fancs-dev.slack.com/archives/C014J5WSVAA/p1642668276060800
-- ハイパーカジュアルの開発について
-  - https://fancs-dev.slack.com/archives/C0J08LR7F/p1643356466493819
 
 ## 各自対応の進捗、予定
 
@@ -79,32 +82,15 @@
 
 #### 先週の進捗
 
-- nendSDK-iOS
-  - WebViewの設定情報のI/F追加
-- iOS15.3, iOS15.4beta確認
-  - nendSDKの動作に問題ないことを確認
-- 採用面接
-- レビュー
+- お休み
 
 #### 今週の対応予定
 
-- nendSDK-iOS
-  - WebViewの設定情報のI/F追加
-  - SwiftUIのサンプル反映
-- iOSのアップデートの検証
-  - 新しいバージョンがリリースされたら
-- XCFrameworkの調査
-  - 配布方法の検討
-  - 各アーキテクチャの動作確認
-- ナレッジ共有
-  - nendSDK-iOS関連
-- 各種レビュー
+- お休み
 
 #### 問い合わせ対応
 
-- https://pjmanage.adn-mobasia.net/issues/27555
-  - インタースティシャル広告の表示エラー
-    - 解決済み
+- お休み
 
 #### 問題点、課題
 
@@ -114,25 +100,31 @@
 
 #### 先週の進捗
 
+- MoPub CustomEvent
+  - 廃止対応 (Android/iOS)
 - nendSDK-Android
-  - v8.1.0リリース
-  - admobメディエーションv20対応
-  - kotlinサンプル修正中
-- 世界遺産ビューア
+  - Kotlin DSLへの置き換え検討
 
 #### 今週の対応予定
 
+- MoPub CustomEvent
+  - 廃止対応 (Android/iOS)
 - nendSDK-Android
-  - kolinサンプルの修正/デプロイ
-  - 細かいissueの消化
-- admobメディエーションサンプルのバージョンアップ対応続き
+  - Kotlin DSLへの置き換え検討
+  - その他細かいissueの消化
+- AdMobメディエーションサンプルのバージョンアップ対応続き
+  - a8kun-botから更新が来てないような気がする?
 - 世界遺産ビューア
 
 #### 問い合わせ対応
 
-- https://pjmanage.adn-mobasia.net/issues/27557
-  - 既にサポートを切った端末でインストールエラー
-    - 最新のSDKアップデートで解決できるかもと返答
+- https://pjmanage.adn-mobasia.net/issues/27561
+  - wikiの情報が新しいAndroid Studioとは古かったため起きたエラー
+  - 解決済
+- https://pjmanage.adn-mobasia.net/issues/27560
+  - モンストの件の続きでビルドエラー
+  - こちらも古いAndroid Studio(AGP)が原因とされている
+  - 一旦先方が示した方法で問題ないと回答
 
 #### 問題点、課題
 
@@ -142,20 +134,25 @@
 
 #### 先週の進捗
 
-- お問い合わせ対応（【iOS SDK】動画枠でクラッシュが発生#27541
-  - 修正版をメディアさんに送付済み
 - nendSDK-iOS-sample
-  - SwiftUI バナー＆インタースティシャル レビュー中
+  - SwiftUI 動画ネイティブ作成中
+  - SwiftUI フルボード、動画レビュー修正中
+  - SwiftUI バナー＆インタースティシャル レビュー待ち
   - レビュー
+- MoPub CustomEvent
+  - wikiの英語訳作成
+- レビュー
 
 #### 今週の対応予定
 
 - SwiftUIを用いたサンプルアプリの作成
-  - ネイティブ, 動画ネイティブ, フルボード
+  - 動画ネイティブ、ネイティブ作成
 - nendSDK-iOS
   - issue着手(着手するissueは木南さんが洗い出し中)
 - Unityプラグインアップデート (今週以降)
-  - SDKのアップデート
+  - Android側から順に着手
+    - 福岡さんの方でレクチャー
+  - iOSはアップデート後
 - レビュー
 
 #### 問い合わせ対応
@@ -164,36 +161,32 @@
 
 #### 問題点、課題
 
-- Androidのレビューについて
-  - ソースコードのレビューの細かい動作について確認が難しい
-    - 動作確認やロジック周り、仕様の確認などできる範囲でやってほしい
-    - レビューをこなしていくことでソースコードまでチェックできるようになってほしい
-    - レビュー観点やわからないところは尋ねて進めていく
+- なし
 
 ### 福岡
 
 #### 先週の進捗
 
 - 各種レビュー
-- 2021年下期評価実施
-  - 最終確認
 - 採用
-  - １次面接
   - スカウト継続
-- AppleIDアカウント整理
 - Chromeバージョンアップの確認
 - ハイパーカジュアルゲーム開発関連
-- iOS16準備
+  - 日程の調整など
   - slackにチャンネル作成
+- マネージャ業務周り
+  - 会社支給PCのセキュリティ強化の準備
+    - 3課だけ別の対応をしてもらう予定(別にPCをもう1台用意してもらう)
+    - 新しいOSのアップデートに対応するため
 
 #### 今週の対応予定
 
-- MoPubクローズに伴う調査
-  - 草開さんと確認中
-- VASTエラーの調査
-  - 草開さんからの返答待ち
 - 各種レビュー
-- MGR教育PJ
+- 組織課題
+  - PJ準備
+- 会社支給PCのセキュリティ強化の準備
+- a8-kun-bot(AdMobのアップデート通知bot)の確認
+- 検証端末にauthenticationを設定する with toyama
 - 採用
   - スカウト継続
 - ClickUpアカウント棚卸し
@@ -206,17 +199,24 @@
 
 - なし
 
+## 今後の改善点
+
+- レビュー観点に関して、より詳細な情報を追記したい
+
 ## その他
 
 - 適宜有給取得
   - 休暇申請&サイボウズ登録をお願いします
   - サイボウズ登録時はサービス開発部の欄にも登録する
 - 勤怠申請について、Slackで改めてアナウンスする
-- 外山
-  - 2/2 (水) 通院のため離席(11時～14時頃まで)
+- 船越
+  - 2/8 (火) 19時までに退勤
+    - イベント(勉強会)
+- 福岡
+  - 今週(木)に1on1予定
 
 ## 次回ファシリテーター（木南->外山->福岡->船越の順番で）
 
-- 外山さん
+- 福岡さん
   - 定例MTG、議事録の運用手順
   - https://github.com/fan-ADN/nendSDK-Document-Private/wiki#定例mtg
