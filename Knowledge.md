@@ -18,6 +18,9 @@
 - [静止画広告](https://pjmanage.adn-mobasia.net/projects/nend_manual/wiki/静止画（基本機能）)
 - [動画広告](https://pjmanage.adn-mobasia.net/projects/nend_manual/wiki/動画（基本機能）)
 
+### 運用マニュアル
+- https://github.com/fan-ADN/nend/wiki/サービス運用マニュアル
+
 ### Web上の資料
 - [メディアパートナー用](https://board.nend.net/dl-mediapartner/)
   - SDKを利用するアプリ向けの資料
