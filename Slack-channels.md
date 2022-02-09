@@ -27,6 +27,8 @@
   - 現在jenkinsは使っていない
 - team_sdk_ios
   - iOS/iPadOSに関する情報収集やディスカッションに利用
+- team_sdk_android
+  - androidに関する情報収集やディスカッションに利用
 
 ## GERA
 - neobiz_gera_dev
@@ -90,7 +92,7 @@ nendに関わる部署全員が参加
 - 酒
 - times_XXX
 
-### ファンコミ全体
+## ファンコミ全体
 - fancomi-all
 - mail_to_all
 - general
@@ -100,3 +102,6 @@ nendに関わる部署全員が参加
 - 総務
 - 行政処分-コンプラニュース配信
 - スマホ_pc紛失_情報漏洩緊急連絡
+
+## ハイパーカジュアルゲーム開発(with ファンコミュニケーションズ・グローバル)
+- fanglobal_publishing_service-development
