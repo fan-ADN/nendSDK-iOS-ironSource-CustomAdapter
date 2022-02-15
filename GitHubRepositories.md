@@ -28,7 +28,7 @@
 - https://github.com/fan-ADN/nendSDK-unitypackage-check
 - https://github.com/fan-ADN/nendSDK-Unity-AdMobMediation-Extras
 
-### AdobeAir
+### AdobeAir(Archived)
 - https://github.com/fan-ADN/nendSDK-AdobeAir
 - https://github.com/fan-ADN/nendSDK-AdobeAir-pub
 - https://github.com/fan-ADN/nendSDK-AdobeAir-pub-private
@@ -38,7 +38,7 @@
 - https://github.com/fan-ADN/nendSDK-AdobeAir-native-extension-dependencies
   - 詳細は要確認(不要かも)
 
-### cocos2d-x
+### cocos2d-x(Archived)
 - https://github.com/fan-ADN/nendSDK-cocos2d-x
 - https://github.com/fan-ADN/nendSDK-Cocos2dx-pub
 - https://github.com/fan-ADN/nendSDK-cocos2dx-wiki
@@ -56,7 +56,7 @@
 - https://github.com/fan-ADN/nendSDK-iOS-AdmobMediation-pub
 - https://github.com/fan-ADN/nendSDK-Android-AdmobMediation-pub
 
-### MoPub Custom Event
+### MoPub Custom Event(Archived)
 - https://github.com/fan-ADN/nendSDK-iOS-CustomEvents
 - https://github.com/fan-ADN/nendSDK-iOS-MoPub-CustomEvent-pub
 - https://github.com/fan-ADN/nendSDK-iOS-MoPub-CustomEvent-wiki
