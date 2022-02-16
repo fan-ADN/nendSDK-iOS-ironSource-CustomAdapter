@@ -86,3 +86,15 @@
   - Slack過去スレッド(参考情報)
     - https://fancs-dev.slack.com/archives/C0J80E2F8/p1510546360000101
     - https://fancs-dev.slack.com/archives/C0J80E2F8/p1510557188000126
+
+## heroku
+- アカウント
+  - `fancs.adndev01@gmail.com`
+  - パスワードはマネージャーか部長に聞く。
+- 基本的にherokuでの編集や操作はマネージャーがやります。
+- [monthly-review-reports](https://dashboard.heroku.com/apps/monthly-review-reports)
+  - プルリクのレビュワーにアサインされた時に`#team_sdk_bot`のSlackチャンネルに通知するアプリ
+  - PR作成やレビューコメント数などを可視化&スコア付けする機能もあるが、現在使っていない。
+- [teamsdk-nend-api-mock](https://dashboard.heroku.com/apps/teamsdk-nend-api-mock)
+  - mockデータを返すSDKのテスト用途のアプリ
+  - https://github.com/fan-ADN/nendSDK-Document-Private/wiki/GitHubRepositories#mockサーバーherokuと連携
