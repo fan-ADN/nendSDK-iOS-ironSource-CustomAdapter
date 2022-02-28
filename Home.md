@@ -24,6 +24,9 @@
 
 ## GitHubリポジトリ
 * [[3課で管理しているリポジトリ一覧|GitHubRepositories]]
+- https://github.com/fan-ADN/nend-docs
+   - nendのドキュメント公開用リポジトリ
+   - 概要 https://fancs-dev.slack.com/archives/C0L7YAW3E/p1645518911586799
 
 ## Firebaseプロジェクト
 * [[3課で管理しているFirebaseプロジェクト一覧|FirebaseProjects]]
