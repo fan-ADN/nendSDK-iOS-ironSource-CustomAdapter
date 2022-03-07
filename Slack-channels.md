@@ -29,6 +29,8 @@
   - iOS/iPadOSに関する情報収集やディスカッションに利用
 - team_sdk_android
   - androidに関する情報収集やディスカッションに利用
+- team-sdk-yurufuwa-question
+  - アプリ開発のゆるふわ質問ちゃんねる
 
 ## GERA
 - neobiz_gera_dev
@@ -83,6 +85,8 @@ nendに関わる部署全員が参加
   - iOS15のプロジェクト全般をやり取りする
 - nend-dev-emergency
   - nendのシステム的な問題が見つかった際にやり取りする
+- skan30対応
+  - SKAN3.0対応に関するやり取り
 
 ## サービス開発部
 - service-dev
