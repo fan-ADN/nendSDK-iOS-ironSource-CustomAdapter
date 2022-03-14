@@ -127,7 +127,8 @@ GitHubにプッシュする都合上、念の為パスワード類はzip暗号�
 * PW
   * a8kun-＜9から始まるやつ＞
 * 2FA Authentication
-  * 検証端末2台にGoogle Authenticatorを設定
-    * Fan-SD115 / iPod Touch 5th
+  * 検証端末3台にMicrosoft Authenticatorを設定
+    * Fan-SD007 / iPhone11
+    * Fan-SD199 / iPhoneX
     * Fan-SD198 / iPhone 8 Plus
   * Recovery-codeは`9から始まるやつ`で解凍
