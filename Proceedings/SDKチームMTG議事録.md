@@ -1,4 +1,4 @@
-# 2022/03/07 SDKチームMTG議事録
+# 2022/03/14 SDKチームMTG議事録
 
 ## 参加者
 
@@ -16,7 +16,7 @@
 - iOS（木南、船越）
   - SDK v7.2.0リリース済み
   - iOS15周り
-    - iOS 15.4Beta4動作確認済み
+    - iOS 15.4RC動作確認済み
       - 影響なしのため、全体共有もなし
     - iOS 14は継続して報告を行う
     - 調査・対応依頼があればそちらも
@@ -24,18 +24,19 @@
     - `#skan30対応`チャンネルで経緯説明、今後やり取りする
     - 3/7MTGのスレッド
       - https://fancs-dev.slack.com/archives/C0L7YAW3E/p1646360371323099
-  - 3/9 Apple新製品発表あり
+  - 細かいタスクを模索中
 - Android（外山、福岡）
   - 馬場さん 3/16(水)入社
   - Android 13 Preview 1がリリースされた
     - まずは情報収集からはじめる(毎週月曜行う)
       - Beta 1がリリースされる4月までには機能の調査と影響範囲を調べておきたい
       - 端末購入はそのときに用意しておきたい
-  - Android12 L情報収集中
-  - 細かいタスクを消化中
+  - Android12 L動作確認して問題はなさそう
+  - 細かいタスクを模索中
 - AdMobメディエーションアダプター用検証サンプル（外山、木南）
   - 新バージョンがリリースされたら動作検証しておく
-    - Android: v20.5.0 対応のレビュー依頼中
+    - Android: v20.5.0 対応完了
+    - Android: v20.6.0 対応予定
     - iOS: v9.0.0やその後のバージョンも未確認
       - プラグイン系リリース後、合間で進める
   - Android/iOS: adaptive bannerのドキュメント記載の件はgoogleに確認中
@@ -44,16 +45,11 @@
 - プラグイン
   - Unity（船越、外山、福岡）
     - nendSDKのアップデート対応 (iOS, Android)
-      - iOSとAndroidのSDKアップデート済み
-      - EMD4Uとdoxygenの更新も含める
-      - doxygenのレビュー待ち
-      - 来週中(3/7～)にリリース予定
+      - v4.3.0リリース済み
     - 新バージョンがリリースされたら動作検証しておく
   - Flutter（外山、木南）
     - nendSDKのアップデート対応 (iOS, Android)
-      - iOSとAndroidのSDKアップデート済み
-      - FlutterとDartバージョンをアップデート、リリース準備する予定
-      - 来週中(3/7～)にリリース予定
+      - v1.0.2リリース済み
     - チームのリソース確保次第、今後を検討する
   - React Native は優先度低め
     - 問い合わせが来たら確認する程度にしておき、当面は放置
@@ -61,25 +57,30 @@
 - 問い合わせ（全員）
   - 詳細は[3課wikiの問い合わせ対応](https://github.com/fan-ADN/nendSDK-Document-Private/wiki/Knowledge-inquiries)を参照
 - ironSourceカスタムアダプター対応の調査（外山、木南）
+  - 調査報告１回目完了　iOS継続する
   - https://github.com/fan-ADN/nendSDK-request/issues/9
 
 ### 新規事業アプリ開発
 
 - ハイパーカジュアルゲーム事業
   - 2022/3/14始動予定
-    - iOS SDKリリース(3/1,2) -> プラグイン(3/7~ Unity優先 Flutter)
 
 --------------------------------------------------------------------------------
 
 ## 共有事項
-- 【ご注意下さい】虚偽を装ったなりすましメールについて
-  - https://fancs-dev.slack.com/archives/C014J5WSVAA/p1646116232901259
-- 【８F　フロア案内について】
-  - https://fancs-dev.slack.com/archives/C014J5WSVAA/p1646365113853889
-- SKAN説明会開催のお知らせ
-  - https://fancs-dev.slack.com/archives/C2GCVN198/p1646191147079299
-- SKAN3.0対応について
-  - https://fancs-dev.slack.com/archives/C0L7YAW3E/p1646360371323099
+- オンボーディング項目
+  - SDKチーム共有フォルダ/オンボーディング-SDK・アプリ開発の業務項目
+    - https://docs.google.com/spreadsheets/d/1VSEeV0542WmI36tIg3yHrIB0O40awM4bKQnqTaRmmu8/edit#gid=601940104
+  - SDKチーム共有フォルダ/オンボーディング-入社後の準備・説明項目
+    - https://docs.google.com/spreadsheets/d/1SIkB-qQ8i1uztdORpsn1rP7cB8Y2FZ1Ay6a6QTyv_Yg/edit#gid=0
+- PCのログオン時のパスワードの有効期限の通知について
+  - https://fancs-dev.slack.com/archives/C014J5WSVAA/p1646880806641829
+- 「感染拡大対策モード」変更について
+  - https://fancs-dev.slack.com/archives/C014J5WSVAA/p1646958600325659
+  - 3/14から通常モード
+- zoomからgoogleMeetへ切り替え
+  - https://fancs-dev.slack.com/archives/C014J5WSVAA/p1646967892079299
+  - 3/18から実施
 
 --------------------------------------------------------------------------------
 
@@ -88,22 +89,22 @@
 ### 木南
 
 #### 先週の進捗
-- nendSDK-iOS v7.2.0リリース
-- FlutterプラグインのiOSのアップデート対応済み
+- Flutterプラグイン
+  - v1.0.2リリース完了
 - Unityプラグインのレビュー
-- iOS15.4 beta5検証
+- iOS15.4 RC検証
   - nendに影響なし
 
 #### 今週の対応予定
-- Unityプラグインのレビュー
-- Flutterプラグインのリリース準備
+- ハイパーカジュアルゲーム
 - ironSource調査
 - SKAN3.0のMTG、必要に応じて作業
 
 #### 問い合わせ対応
 
-- https://pjmanage.adn-mobasia.net/issues/27575
-  - 回答済み
+- https://pjmanage.adn-mobasia.net/issues/27576 【iOSSDK】admobメディエーションでのエラーについて
+- https://pjmanage.adn-mobasia.net/issues/27578 【iOS/AndroidSDK】Admobで動画リワードが配信されない
+  - 上記２件AdMobの管理画面の問題、AdMobに問い合わせていただくよう案内
 
 #### 問題点、課題
 
@@ -113,32 +114,34 @@
 
 #### 先週の進捗
 
-- admobメディエーション
-  - v20.5.0 対応のレビュー依頼中
-- ironSource調査
-  - カスタムアダプタ、Android周りの調査まで実施
 - nendSDK-Android
-  - Android13の動作変更箇所の調査
-    - 現在nendへの影響は見当たらず
+  - admob-mediation
+    - v20.5.0対応 → マージ済み
+  - Android 13調査
+    - Features and APIs Overview周りの調査
+      - 今のところSDKへの影響はなし
+  - 新入社員受け入れ周り
+    - MTG、資料調整など
+- 1on1レポート記入
 - 各種レビュー
 
 #### 今週の対応予定
 
-- admobメディエーション
-  - v20.5.0 対応中
-  - nendSDK側の修正PRもレビュー依頼
-- ironSource調査
-  - 3/7 草開さんに一旦報告
 - nendSDK-Android
-  - Android 13周りの調査
+  - Android 13の調査(本日)
+  - nendSDKのレクチャー周り(3/16～)
   - Kotlin DSLへの置き換え検討
-  - その他細かいissueの消化
-- 新メンバー受け入れ準備
-- 世界遺産ビューア
+  - 細かいissue(リファクタリング等)がないか考える
+- ironSourceカスタムイベントアダプタ周りの調査
+  - 何かあれば
+- HCG事業まわり
+  - 何かあれば
 
 #### 問い合わせ対応
 
-- なし
+- https://pjmanage.adn-mobasia.net/issues/27579
+  - めずらしいRNの問い合わせ
+    - バグっぽいことを教えた上でプロダクトでの使用を推奨しない旨を返信
 
 #### 問題点、課題
 
@@ -148,27 +151,21 @@
 
 #### 先週の進捗
 - Unityプラグイン
-  - nendSDK-iOSはSDKアップデート済み
-  - EDM4Uパッケージのアップデート済み
-  - doxygenのレビュー中
-- ナレッジを追記
-  - https://github.com/fan-ADN/nendSDK-iOS-source/wiki/SDKのリリース手順-（編集中）
-    - 後日木南さんに最終確認してもらう
-  - EDM4Uについても追記済み
+  - v4.3.0リリース
+- wikiにナレッジ追記
+  - EDM4U, doxygen
+- 1on1  
 - 各種レビュー
 
 #### 今週の対応予定
 
-- Unityプラグイン
-  - doxygenのコメントを見直し&アップデート
-  - v4.3.0リリース 3/10までに
-  - wiki更新も忘れずに！（公開wikiと内部用ナレッジwikiも）
-    - Unity2017を切り捨て
-    - Xcode13以上になる
 - SwiftUIを用いたサンプルアプリの作成
   - 動画ネイティブ、ネイティブ作成
 - nendSDK-iOS
   - issue着手(着手するissueは木南さんが洗い出し中)
+- Pull request templateのissue作成  
+- Qiita記事　草案
+- HCG開発の用意必要であれば。
 - レビュー
 
 #### 問い合わせ対応
@@ -184,21 +181,26 @@
 #### 先週の進捗
 
 - レビュー
+- Chromeバージョンチェック
+- 新メンバーの受け入れ準備
+  - 申請手続き関係は一通り完了
+  - オンボーディング項目の整理
+    - Android側は一旦完了、あとは適宜追記
 - 採用
+  - 書類選考済み（１名）
   - スカウト継続
-- タスク、スケジュール調整
-- マネージャ業務周り
-  - 会社支給PCのセキュリティ強化の準備
-    - 3課だけ別の対応をしてもらう予定(別にPCをもう1台用意してもらう)
-    - 新しいOSのアップデートに対応するため
+- タスク、スケジュールの諸々調整
 
 #### 今週の対応予定
 
 - 各種レビュー
 - 検証端末にauthenticationを設定する with toyama（木南さん待ち）
-  - 今週金曜にできれば。
-- SKAN3.0MTG
+  - 今日やる。
+- ハイパーカジュアル開発キックオフ予定
+- 1on1
+  - 2021年下期評価フィードバックも
 - 新メンバーの受け入れ準備
+  - 3/16入社面談
 - 採用
   - スカウト継続
 - Chromeバージョンチェック
@@ -207,6 +209,7 @@
 #### 問い合わせ対応
 
 - https://pjmanage.adn-mobasia.net/issues/27577
+  - `ERR_FILE_NOT_FOUND`エラーの件
   - 回答済み
 
 #### 問題点、課題
@@ -225,27 +228,19 @@
 - 木南さん
   - 3/16,17,18 リフレッシュ休暇
 - 船越さん
-  - 3/10昼休憩長めに取る
-- 協議内容
-  - 検証専用PCの要件について協議
-    - https://docs.google.com/spreadsheets/d/1w0XRaWVvFHCDHUXrEI6KTXsZXUr_pRhu-Ncb9n_EoLQ/edit#gid=229157614
-    - いつ頃までに準備必要そうか？
-      - 通常業務用PCのセキュリティ設定後、早めに必要になると考えています。
-    - 在庫PCを使い回せそうか？
-      - 2018年頃なら最新OSも使えるかも。
-    - 誰が使用するか？
-      - 手元で検証する必要のありそうな人が優先かなと思います
-    - 開発3課共有PC(通常業務用)はいつセキュリティ設定するのが良さそうか？
-      - もしくは検証専用PCにするとか
-  - 上記協議のまとめ
-    - 検証専用PCは急ぎ必要な状況ではない様子
-    - 必要なタイミングが近づいたら改めて話、準備を進める
-- 連絡事項
-  - 1on1 (3/11)各自レポート準備する
+  - 3/16昼休憩長めに取る
+- 船越さん提案
+  - PRテンプレートについて
+  - issue各リポジトリに作る
+- 福岡から提案
+  - チームMTGの議事録の運用方法について
+    - 事前共有して、ファシリテーターの負担を減らし、全体の進行の効率化したい。
+  - 3/22以降、馬場さんと交流タイム設けたい
+    - Qiitaプロフィール記事で自己紹介
 
 
 ## 次回ファシリテーター（木南->外山->福岡->船越の順番で）
 
-- 船越さん
+- 木南さん
   - 定例MTG、議事録の運用手順
   - https://github.com/fan-ADN/nendSDK-Document-Private/wiki#定例mtg
