@@ -16,7 +16,8 @@
   - https://miro.com/app/board/o9J_l7XSXo4=/
 
 ## 新入社員向け準備項目
-- [入社後の準備項目](https://docs.google.com/spreadsheets/d/1SIkB-qQ8i1uztdORpsn1rP7cB8Y2FZ1Ay6a6QTyv_Yg/edit#gid=0)
+- [オンボーディング-入社後の準備・説明項目](https://docs.google.com/spreadsheets/d/1SIkB-qQ8i1uztdORpsn1rP7cB8Y2FZ1Ay6a6QTyv_Yg/edit#gid=0)
+- [オンボーディング-SDK・アプリ開発の業務項目](https://docs.google.com/spreadsheets/d/1VSEeV0542WmI36tIg3yHrIB0O40awM4bKQnqTaRmmu8/edit#gid=601940104)
 
 ## アカウント関連
 * [[動作検証、CI用などの共有アカウント|AccountInfo]]
