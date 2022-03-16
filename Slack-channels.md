@@ -31,6 +31,8 @@
   - androidに関する情報収集やディスカッションに利用
 - team-sdk-yurufuwa-question
   - アプリ開発のゆるふわ質問ちゃんねる
+- team_sdk_fanglobal-dev
+  - FGとのハイパーカジュアルゲーム開発企画において、3課内で開発の実装レベルの相談などを行うチャンネル
 
 ## GERA
 - neobiz_gera_dev
