@@ -129,9 +129,14 @@
 - https://github.com/fan-ADN/app-IED-iOS
   - 何度もAppleにリジェクトされてリリースを断念
 
-## 新規事業部アプリ
+## 新規事業アプリ
+### ハイパーカジュアルゲーム（2022年3月〜）
+- https://github.com/fan-ADN/app-fanglobal-mock-riseup
+
 ### GERA
 - https://github.com/fan-ADN/gera-flutter
+  - 2021年いっぱいで3課から開発へのアサインは一旦終了。
+  - 今後は何かサポートが必要な時に協力する。
 
 ## 開発3課の業務管理用
 - https://github.com/fan-ADN/nendSDK-request
