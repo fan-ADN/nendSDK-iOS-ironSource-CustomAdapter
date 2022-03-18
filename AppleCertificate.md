@@ -34,7 +34,7 @@ Appleの証明書の作成は、基本的にチーム内の誰か1人のMacで�
 
 ## 証明書の保管場所
 - [Redmine: nend >> 開発wiki / SDK関連](https://pjmanage.adn-mobasia.net/projects/developer/wiki/Apple証明書)
-  - これらのファイルをMacにダウンロード > ファイルをダブルクリック > 下記のパスワード入力 > Macのキーチェーンに登録します。`fan_distribution.p12`はリリースビルドまたはアドホックビルドに必要になります。
+  - これらのファイルをMacにダウンロード > ファイルをダブルクリック > 下記のパスワード入力 > Macのキーチェーンに登録します。
 
 #### 補足
 上記Redmineにも本wikiと同じ内容を記載がありますが、こういうナレッジの管理や共有は今後Redmineではなくwikiを活用していくため、このwikiに内容を移植しました。

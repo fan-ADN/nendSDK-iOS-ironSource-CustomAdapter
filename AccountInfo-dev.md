@@ -10,6 +10,7 @@
 - Apple Developer Program
   - 証明書やプロビジョニングプロファイル、デバイス登録などを行う
   - https://developer.apple.com/account/#/overview/EH6M2BH4ZR
+  - 証明書の入手は[こちら](https://github.com/fan-ADN/nendSDK-Document-Private/wiki/AppleCertificate#%E8%A8%BC%E6%98%8E%E6%9B%B8%E3%81%AE%E4%BF%9D%E7%AE%A1%E5%A0%B4%E6%89%80)
 - App Store Connect
   - https://appstoreconnect.apple.com
   - iOSアプリ管理全般
