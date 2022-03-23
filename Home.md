@@ -28,6 +28,9 @@
 - https://github.com/fan-ADN/nend-docs
    - nendのドキュメント公開用リポジトリ
    - 概要 https://fancs-dev.slack.com/archives/C0L7YAW3E/p1645518911586799
+- Discussion
+  - https://github.com/fan-ADN/nendSDK-Document-Private/discussions
+  - Discussion機能を使い、チーム内で意見を求めたり、議論して何かを決めたりする際に使います。
 
 ## Firebaseプロジェクト
 * [[3課で管理しているFirebaseプロジェクト一覧|FirebaseProjects]]
