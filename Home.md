@@ -46,7 +46,8 @@
 * [[開発フローについて|Workflow-Of-Development]]
   * [[レビューについて|About-Review]]
     * [[非公開→公開リポジトリへのミラーリングやUpstreamについて|Mirroring-automation]]
-* [[GitHubのIssueのラベル運用ルール|GitHubIssueLabelRule]]
+* [[GitHubのIssueのラベル運用ルール|PullRequestTemplateRule]]
+* [[プルリクエストのテンプレート運用ルール|GitHubIssueLabelRule]]
 * [CI/CD](https://github.com/fan-ADN/nendSDK-CI-CD-backups/wiki)
 * [[Code Coverage|CodeCoverage]]
 * [Serverチームへの提供アプリなど](https://github.com/fan-ADN/app-From-SDKTeam-To-ServerTeam/wiki)
