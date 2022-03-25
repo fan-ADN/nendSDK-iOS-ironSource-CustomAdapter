@@ -60,12 +60,19 @@
 - [Flutter](https://github.com/fan-ADN/nendSDK-Flutter/wiki)
 - [React Native](https://github.com/fan-ADN/nendSDK-react-native/wiki)
 
+### SDKプラグイン・アダプタ
+- https://github.com/fan-ADN/nendSDK-Document-Private/wiki/Plugins
+
 ### SDK社内勉強会資料
 - https://github.com/fan-ADN/nendSDK-Document-Private/wiki/nendSDK社内向け勉強会資料_beginner
 - https://github.com/fan-ADN/nendSDK-Document-Private/wiki/nendSDK社内向け勉強会資料_deep
 
-### SDKプラグイン・アダプタ
-- https://github.com/fan-ADN/nendSDK-Document-Private/wiki/Plugins
+### SKAN説明会(SKAdNetwork)
+- [目的・アジェンダ](https://fancs-dev.slack.com/archives/C2GCVN198/p1646191147079299)
+- [スライド資料](https://fancs-dev.slack.com/archives/C2GCVN198/p1647399795933679?thread_ts=1646191147.079299&cid=C2GCVN198)
+
+### MRAID仕様、関連資料
+- https://github.com/fan-ADN/nend-request/tree/master/specs/issue84
 
 ### cookie(個人情報関連)
 - 2022年4月に個人情報保護法が改正される
