@@ -37,6 +37,9 @@
   - [Nend配信仕様](https://pjmanage.adn-mobasia.net/projects/developer/wiki/Nend配信仕様)
   - [SDKからの広告抽選API仕様](https://github.com/fan-ADN/nend/wiki/SDKからの広告抽選API仕様)
 
+### 効果計測の流れ(クリック、ビュー、コンバージョン)
+- [iOSアプリの広告効果計測の流れ](https://fancsdev.qiita.com/shared/items/43ce6bff38381cfca0a3)
+
 ### SDK仕様
 - バナー
   - まとまった情報がないため、困ったら周りに聞く
