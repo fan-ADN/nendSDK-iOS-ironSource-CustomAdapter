@@ -57,7 +57,7 @@ GitHubで行うことのメリットとしては以下が考えられます。
 レビュイーとして最低限以下のことに気をつけましょう。
 
 - 修正したことを明確にするために、レビュワーの指摘に対する修正をした際はコメントを加えて返信してください。
-  - 例: ![修正例](https://github.com/fan-ADN/nendSDK-Document-Private/blob/master/SDK-Team-Workflow/SDK-Team-Workflow/Example_Of_Comment_To_Reviewer.png)
+  ![修正例](https://github.com/fan-ADN/nendSDK-Document-Private/blob/master/SDK-Team-Workflow/Example_Of_Comment_To_Reviewer.png)
 
 <a name="reviewer"></a>
 
