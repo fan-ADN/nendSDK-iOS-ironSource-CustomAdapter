@@ -1,5 +1,16 @@
 # レビューについて
 
+3課の開発レビューの基本ルール
+
+--------------------------------------------------------------------------------
+
+こっちも見てね
+
+- コードレビュー入門・心得
+  - https://github.com/fan-ADN/nendSDK-Document-Private/wiki/AboutCodeReview
+
+--------------------------------------------------------------------------------
+
 基本的には、全てGitHubのPullRequestで行うようにします。
 
 GitHubで行うことのメリットとしては以下が考えられます。
@@ -12,16 +23,18 @@ GitHubで行うことのメリットとしては以下が考えられます。
   - チーム内で各タスクの進捗状況が共有できる。
 
 1. [レビューを依頼する前に](#before_pull_request)
+1. [レビュイーについて](#reviewee)
 1. [レビュワーについて](#reviewer)
 1. [テストについて](#testing)
 
 <a name="before_pull_request"></a>
+
 ## レビューを依頼する前に...
 
-- [ ] セルフチェックおよびテストをしっかりと行うこと
-- [ ] レビュワーが見やすいようにコードのフォーマットを行うこと
+- [x] セルフチェックおよびテストをしっかりと行うこと
+- [x] レビュワーが見やすいようにコードのフォーマットを行うこと
   - Android
-    - Android Studioの`Reformat Code`オススメです
+    - Android Studioの`Reformat Code`がオススメです
   - iOS
     - [ClangFormatがオススメ](https://github.com/fan-ADN/nendSDK-iOS-source/wiki/ClangFormatについて)です
   - Unity
@@ -37,17 +50,33 @@ GitHubで行うことのメリットとしては以下が考えられます。
 
 ![img](https://github.com/fan-ADN/nendSDK-Document-Private/blob/master/SDK-Team-Workflow/Workflow-Of-Develop-Private.png)
 
+<a name="reviewee"></a>
+
+## レビュイーについて
+
+レビュイーとして最低限以下のことに気をつけましょう。
+
+- 修正したことを明確にするために、レビュワーの指摘に対する修正をした際はコメントを加えて返信してください。
+  - 例: ![修正例](https://github.com/fan-ADN/nendSDK-Document-Private/blob/master/SDK-Team-Workflow/SDK-Team-Workflow/Example_Of_Comment_To_Reviewer.png)
+
 <a name="reviewer"></a>
+
 ## レビュワーについて
 
 レビュワーの人数は臨機応変に変更可としますが、
+
 - 基本的には **最低2人以上** をレビュワーにアサインして下さい。
 - 改修内容の規模や緊急対応などでレビュワーが1人となる場合は、マネージャーや他のメンバーに相談して下さい。
-  - もし緊急時で相談できる人が誰も居なかった場合は、山本さんに相談して下さい。
 
 ![img](https://github.com/fan-ADN/nendSDK-Document-Private/blob/master/SDK-Team-Workflow/Workflow-Of-Develop-Public.png)
 
+また、以下の点に気をつけましょう。
+
+- レビュイーが修正した内容に問題ないと確認した際は `Resolve conversation` を押してください。
+  - もし修正した内容が意図と違っていた場合などは引き続き同じスレッド内で議論を続けてください。
+
 <a name="testing"></a>
+
 ## テストについて
 
 以下を全て満たすテストを行ってください。
