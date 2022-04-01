@@ -6,6 +6,8 @@
 - dev3rd_日報
   - 日報専用
   - 退勤時に投稿
+- dev3rd_github_discussions
+  - https://github.com/fan-ADN/nendSDK-Document-Private/discussions に作成されたDiscussionを通知するチャンネル
 - team_sdk
   - SDKの開発業務に関するコミュニケーション全般に利用
 - team_sdk_github
