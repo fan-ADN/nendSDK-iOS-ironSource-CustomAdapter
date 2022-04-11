@@ -53,9 +53,9 @@ GitHub上でissueを作成する
 ### 作業ブランチ作成
 
 ローカルにクローンしたリポジトリで作業ブランチを作成する  
-開発３課では、`issue#` +  `issueの番号`でブランチを作成している
+開発３課では、`issue` +  `issueの番号`でブランチを作成している
 <!-- sourcetreeのTreeのSS -->
-![branch](https://user-images.githubusercontent.com/9563320/53869088-d5c13280-403a-11e9-8503-ba25a42da12c.png)
+![branch](https://user-images.githubusercontent.com/9563320/162665184-afb78472-439d-4e9e-9aa4-088051bc7db4.png)
 
 ### 開発、コミット＆プッシュ
 ローカル環境で開発を行います  
