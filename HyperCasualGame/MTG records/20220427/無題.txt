@@ -1,0 +1,19 @@
+■アセット
+- 主人公ユニット： https://assetstore.unity.com/packages/3d/props/polygon-starter-pack-low-poly-3d-art-by-synty-156819#description
+- GUI： https://assetstore.unity.com/packages/2d/gui/icons/gui-mobile-hyper-casual-157435#description
+- 背景： https://assetstore.unity.com/packages/2d/textures-materials/2d-parallax-backgrounds-81087
+- SE：https://assetstore.unity.com/packages/audio/sound-fx/free-casual-pack-sfx-197054
+- BGM：https://assetstore.unity.com/packages/audio/music/hypercasual-music-pack-demo-167828
+■視聴覚効果
+- BGM:
+-- （スプラッシュ画面後）タイトル画面：Music Minds
+-- ゲーム開始時～：Peek-a-Boo Var_1
+-- リザルト画面：1. Beyond the Clouds
+- SE
+-- ボタン押下時：CAMERA CLICK 1
+-- リザルト画面cash獲得時：COIN 3
+-- hero飛び上がるとき：JUMP 2
+-- 障害物とプロテクターが当たった時：Punch_01
+-- リザルト画面遷移時：SPECIAL POP 2
+- バイブレーション
+-- 障害物とプロテクターが当たった時
