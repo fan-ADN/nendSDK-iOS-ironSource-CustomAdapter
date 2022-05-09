@@ -1,0 +1,31 @@
+# Notify to Slack when a new comment is posted on some discussions
+name: discussion comment
+
+on:
+  discussion_comment:
+    types:
+      - created
+
+jobs:
+  dump:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: mask secret
+        run: |
+          echo $SLACK_WEBHOOK_URL | perl -nE 's|^.+slack\.com||g; say "::add-mask::$_"'
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+      - name: Transform timestamp
+        id: timestamp_transform
+        run: |
+          echo "::set-output name=comment_created_at::$(date --date=$TIMESTAMP +%s)"
+        env:
+          TIMESTAMP: ${{ github.event.comment.created_at}}
+      - name: Send to Slack
+        id: slack
+        run: |
+          curl -f --trace-ascii - -d "$PAYLOAD" $SLACK_WEBHOOK_URL
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          PAYLOAD: "{\"attachments\":[{\"mrkdwn_in\":[\"text\"],\"fallback\":\"New Comment on ${{ github.event.discussion.html_url}}\",\"author_name\":\"${{ github.event.comment.user.login }}\",\"author_link\":\"${{ github.event.comment.user.html_url }}\",\"author_icon\":\"${{ github.event.comment.user.avatar_url }}\",\"title\":\"Comment on #${{github.event.discussion.number}} ${{ github.event.discussion.title}}\",\"title_link\":\"${{ github.event.comment.html_url}}\",\"text\":${{ toJSON(github.event.comment.body) }},\"footer\":\"${{ github.event.repository.full_name}}\",\"ts\":${{ steps.timestamp_transform.outputs.comment_created_at}}}]}"
