@@ -140,6 +140,7 @@
 ## 新規事業アプリ
 ### ハイパーカジュアルゲーム（2022年3月〜）
 - https://github.com/fan-ADN/app-fanglobal-mock-riseup
+- https://github.com/fan-ADN/app-fanglobal-game-dev-docs
 
 ### GERA
 - https://github.com/fan-ADN/gera-flutter
