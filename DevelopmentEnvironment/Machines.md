@@ -108,16 +108,16 @@ CIやリモートワークに使っているマシンに関する情報です。
   - jobsで`runs-on: [self-hosted, macos, m1]`のようにラベルを指定する
 
 # Self-hosted runnersのマシン
-![img](https://user-images.githubusercontent.com/9563506/127966384-4eeb8b12-52ef-44f4-ba62-c43c9e7aeb22.png)
+![img](https://user-images.githubusercontent.com/9563506/170418519-12825d2a-04fb-4721-b2f9-0012fbe99fb9.png)
 
 - GitHub Actionsの実行にこれらの共有PC（Windows/Mac）を利用しています。
 - [カスタムラベル](https://docs.github.com/ja/actions/hosting-your-own-runners/using-labels-with-self-hosted-runners)を作成して利用できます
   - GitHub ActionsのRunnerでカスタムラベルを使用したい場合
     - jobsで`runs-on: [self-hosted, macos, m1]`とか`runs-on: [self-hosted, Windows, laptop]`のようにラベルを指定する
   - ラベル追加や削除などしたい場合はマネージャーに依頼してください
-- RNxxx(WidnowsノートPC)はオフィスで共有マシンとしてではなく、自宅にてRunnerマシンとして割り当てて利用しています。
-  - 主にAndroid向けのビルドやテストに使用しています
-  - `RN1541`はfan-t-fukuokaの家で動かしています
+- SDxxx(WidnowsノートPC)はオフィスで共有マシンとしてではなく、自宅にてRunnerマシンとして割り当てて利用しています。
+  - 主に手元でAndroid向けのビルドやテストをするために使用しています
+  - 現在`SD0023`は`nnsnico`の家で動かしています
 - `Offline`になっている場合の可能性
   - ネットワーク未接続
   - OSアップデートによる再起動後のログイン待ち
