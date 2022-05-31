@@ -105,7 +105,6 @@ nendに関わる部署全員が参加
 - fancomi-all
 - mail_to_all
 - general
-- 人事
 - 人事_従業員説明
 - 経理
 - 総務
