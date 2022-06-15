@@ -76,8 +76,13 @@
   - 各自の`@fancs.com`メールアドレスをメーリングリストに設定済み（のはず）
     - このアドレス宛のメールが各自にも届くので、Gmailとかでフィルタリングしてメールをチェックできるようにしておく  
 
-## Googleグループ/CLA
-- [fancs-dev](https://groups.google.com/g/fancs-dev/)
+## Googleグループ
+- [ADP事業部 - サービス開発部 - 開発3課](https://groups.google.com/a/g.fancs.com/g/service-dev-dev3rd)
+  - [メンバー](https://groups.google.com/a/g.fancs.com/g/service-dev-dev3rd/members)
+  - メールアドレス
+    - `service-dev-dev3rd@g.fancs.com`
+  - 2022/6現在ではこのグループのメールアドレスを運用しているプロジェクトやサービスなどはありませんが、今後必要になったら使う予定です。
+- [fancs-dev (CLA用)](https://groups.google.com/g/fancs-dev/)
   - [メンバー](https://groups.google.com/g/fancs-dev/members)
   - メーリングリスト
     - `fancs-dev@googlegroups.com`
