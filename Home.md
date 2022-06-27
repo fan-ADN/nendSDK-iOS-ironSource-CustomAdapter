@@ -94,6 +94,7 @@
   - 議事録をwikiに反映する  
     1. masterブランチにコミット, プッシュする
     2. [mirroring-to-wiki.command](https://github.com/fan-ADN/nendSDK-Document-Private/blob/master/mirroring-to-wiki.command)コマンドを実行する
+- [[タイムキーパー運用ルール|タイムキーパー運用ルール]]
 
 ### サービス開発部全体会議
 - サービス開発部全員参加
