@@ -1,0 +1,471 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01F8E0E819C1A1EA95E4AEDD /* Pods_NendIronSourceCustomAdapterSwiftSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13FD0F113447E9C3E1944B86 /* Pods_NendIronSourceCustomAdapterSwiftSample.framework */; };
+		4F97B7A02886D71000B76B0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F97B79F2886D71000B76B0D /* AppDelegate.swift */; };
+		4F97B7A22886D71000B76B0D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F97B7A12886D71000B76B0D /* SceneDelegate.swift */; };
+		4F97B7A42886D71000B76B0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F97B7A32886D71000B76B0D /* ViewController.swift */; };
+		4F97B7A72886D71000B76B0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F97B7A52886D71000B76B0D /* Main.storyboard */; };
+		4F97B7A92886D71200B76B0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F97B7A82886D71200B76B0D /* Assets.xcassets */; };
+		4F97B7AC2886D71200B76B0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F97B7AA2886D71200B76B0D /* LaunchScreen.storyboard */; };
+		4F97B7BA2886E88500B76B0D /* ISNendCustomAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F97B7B42886E88500B76B0D /* ISNendCustomAdapter.m */; };
+		4F97B7BB2886E88500B76B0D /* ISNendCustomInterstitial.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F97B7B52886E88500B76B0D /* ISNendCustomInterstitial.m */; };
+		4F97B7BC2886E88500B76B0D /* ISNendCustomRewardedVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F97B7B92886E88500B76B0D /* ISNendCustomRewardedVideo.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		13FD0F113447E9C3E1944B86 /* Pods_NendIronSourceCustomAdapterSwiftSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NendIronSourceCustomAdapterSwiftSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F97B79C2886D71000B76B0D /* NendIronSourceCustomAdapterSwiftSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NendIronSourceCustomAdapterSwiftSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F97B79F2886D71000B76B0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4F97B7A12886D71000B76B0D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4F97B7A32886D71000B76B0D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4F97B7A62886D71000B76B0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4F97B7A82886D71200B76B0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4F97B7AB2886D71200B76B0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4F97B7AD2886D71200B76B0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F97B7B42886E88500B76B0D /* ISNendCustomAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISNendCustomAdapter.m; sourceTree = "<group>"; };
+		4F97B7B52886E88500B76B0D /* ISNendCustomInterstitial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISNendCustomInterstitial.m; sourceTree = "<group>"; };
+		4F97B7B62886E88500B76B0D /* ISNendCustomRewardedVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISNendCustomRewardedVideo.h; sourceTree = "<group>"; };
+		4F97B7B72886E88500B76B0D /* ISNendCustomAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISNendCustomAdapter.h; sourceTree = "<group>"; };
+		4F97B7B82886E88500B76B0D /* ISNendCustomInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISNendCustomInterstitial.h; sourceTree = "<group>"; };
+		4F97B7B92886E88500B76B0D /* ISNendCustomRewardedVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISNendCustomRewardedVideo.m; sourceTree = "<group>"; };
+		4F97B7DB2886F47200B76B0D /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		6F51D576E8F1C90BFA55A387 /* Pods-NendIronSourceCustomAdapterSwiftSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NendIronSourceCustomAdapterSwiftSample.debug.xcconfig"; path = "Target Support Files/Pods-NendIronSourceCustomAdapterSwiftSample/Pods-NendIronSourceCustomAdapterSwiftSample.debug.xcconfig"; sourceTree = "<group>"; };
+		EA79E6FB79D73ABDB7E1799A /* Pods-NendIronSourceCustomAdapterSwiftSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NendIronSourceCustomAdapterSwiftSample.release.xcconfig"; path = "Target Support Files/Pods-NendIronSourceCustomAdapterSwiftSample/Pods-NendIronSourceCustomAdapterSwiftSample.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4F97B7992886D71000B76B0D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01F8E0E819C1A1EA95E4AEDD /* Pods_NendIronSourceCustomAdapterSwiftSample.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2442C1370C1C959EB231BFD2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6F51D576E8F1C90BFA55A387 /* Pods-NendIronSourceCustomAdapterSwiftSample.debug.xcconfig */,
+				EA79E6FB79D73ABDB7E1799A /* Pods-NendIronSourceCustomAdapterSwiftSample.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		38DE404FED4645DA22630621 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				13FD0F113447E9C3E1944B86 /* Pods_NendIronSourceCustomAdapterSwiftSample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4F97B7932886D71000B76B0D = {
+			isa = PBXGroup;
+			children = (
+				4F97B7B32886E88500B76B0D /* ISNendCustomAdapter */,
+				4F97B79E2886D71000B76B0D /* NendIronSourceCustomAdapterSwiftSample */,
+				4F97B79D2886D71000B76B0D /* Products */,
+				2442C1370C1C959EB231BFD2 /* Pods */,
+				38DE404FED4645DA22630621 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4F97B79D2886D71000B76B0D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4F97B79C2886D71000B76B0D /* NendIronSourceCustomAdapterSwiftSample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4F97B79E2886D71000B76B0D /* NendIronSourceCustomAdapterSwiftSample */ = {
+			isa = PBXGroup;
+			children = (
+				4F97B7DB2886F47200B76B0D /* Bridging-Header.h */,
+				4F97B79F2886D71000B76B0D /* AppDelegate.swift */,
+				4F97B7A12886D71000B76B0D /* SceneDelegate.swift */,
+				4F97B7A32886D71000B76B0D /* ViewController.swift */,
+				4F97B7A52886D71000B76B0D /* Main.storyboard */,
+				4F97B7A82886D71200B76B0D /* Assets.xcassets */,
+				4F97B7AA2886D71200B76B0D /* LaunchScreen.storyboard */,
+				4F97B7AD2886D71200B76B0D /* Info.plist */,
+			);
+			path = NendIronSourceCustomAdapterSwiftSample;
+			sourceTree = "<group>";
+		};
+		4F97B7B32886E88500B76B0D /* ISNendCustomAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				4F97B7B42886E88500B76B0D /* ISNendCustomAdapter.m */,
+				4F97B7B52886E88500B76B0D /* ISNendCustomInterstitial.m */,
+				4F97B7B62886E88500B76B0D /* ISNendCustomRewardedVideo.h */,
+				4F97B7B72886E88500B76B0D /* ISNendCustomAdapter.h */,
+				4F97B7B82886E88500B76B0D /* ISNendCustomInterstitial.h */,
+				4F97B7B92886E88500B76B0D /* ISNendCustomRewardedVideo.m */,
+			);
+			path = ISNendCustomAdapter;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4F97B79B2886D71000B76B0D /* NendIronSourceCustomAdapterSwiftSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F97B7B02886D71200B76B0D /* Build configuration list for PBXNativeTarget "NendIronSourceCustomAdapterSwiftSample" */;
+			buildPhases = (
+				DC853A5B9374334E757F1258 /* [CP] Check Pods Manifest.lock */,
+				4F97B7982886D71000B76B0D /* Sources */,
+				4F97B7992886D71000B76B0D /* Frameworks */,
+				4F97B79A2886D71000B76B0D /* Resources */,
+				D847532B8820479ED8337ED7 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NendIronSourceCustomAdapterSwiftSample;
+			productName = NendIronSourceCustomAdapterSwiftSample;
+			productReference = 4F97B79C2886D71000B76B0D /* NendIronSourceCustomAdapterSwiftSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4F97B7942886D71000B76B0D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					4F97B79B2886D71000B76B0D = {
+						CreatedOnToolsVersion = 13.4;
+					};
+				};
+			};
+			buildConfigurationList = 4F97B7972886D71000B76B0D /* Build configuration list for PBXProject "NendIronSourceCustomAdapterSwiftSample" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4F97B7932886D71000B76B0D;
+			productRefGroup = 4F97B79D2886D71000B76B0D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4F97B79B2886D71000B76B0D /* NendIronSourceCustomAdapterSwiftSample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4F97B79A2886D71000B76B0D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F97B7AC2886D71200B76B0D /* LaunchScreen.storyboard in Resources */,
+				4F97B7A92886D71200B76B0D /* Assets.xcassets in Resources */,
+				4F97B7A72886D71000B76B0D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D847532B8820479ED8337ED7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NendIronSourceCustomAdapterSwiftSample/Pods-NendIronSourceCustomAdapterSwiftSample-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NendIronSourceCustomAdapterSwiftSample/Pods-NendIronSourceCustomAdapterSwiftSample-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NendIronSourceCustomAdapterSwiftSample/Pods-NendIronSourceCustomAdapterSwiftSample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC853A5B9374334E757F1258 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NendIronSourceCustomAdapterSwiftSample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4F97B7982886D71000B76B0D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F97B7A42886D71000B76B0D /* ViewController.swift in Sources */,
+				4F97B7BB2886E88500B76B0D /* ISNendCustomInterstitial.m in Sources */,
+				4F97B7BA2886E88500B76B0D /* ISNendCustomAdapter.m in Sources */,
+				4F97B7BC2886E88500B76B0D /* ISNendCustomRewardedVideo.m in Sources */,
+				4F97B7A02886D71000B76B0D /* AppDelegate.swift in Sources */,
+				4F97B7A22886D71000B76B0D /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4F97B7A52886D71000B76B0D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4F97B7A62886D71000B76B0D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4F97B7AA2886D71200B76B0D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4F97B7AB2886D71200B76B0D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4F97B7AE2886D71200B76B0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4F97B7AF2886D71200B76B0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4F97B7B12886D71200B76B0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F51D576E8F1C90BFA55A387 /* Pods-NendIronSourceCustomAdapterSwiftSample.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = EH6M2BH4ZR;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "arm64 i386 armv7";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NendIronSourceCustomAdapterSwiftSample/Info.plist;
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Need advertising identifier for mediation testing.";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = net.nend.NendIronSourceCustomAdapterSwiftSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/NendIronSourceCustomAdapterSwiftSample/Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4F97B7B22886D71200B76B0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA79E6FB79D73ABDB7E1799A /* Pods-NendIronSourceCustomAdapterSwiftSample.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = EH6M2BH4ZR;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "arm64 i386 armv7";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NendIronSourceCustomAdapterSwiftSample/Info.plist;
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Need advertising identifier for mediation testing.";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = net.nend.NendIronSourceCustomAdapterSwiftSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/NendIronSourceCustomAdapterSwiftSample/Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4F97B7972886D71000B76B0D /* Build configuration list for PBXProject "NendIronSourceCustomAdapterSwiftSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F97B7AE2886D71200B76B0D /* Debug */,
+				4F97B7AF2886D71200B76B0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4F97B7B02886D71200B76B0D /* Build configuration list for PBXNativeTarget "NendIronSourceCustomAdapterSwiftSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F97B7B12886D71200B76B0D /* Debug */,
+				4F97B7B22886D71200B76B0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4F97B7942886D71000B76B0D /* Project object */;
+}
