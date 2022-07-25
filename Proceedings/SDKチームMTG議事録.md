@@ -1,4 +1,4 @@
-# 2022/07/19 SDKチームMTG議事録
+# 2022/07/25 SDKチームMTG議事録
 
 ## 参加者
 
@@ -19,19 +19,19 @@
   - WWDC関連 & iOS16
     - iOS16 beta 3
       - nendSDKへの影響がある変更はなし
-    - iOS16関連の対応のissue作成して管理できるようにしておく
-      - iOS16向け対応の親issueと開発項目の子issueを作成済み
   - iOS15周り
-    - iOS 15.6 RC 2リリース
-      - 調査実施予定
+    - iOS 15.6正式版リリース
+      - 調査実施なし(RC2からビルド番号が変わっていないため)
     - iOS 14は継続して報告を行う
     - 調査・対応依頼があればそちらも
   - SKAN3.0 & 4.0
     - 細かい仕様は継続的にやり取りする
   - 細かいタスクを模索しつつ、Issueで対応中
 - Android（外山、馬場、福岡）
-  - Android 13 Beta4調査中
-    - 互換性フレームワーク 今日調査終了予定
+  - Android 13 Beta4調査完了
+    - nendSDKの影響なし
+      - 動作機能等
+      - 互換性フレームワーク
   - 細かいタスクを模索&対応中
 - AdMobメディエーションアダプター用検証サンプル（外山、木南）
   - 新バージョンがリリースされたら動作検証しておく
@@ -45,7 +45,7 @@
       - 一旦様子見。Android13リリース対応後に一緒に対応（あわよくばiOSも一緒に…）
     - 余力があれば新バージョンがリリースされたら動作検証しておく
   - Flutter（外山、木南、馬場）
-    - v8.2.0リリースされたので更新予定
+    - nendSDK Androidの次回リリースまで待ち
       - Unityと同様
     - チームのリソース確保次第、今後を検討する
   - React Native は優先度低め
@@ -54,14 +54,17 @@
 - ironSourceカスタムアダプター対応（外山、木南）
   - https://github.com/fan-ADN/nendSDK-request/issues/9
     - Android
-      - wiki英語
-        - レビュー完了
-      - インタースティシャル
-        - iOSに仕様を合わせるべき箇所を修正中
-        - iOSのレビュー完了後にPR作成
+      - リリースPR作成済
+        - 今週火曜日くらいまでにレビューを終えておきたい
     - iOS
-      - インタースティシャルレビュー中
-      - wiki・サンプル今週PR作成予定
+      - インタースティシャルマージ済
+      - wiki側PR作成済
+      - サンプル
+        - Swift側PRマージ済
+        - Objective-C側PRレビュー中
+      - 配布パッケージ
+        - PodSpec作成中
+      - 上記終了後リリース予定
 - 問い合わせ（全員）
   - 詳細は[3課wikiの問い合わせ対応](https://github.com/fan-ADN/nendSDK-Document-Private/wiki/Knowledge-inquiries)を参照
 
@@ -71,34 +74,27 @@
   - 第二作目
     - Stack(積み木みたいなゲーム)
     - https://github.com/fan-ADN/app-fanglobal-mock-stack
-    - リリース済み
     - CPI以外の反応が良かったので 広告追加実装完了
       - 管理画面の確認が出来たら今週中にリリース
-    - GameAnalytics
-      - 実装済み、データ反映の確認予定
+      - 最終確認待ち
   - 第三作目
     - CubesControl
       - FGにステージ作成依頼中
-      - 仕様が決まったので対応予定
+      - 仕様決め対応完了
+  - 第四作目
+    - 案はまだきてない(今週予定)
 
 --------------------------------------------------------------------------------
 
 ## 共有事項
 
-- 全社MTG
-  - https://fancs-dev.slack.com/archives/C8KF2FALB/p1657600407989459
-- 法務相談のSlackチャンネル
-  - https://fancs-dev.slack.com/archives/C014J5WSVAA/p1657695827997209
-- Redmineのアカウント発行（審査・法務）
-  - https://fancs-dev.slack.com/archives/C014J5WSVAA/p1657760180414489
-- 次回1on1
-  - 今週〜来週
-  - 初回と目標設定
-- 2022年上期評価・下期目標設定
-  - 7/19
-    - 一次評価の提出期限
-  - 7/29
-    - 下期目標設定の提出期限
+- Googleドライブの共有ルール
+  - https://fancs-dev.slack.com/archives/C014J5WSVAA/p1658299640659599
+- 9con 最終プレゼン大会8/22
+  - https://fancs-dev.slack.com/archives/C014J5WSVAA/p1658278990815959
+- GitHubのチーム権限について
+  - 各リポジトリのチーム権限をSDK -> dev3rdに変更
+  - https://fancsdev.qiita.com/shared/items/c4ee69f4a4acbb3d4e6b#%E3%83%81%E3%83%BC%E3%83%A0
 
 --------------------------------------------------------------------------------
 
@@ -109,19 +105,31 @@
 #### 先週の進捗
 
 - ironSourceカスタムアダプター
-  - リワード完了
-  - インタースティシャル
-    - レビュー中
+  - リワード&インタースティシャル
+    - ソースコードの実装まで完了
+  - wiki
+    - PR出しました
+  - サンプル
+    - Swift
+      - レビュー完了
+      - Objective-Cで出た細かい指摘を修正後PRを出す
+    - Objective-C
+      - レビュー中
 - 各種レビュー
 
 #### 今週の対応予定
 
 - ironSourceカスタムアダプター
-  - インタースティシャル
-    - レビュー
   - サンプル
+    - Objective-C
+      - レビュー
+    - Swift
+      - 細かい修正
   - wiki
+    - レビュー
   - 配布パッケージ作成
+    - podspecファイルの作成
+  - リリース
 
 #### お問い合わせ対応
 
@@ -130,11 +138,7 @@
 #### 問題点、課題
 
 - ironSourceカスタムイベントに向けて計画を周知する
-  - 今週中にwiki,サンプルのPR作成
-    - サンプル 水曜目標
-    - wiki 金曜目標
-  - 配布パッケージはインタースティシャルレビュー完了後に合間で実施
-  - 7/28リリース予定
+  - 7/28(木)リリース予定
 
 ### 外山
 
@@ -146,42 +150,25 @@
     - 本体
       - [インステ側の修正](https://github.com/fan-ADN/nendSDK-Android-ironSource-CustomAdapter-private/pull/28)
         - iOS側でのPRで見つかった分
-      - [エラーの管理方法をまとめる](https://github.com/fan-ADN/nendSDK-Android-ironSource-CustomAdapter-private/issues/11)
-    - wiki
-      - [英語](https://github.com/fan-ADN/nendSDK-Android-ironSource-CustomAdapter-wiki/pull/3)
         - マージ済
-  - 本体
-    - 細かいissueの整理
-      - [sourceSetsの削除](https://github.com/fan-ADN/nendSDK-Android-source/pull/773)
-      - [maven publishing apiの置き換え](https://github.com/fan-ADN/nendSDK-Android-source/pull/774)
+      - [エラーの管理方法をまとめる](https://github.com/fan-ADN/nendSDK-Android-ironSource-CustomAdapter-private/issues/11)
+        - WIP
+      - [動画リワードのテスト実装](https://github.com/fan-ADN/nendSDK-Android-ironSource-CustomAdapter-private/pull/32)
+        - WIP
+      - リリース準備( `v8.2.0.0` )
+        - 本体、サンプル、wikiのPR全部あがってます
 
 #### 今週の対応予定
 
 ---
 
-**今月中にリリース目標**
+**今週木曜日までにリリース目標**
 
 ---
 
 - ironSourceカスタムイベントアダプター
-  - 残タスク(リリースするまでに最低限必要なもの)
-    - [x] リワード動画
-    - [x] インステ
-    - [x] maven pomとjarファイルの書き出し
-    - [x] 難読化の設定
-    - [x] サンプルアプリ
-      - [x] java
-      - [x] kotlin
-    - [x] ドキュメント
-      - [x] 日本語
-      - [x] 英語
-    - [ ] 微修正
-      - [ ] ユーザー機能の削除
-      - [ ] nendSDKとironSource SDKのアップデート
-      - [ ] インステの修正
-      - [ ] (optional) maven publishing apiの置き換え
-  - 7/28リリース予定
-
+  - リリース準備
+  - WIPのタスク
 - nendSDK-Android
   - 細かいissue(リファクタリング等)がないか考える
 
@@ -196,24 +183,26 @@
 ### 船越
 
 #### 先週の進捗
-- 自己評価関連
+- 1on1
 - HCG
   - Mock-Stack
-    - 広告SDK導入(バナー、インステ)
-    - 計測SDK 管理画面反映調整
-
-#### 今週の対応予定
-- MTG(1on1)
-- HCG
-  - Mock-Stack
-    - 広告、計測SDK最終確認
-    - 最終ビルド
+    - 計測、広告SDK導入、最終確認中
   - Mock-CubesControl
-    - 仕様反映
-    - 計測SDK導入、反映確認
+    - ゲーム仕様については開発完了
 - 各種レビュー
 
-#### お問い合わせ対応
+#### 今週の対応予定
+- 1on1
+- HCG
+  - Mock-Stack
+    - リリース
+  - Mock-CubesControl
+    - 計測SDKの追加、ステージ追加後リリース
+  - 第4弾打ち合わせ
+- 各種レビュー
+- 全社MTG視聴
+
+#### 問い合わせ対応
 - なし
 
 #### 問題点、課題
@@ -224,70 +213,58 @@
 #### 先週の進捗
 - nendSDK
   - Android13対応
-    - Beta3→Beta4の差分調査
-  - コードカバレッジ
-    - Jacoco設定中
-
+    - Beta3→Beta4の差分調査完了
+  - コードカバレッジ実装
+    - 一旦は設定完了
 - 各種レビュー
-  - ironsource Android
-  - ironsource iOS
-
-- Chromeチェックツール作成して動かし中
-
-- 評価レポート作成・修正と1on1
 
 #### 今週の対応予定
-- nendSDK
-  - Android13対応
-    - 差分調査完了まで
-  - Jacoco設定完了まで
-
-- 各種レビュー
+- レビュー(ironSource最優先)
+- nendSDK issue探し等
+- コードカバレッジの細かい設定完了まで
+  - botの移行やWikiの記載、残タスクのissue化
+  - 折角頑張って設定したのでQiita書きたい
 
 #### お問い合わせ対応
-- MAX✖️らくスマでクラッシュする件
-  - MAXを組み込んだサンプルアプリを作成して動作確認まで完了
-    - MAX(Android)の使い方をWikiに書いておきました。
+
+- なし
 
 #### 問題点、課題
-- Androidの過去のissueの内容を確認したときに「何が問題で、何が期待される修正なのか」がわからないものが多いです(iOS側はどうなのでしょうか)...一旦、内容を整理したいなと考えています
-(https://github.com/fan-ADN/nendSDK-Android-source/issues/616　や　https://github.com/fan-ADN/nendSDK-Android-source/issues/576 など)
+
+- 5,6分で良いので、CodeCovのカバレッジレポート生成方法について説明させてください
 
 ### 国本
 
 #### 先週の進捗
-- iOS 16情報収集
-  - 調査完了し、対処が必要なものに関しては別途issue作成を行った
+- レビュー
+    - nendSDK-iOS-ironSource-CustomAdapter-private
+        - Added Interstitial ad adapter. #10：済
+    - nendSDK-iOS-ironSource-CustomAdapter-sample
+        - Added Swift sample #4：済
+        - Added Objective-C sample #5：済
+- iOS 15.6 RC2（=正式版） 動作検証
+    - 影響なし
 - issue対応
-  - nendSDK-iOS-source
-    - プレイアブル広告再生中にreleaseVideoAdしても広告を閉じない #876：レビュー依頼中
-    - [AdSupport]isAdvertisingTrackingEnabledの非推奨 #881：Close
-    - [UIKit]UIDevice.orientationの非推奨 #877：着手中
-    - AVFoundation.frameworkの非推奨パラメータやAPIの対応 #882：着手中
-- iOS 15.6 RC,iOS 16 beta3 動作検証
-  - 影響なし
-- 面談
+    - nendSDK-iOS-source
+        - プレイアブル広告再生中にreleaseVideoAdしても広告を閉じない #876：済
+        - AVFoundation.frameworkの非推奨パラメータやAPIの対応 #822：着手中
 
 #### 今週の対応予定
-- iOS 15.6 RC2 動作検証
 - レビュー
-  - nendSDK-iOS-ironSource-CustomAdapter-private
-    - Added Interstitial ad adapter. #10
+    - nendSDK-Android-ironSource-CustomAdapter-wiki,sample,private
+    - nendSDK-iOS-ironSource-CustomAdapter-wiki
 - issue対応
-  - nendSDK-iOS-source
-    - プレイアブル広告再生中にreleaseVideoAdしても広告を閉じない #876
-    - [UIKit]UIDevice.orientationの非推奨 #877
-    - AVFoundation.frameworkの非推奨パラメータやAPIの対応 #882
-    - [WebKit]requiresUserActionForMediaPlaybackの非推奨 #883
-    - [CoreTelephony]subscriberCellularProviderの非推奨 #884
-  - nendSDK-iOS-sample（優先度低）
-    - ナビゲーションバーにSystem Background Colorが適用されていない #123
-    - FullBoard - スワイプ形式のViewControllerをPageViewControllerを継承させる #112
-- Xcode 14.0で試したいこと（時間空いた時に）
-  - SwiftLint，SwiftFormat（静的解析、コードフォーマッター）が簡単に使えるようになったらしいので試す
+    - nendSDK-iOS-source
+        - iOS 16向け対応 #880
+            - AVFoundation.frameworkの非推奨パラメータやAPIの対応
+            - [UIKit]UIDevice.orientationの非推奨
+            - [WebKit]requiresUserActionForMediaPlaybackの非推奨
+            - [CoreTelephony]subscriberCellularProviderの非推奨
+- 目標設定面談
 
 #### 問い合わせ対応
-- なし
+- #27634【iOSSDK】XCODEでBuild Failになってしまう
+    - シミュレータ用にビルドする際にarm64アーキテクチャが削除されていることが原因。一次回答済み。
 
 #### 問題点、課題
 - なし
@@ -297,19 +274,20 @@
 #### 先週の進捗
 
 - レビュー
-  - iOSのironSourceの実装
+  - iOSのironSourceアダプターとサンプル
   - AndroidのSDK本体の細かい修正
-- 2022年上期評価
-  - 自己評価
-  - 1次評価
+- 2022年下期目標設定
+  - 1on1実施
+  - 個人の目標設定など
+- リポジトリ管理
+  - 各リポジトリのチーム権限をSDK -> dev3rdに変更
 
 #### 今週の対応予定
 
-- 2022年上期評価・目標設定
+- 2022年下期目標設定
   - 目標設定 7/29まで
 - 各種レビュー
 - HCG開発
-  - 次作開発の支援
 - 採用
   - スカウト
 - 組織課題PJ
@@ -330,11 +308,15 @@
 
 ### 決まったこと
 
-- ironSourceカスタムアダプター : 7/28リリース予定で作業中の旨を草開さんに伝える
-- nendSDK-Android-source の内容が不明瞭なものを確認し、コメント追記 or ラベルを付与する
-  - ラベル名 `unknown`
+- ironSourceカスタムアダプター 7/28(木) リリース予定
+  - (福岡) nendの管理画面に配布ページを作ってもらう必要があるので草開さんにメンションする
+- Androidだけで定例やる？
+  - やるかも
+  - 外山の方で調整
 
 ### 決まってないこと
+
+- なし
 
 --------------------------------------------------------------------------------
 
@@ -345,19 +327,15 @@
     - できれば休暇前日までにやる
   - サイボウズ登録時はサービス開発部の欄にも登録する
 - **勤怠申請について、チーム内や周りにSlackでもアナウンスする**
-- 外山さん
-  - 7/21 通院のため午後(13時〜14時頃)から就業開始予定
-- 馬場さん
-  - 7/22 出社予定
-- 福岡さん
-  - 7/22 休み予定
+- 国本さん
+  - 7/28 17時早退予定
 - 船越さん
-  - 7/20 16時頃 早退予定
+  - 8/1 夏期休暇
 
 ## 次回ファシリテーター（木南->外山->福岡->船越->馬場->国本の順番で）
 
-- 外山さん
+- 福岡さん
   - 定例MTG、議事録の運用手順
   - https://github.com/fan-ADN/nendSDK-Document-Private/wiki#定例mtg
-- タイムキーパー → 福岡さん
-- 次回SDKチームMTGは7/25(月)実施
+- タイムキーパー → 馬場さん(次回は船越さん)
+- 次回SDKチームMTGは8/1(月)実施
