@@ -14,9 +14,6 @@
 		4F97B7F52886F5FA00B76B0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F97B7F42886F5FA00B76B0D /* Assets.xcassets */; };
 		4F97B7F82886F5FA00B76B0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F97B7F62886F5FA00B76B0D /* LaunchScreen.storyboard */; };
 		4F97B7FB2886F5FA00B76B0D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F97B7FA2886F5FA00B76B0D /* main.m */; };
-		4F97B8082886F65D00B76B0D /* ISNendCustomAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F97B8022886F65D00B76B0D /* ISNendCustomAdapter.m */; };
-		4F97B8092886F65D00B76B0D /* ISNendCustomInterstitial.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F97B8032886F65D00B76B0D /* ISNendCustomInterstitial.m */; };
-		4F97B80A2886F65D00B76B0D /* ISNendCustomRewardedVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F97B8072886F65D00B76B0D /* ISNendCustomRewardedVideo.m */; };
 		B0A1C3CB69B3E765844D3D2D /* Pods_NendIronSourceCustomAdapterObjectiveCSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0BB3B4DF2C3FFD06E45BFE1 /* Pods_NendIronSourceCustomAdapterObjectiveCSample.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,12 +31,6 @@
 		4F97B7F72886F5FA00B76B0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4F97B7F92886F5FA00B76B0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F97B7FA2886F5FA00B76B0D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		4F97B8022886F65D00B76B0D /* ISNendCustomAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISNendCustomAdapter.m; sourceTree = "<group>"; };
-		4F97B8032886F65D00B76B0D /* ISNendCustomInterstitial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISNendCustomInterstitial.m; sourceTree = "<group>"; };
-		4F97B8042886F65D00B76B0D /* ISNendCustomRewardedVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISNendCustomRewardedVideo.h; sourceTree = "<group>"; };
-		4F97B8052886F65D00B76B0D /* ISNendCustomAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISNendCustomAdapter.h; sourceTree = "<group>"; };
-		4F97B8062886F65D00B76B0D /* ISNendCustomInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISNendCustomInterstitial.h; sourceTree = "<group>"; };
-		4F97B8072886F65D00B76B0D /* ISNendCustomRewardedVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISNendCustomRewardedVideo.m; sourceTree = "<group>"; };
 		4F97B80B2886FC6100B76B0D /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		738AC7C916A568FE7B0015FB /* Pods-NendIronSourceCustomAdapterObjectiveCSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NendIronSourceCustomAdapterObjectiveCSample.debug.xcconfig"; path = "Target Support Files/Pods-NendIronSourceCustomAdapterObjectiveCSample/Pods-NendIronSourceCustomAdapterObjectiveCSample.debug.xcconfig"; sourceTree = "<group>"; };
 		C0BB3B4DF2C3FFD06E45BFE1 /* Pods_NendIronSourceCustomAdapterObjectiveCSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NendIronSourceCustomAdapterObjectiveCSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,7 +60,6 @@
 		4F97B7DC2886F5F800B76B0D = {
 			isa = PBXGroup;
 			children = (
-				4F97B8012886F65D00B76B0D /* ISNendCustomAdapter */,
 				4F97B7E72886F5F800B76B0D /* NendIronSourceCustomAdapterObjectiveCSample */,
 				4F97B7E62886F5F800B76B0D /* Products */,
 				91A254E12B9F0CB9EF7DB406 /* Pods */,
@@ -101,19 +91,6 @@
 				4F97B7FA2886F5FA00B76B0D /* main.m */,
 			);
 			path = NendIronSourceCustomAdapterObjectiveCSample;
-			sourceTree = "<group>";
-		};
-		4F97B8012886F65D00B76B0D /* ISNendCustomAdapter */ = {
-			isa = PBXGroup;
-			children = (
-				4F97B8022886F65D00B76B0D /* ISNendCustomAdapter.m */,
-				4F97B8032886F65D00B76B0D /* ISNendCustomInterstitial.m */,
-				4F97B8042886F65D00B76B0D /* ISNendCustomRewardedVideo.h */,
-				4F97B8052886F65D00B76B0D /* ISNendCustomAdapter.h */,
-				4F97B8062886F65D00B76B0D /* ISNendCustomInterstitial.h */,
-				4F97B8072886F65D00B76B0D /* ISNendCustomRewardedVideo.m */,
-			);
-			path = ISNendCustomAdapter;
 			sourceTree = "<group>";
 		};
 		91A254E12B9F0CB9EF7DB406 /* Pods */ = {
@@ -240,12 +217,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F97B7F02886F5F800B76B0D /* ViewController.m in Sources */,
-				4F97B80A2886F65D00B76B0D /* ISNendCustomRewardedVideo.m in Sources */,
 				4F97B7EA2886F5F800B76B0D /* AppDelegate.m in Sources */,
 				4F97B7FB2886F5FA00B76B0D /* main.m in Sources */,
-				4F97B8092886F65D00B76B0D /* ISNendCustomInterstitial.m in Sources */,
 				4F97B7ED2886F5F800B76B0D /* SceneDelegate.m in Sources */,
-				4F97B8082886F65D00B76B0D /* ISNendCustomAdapter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

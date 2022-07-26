@@ -14,9 +14,6 @@
 		4F97B7A72886D71000B76B0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F97B7A52886D71000B76B0D /* Main.storyboard */; };
 		4F97B7A92886D71200B76B0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F97B7A82886D71200B76B0D /* Assets.xcassets */; };
 		4F97B7AC2886D71200B76B0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F97B7AA2886D71200B76B0D /* LaunchScreen.storyboard */; };
-		4F97B7BA2886E88500B76B0D /* ISNendCustomAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F97B7B42886E88500B76B0D /* ISNendCustomAdapter.m */; };
-		4F97B7BB2886E88500B76B0D /* ISNendCustomInterstitial.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F97B7B52886E88500B76B0D /* ISNendCustomInterstitial.m */; };
-		4F97B7BC2886E88500B76B0D /* ISNendCustomRewardedVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F97B7B92886E88500B76B0D /* ISNendCustomRewardedVideo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,12 +26,6 @@
 		4F97B7A82886D71200B76B0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F97B7AB2886D71200B76B0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4F97B7AD2886D71200B76B0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4F97B7B42886E88500B76B0D /* ISNendCustomAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISNendCustomAdapter.m; sourceTree = "<group>"; };
-		4F97B7B52886E88500B76B0D /* ISNendCustomInterstitial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISNendCustomInterstitial.m; sourceTree = "<group>"; };
-		4F97B7B62886E88500B76B0D /* ISNendCustomRewardedVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISNendCustomRewardedVideo.h; sourceTree = "<group>"; };
-		4F97B7B72886E88500B76B0D /* ISNendCustomAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISNendCustomAdapter.h; sourceTree = "<group>"; };
-		4F97B7B82886E88500B76B0D /* ISNendCustomInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISNendCustomInterstitial.h; sourceTree = "<group>"; };
-		4F97B7B92886E88500B76B0D /* ISNendCustomRewardedVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISNendCustomRewardedVideo.m; sourceTree = "<group>"; };
 		4F97B7DB2886F47200B76B0D /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		6F51D576E8F1C90BFA55A387 /* Pods-NendIronSourceCustomAdapterSwiftSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NendIronSourceCustomAdapterSwiftSample.debug.xcconfig"; path = "Target Support Files/Pods-NendIronSourceCustomAdapterSwiftSample/Pods-NendIronSourceCustomAdapterSwiftSample.debug.xcconfig"; sourceTree = "<group>"; };
 		EA79E6FB79D73ABDB7E1799A /* Pods-NendIronSourceCustomAdapterSwiftSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NendIronSourceCustomAdapterSwiftSample.release.xcconfig"; path = "Target Support Files/Pods-NendIronSourceCustomAdapterSwiftSample/Pods-NendIronSourceCustomAdapterSwiftSample.release.xcconfig"; sourceTree = "<group>"; };
@@ -72,7 +63,6 @@
 		4F97B7932886D71000B76B0D = {
 			isa = PBXGroup;
 			children = (
-				4F97B7B32886E88500B76B0D /* ISNendCustomAdapter */,
 				4F97B79E2886D71000B76B0D /* NendIronSourceCustomAdapterSwiftSample */,
 				4F97B79D2886D71000B76B0D /* Products */,
 				2442C1370C1C959EB231BFD2 /* Pods */,
@@ -101,19 +91,6 @@
 				4F97B7AD2886D71200B76B0D /* Info.plist */,
 			);
 			path = NendIronSourceCustomAdapterSwiftSample;
-			sourceTree = "<group>";
-		};
-		4F97B7B32886E88500B76B0D /* ISNendCustomAdapter */ = {
-			isa = PBXGroup;
-			children = (
-				4F97B7B42886E88500B76B0D /* ISNendCustomAdapter.m */,
-				4F97B7B52886E88500B76B0D /* ISNendCustomInterstitial.m */,
-				4F97B7B62886E88500B76B0D /* ISNendCustomRewardedVideo.h */,
-				4F97B7B72886E88500B76B0D /* ISNendCustomAdapter.h */,
-				4F97B7B82886E88500B76B0D /* ISNendCustomInterstitial.h */,
-				4F97B7B92886E88500B76B0D /* ISNendCustomRewardedVideo.m */,
-			);
-			path = ISNendCustomAdapter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,9 +209,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F97B7A42886D71000B76B0D /* ViewController.swift in Sources */,
-				4F97B7BB2886E88500B76B0D /* ISNendCustomInterstitial.m in Sources */,
-				4F97B7BA2886E88500B76B0D /* ISNendCustomAdapter.m in Sources */,
-				4F97B7BC2886E88500B76B0D /* ISNendCustomRewardedVideo.m in Sources */,
 				4F97B7A02886D71000B76B0D /* AppDelegate.swift in Sources */,
 				4F97B7A22886D71000B76B0D /* SceneDelegate.swift in Sources */,
 			);
