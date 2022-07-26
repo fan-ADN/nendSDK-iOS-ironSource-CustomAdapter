@@ -385,8 +385,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = EH6M2BH4ZR;
-				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "arm64 i386 armv7";
+				DEVELOPMENT_TEAM = "";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "arm64 i386 armv7 $(inherited)";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NendIronSourceCustomAdapterSwiftSample/Info.plist;
 				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Need advertising identifier for mediation testing.";
@@ -419,8 +419,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = EH6M2BH4ZR;
-				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "arm64 i386 armv7";
+				DEVELOPMENT_TEAM = "";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "arm64 i386 armv7 $(inherited)";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NendIronSourceCustomAdapterSwiftSample/Info.plist;
 				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Need advertising identifier for mediation testing.";

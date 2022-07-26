@@ -10,7 +10,7 @@ import Foundation
 import ObjectiveC.runtime
 import AppTrackingTransparency
 
-let kAPPKEY = "YOUR_APP_KEY"
+let APPKEY = "YOUR_APP_KEY"
 
 class ViewController: UIViewController, ISRewardedVideoDelegate, ISInterstitialDelegate, ISImpressionDataDelegate {
     
@@ -31,6 +31,8 @@ class ViewController: UIViewController, ISRewardedVideoDelegate, ISInterstitialD
     @IBAction func loadISButtonAction(_ sender: Any) {
         IronSource.loadInterstitial()
     }
+    
+    var rvPlacementInfo: ISPlacementInfo!
     
     //MARK: ViewLifecycle Functions
     override func viewDidLoad() {
@@ -75,7 +77,7 @@ class ViewController: UIViewController, ISRewardedVideoDelegate, ISInterstitialD
         IronSource.setInterstitialDelegate(self)
         IronSource.add(self)
         
-        IronSource.initWithAppKey(kAPPKEY)
+        IronSource.initWithAppKey(APPKEY)
     }
     
     func logFunctionName(string: String = #function) {
@@ -96,6 +98,7 @@ class ViewController: UIViewController, ISRewardedVideoDelegate, ISInterstitialD
      @param error The reason for the error
      */
     public func interstitialDidFailToShowWithError(_ error: Error!) {
+        showISButton.isEnabled=false
         logFunctionName(string: String(describing: error.self))
     }
     
@@ -126,6 +129,7 @@ class ViewController: UIViewController, ISRewardedVideoDelegate, ISInterstitialD
      @param error The reason for the error
      */
     public func interstitialDidFailToLoadWithError(_ error: Error!) {
+        showISButton.isEnabled=false
         logFunctionName(string: #function+String(describing: error.self))
     }
     
@@ -145,7 +149,7 @@ class ViewController: UIViewController, ISRewardedVideoDelegate, ISInterstitialD
      @param available The new rewarded video availability. YES if available and ready to be shown, NO otherwise.
      */
     public func rewardedVideoHasChangedAvailability(_ available: Bool) {
-        showRVButton.isEnabled=true
+        showRVButton.isEnabled=available
         logFunctionName(string: #function+String(available.self))
     }
     
@@ -168,6 +172,12 @@ class ViewController: UIViewController, ISRewardedVideoDelegate, ISInterstitialD
      */
     public func rewardedVideoDidClose() {
         logFunctionName()
+        let action = UIAlertAction.init(title: "OK", style: .cancel)
+        let alert = UIAlertController.init(title:"Video Reward",
+                                           message:"You have been rewarded " + rvPlacementInfo.rewardName! + ": \(String(describing: rvPlacementInfo.rewardAmount))",
+                                       preferredStyle: .alert)
+        alert.addAction(action)
+        self.present(alert, animated: true)
     }
     
     /**
@@ -192,6 +202,7 @@ class ViewController: UIViewController, ISRewardedVideoDelegate, ISInterstitialD
      @param placementInfo An object that contains the placement's reward name and amount.
      */
     public func didReceiveReward(forPlacement placementInfo: ISPlacementInfo!) {
+        rvPlacementInfo = placementInfo
         logFunctionName(string: #function+String(describing: placementInfo.self))
     }
     /**
