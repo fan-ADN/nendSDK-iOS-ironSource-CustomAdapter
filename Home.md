@@ -96,6 +96,10 @@
     2. [mirroring-to-wiki.command](https://github.com/fan-ADN/nendSDK-Document-Private/blob/master/mirroring-to-wiki.command)コマンドを実行する
 - [[タイムキーパー運用ルール|タイムキーパー運用ルール]]
 
+### AndroidチームMTG
+
+- [[Androidチーム定例MTGについて|Androidチーム定例MTGについて]]
+
 ### サービス開発部全体会議
 - サービス開発部全員参加
   - 他部署の人が参加する場合もある
