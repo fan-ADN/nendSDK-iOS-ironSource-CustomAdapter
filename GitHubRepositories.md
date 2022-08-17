@@ -147,6 +147,7 @@
 - https://github.com/fan-ADN/app-fanglobal-mock-riseup
 - https://github.com/fan-ADN/app-fanglobal-mock-stack
 - https://github.com/fan-ADN/app-fanglobal-mock-cubes-control
+- https://github.com/fan-ADN/app-fanglobal-mock-bounce-and-collect
 
 ### GERA
 - https://github.com/fan-ADN/gera-flutter
