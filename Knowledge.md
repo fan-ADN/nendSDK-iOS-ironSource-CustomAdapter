@@ -17,6 +17,7 @@
 ### 機能説明
 - [静止画広告](https://pjmanage.adn-mobasia.net/projects/nend_manual/wiki/静止画（基本機能）)
 - [動画広告](https://pjmanage.adn-mobasia.net/projects/nend_manual/wiki/動画（基本機能）)
+  - [エンドカードのフォーマット](https://fancs-dev.slack.com/archives/C0J80E2F8/p1661247535645289)
 
 ### 運用マニュアル
 - https://github.com/fan-ADN/nend/wiki/サービス運用マニュアル
