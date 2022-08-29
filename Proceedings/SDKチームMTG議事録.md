@@ -1,10 +1,10 @@
-# 2022/0８/22 SDKチームMTG議事録
+# 2022/08/29 SDKチームMTG議事録
 
 ## 参加者
 
-- 福岡
+- 福岡(夏休み)
 - 船越
-- 木南(夏休み)
+- 木南
 - 外山
 - 馬場
 - 国本
@@ -17,7 +17,7 @@
 
 - iOS（木南、船越、国本）
   - WWDC関連 & iOS16
-    - iOS16 beta 6
+    - iOS16 beta 7
       - nendSDKへの影響がある変更はなし
   - iOS15周り
     - 特に動きなし
@@ -29,8 +29,6 @@
   - 細かいタスクを模索しつつ、Issueで対応中
 - Android（外山、馬場、福岡）
   - Android 13 Stable版リリースされました
-    - ドキュメント差分チェックまで確認完了
-    - 互換性フレームワーク確認中
     - Backキーの動きは引き続き確認中
       - ソースコード修正まで完了
       - PR出せてません
@@ -57,10 +55,11 @@
     - ReactNativeリポジトリのdependapotのPRは適宜マージ
 - ironSourceカスタムアダプター対応（外山、木南）
   - Android
-    - リワードのUnitテストまで実装完了
     - 現在インステの実装を進めている
       - 広告種別の切り替えが管理画面からでないとできない→現状通常の動画広告しかテストできない
       - 何か別にスマートな方法があれば切り替えていく予定
+      - デフォルト値を変更する方針？
+      - 今週中PR予定
   - iOS
     - UIテストを実装したい
       - が、シミュレータではIDFAが取得できず、枠が用意できない問題があり、調査が必要。
@@ -69,10 +68,10 @@
       - マニュアルで定期的に情報を取りに行く
     - 草開さんも確認中。
   - Unity、Flutter対応は今後検討していく。
-    - 草開さんと打ち合わせして今後共有していきます。
     - Unity
-      - プラグイン自体の開発は不要
+      - プラグイン自体の開発は不要（iOS/And共に）
       - 導入手順やマニュアルの作成は進めていく方針
+        - iOS 16 対応進めつつ、合間で対応
     - Flutter
       - 一旦対応しない方針
 - 問い合わせ（全員）
@@ -81,63 +80,72 @@
 ### 新規事業アプリ開発
 
 - ハイパーカジュアルゲーム事業（開発担当：船越）
-  - 第二作目
-    - Stack Block: Tower Build Game
-      - Google Playでアラートが出てその対応をした1.3.1リリース済み
-      - 初回リリースは良かった。2回目のリリースで基準点に満たず。
-        - 今後の対応はFGと協議中
-  - 第三作目
-    - Cube Puzzle 3D
-      - 初回リリースの結果が微妙だったので一旦保留。
   - 第四作目
     - Bounce and Collect
-      - 今週中にリリースしたい。FGからの連絡待ち
+      - 審査中。
   - 第五作目
-    - 早ければ今週中に開発着手予定。
+    - Block balls
+      - 開発中。
 
 --------------------------------------------------------------------------------
 
 ## 共有、連絡事項
 
-- 3課のGitHubプロジェクト
-  - nendSDK
-    - 新 https://github.com/orgs/fan-ADN/projects/31
-    - 旧 https://github.com/orgs/fan-ADN/projects/3
-  - dev3rd
-    - 新 https://github.com/orgs/fan-ADN/projects/32/views/1 
-    - 旧 https://github.com/orgs/fan-ADN/projects/7
-  - ツールの使い方
-    - GitHubのプロジェクトツールに関する公式ドキュメント
-    - https://docs.github.com/ja/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects
-- 共有ドライブ
-  - （旧）SDKチーム共有フォルダの以下に移動しました
-  - https://drive.google.com/drive/folders/0AJFWA88ZVW6BUk9PVA
+- 動画広告のエンドカードフォーマットを選択できる機能が追加された
+  - 0:デフォルト
+  - 1:全画面クリック可
+  - 2:全画面クリック可_xボタン付近除外_42px
+  - https://fancs-dev.slack.com/archives/C54JY884B/p1661234918037649
+  - https://fancs-dev.slack.com/archives/C0J80E2F8/p1661247535645289
+
+- ワイン会は再延期
+  - https://fancs-dev.slack.com/archives/C014J5WSVAA/p1661394073055009
+
+- Googleカレンダーについてアンケート（9/9まで）
+  - https://fancs-dev.slack.com/archives/C014J5WSVAA/p1661398653599789
 
 --------------------------------------------------------------------------------
 
 ## 各自対応の進捗、予定
 
+### 木南
+
+#### 先週の進捗
+- 夏季休暇の為なし
+
+#### 今週の対応予定
+- nendSDK-iOS
+  - iOS 16対応の各種レビュー
+  - XCframework対応
+- ironSource Unityプラグイン案内リポジトリの作成
+
+#### 問い合わせ対応
+
+- なし
+
+#### 問題点、課題
+
+- なし
+
 ### 外山
 
 #### 先週の進捗
-
 - nendSDK-Android
-  - ironSourceカスタムイベント
-    - [済] エラータイプのクラス化
-    - [済] UIテストの実装(動画リワード)
-    - [済] Unitテスト追加
-    - UIテストの実装(インステ)
-  - 本体
-    - [済] Draftリリース作成用スクリプトの作成
-    - デュアルSIMの動作検証
+  - Android 13のエラーについて
+    - 実機検証
+    - 調査
+  - デュアルSIMの検証
+    - Android側の実装は問題なし
+- ironSourceカスタムアダプター
+  - インステUIテスト
+    - 管理画面があまりにも遅すぎて、そこで梃摺った
+    - 今週中にPR出す予定
 
 #### 今週の対応予定
-
 - ironSourceカスタムイベントアダプター
   - 残タスクの消化
     - テストの拡充
 - nendSDK-Android
-  - デュアルSIMの調査
   - Android 13のバグ調査
   - リリーススクリプトの整理
   - 細かいissue(リファクタリング等)がないか考える
@@ -146,37 +154,37 @@
 
 - なし
 
-#### 問題点/その他個人的な報告
+#### 問題点、課題
 
-- デュアルSIMの件は、今のところ反応がないことから誰も持っていなさそうなため、明日に締め切ります
-  - 締め切った場合、自分の個人の端末で検証することにします。
+- なし
 
 ### 船越
 
 #### 先週の進捗
-
+- レビュー
+  - iOS
 - HCG
   - Mock-BounceAndCollect
-    - 結果画面追加
-    - ステージ追加
-    - 不具合修正
-    - 計測SDK追加
-    - 効果音追加
+    - 計測イベント追加
+    - アイコン作成
+    - 最終確認
+    - 指摘内容対応
+    - リリース用aabファイル共有
+  - Block Balls
+    - ベクトル取得
+    - ベクトルを利用して射出に変更
+    - 弾の予想軌道（途中）
 
 #### 今週の対応予定
-
-- 1on1準備
-- 各種レビュー
+- レビュー
+  - iOS
 - HCG
-  - Mock-BounceAndCollect
-    - 計測イベント実装、反映確認
-    - 共有
-    - アイコン作成
-    - リリース
-  - 次回作
-    - Block Ballsを検討
+  - Block Balls
+    - 弾の予想軌道
+    - 弾の速度維持
+    - ステージの作成
 
-#### お問い合わせ対応
+#### 問い合わせ対応
 
 - なし
 
@@ -189,60 +197,53 @@
 #### 先週までの進捗
 - nendSDK-Android
   - Android13対応
-      -  Stable版動作検証
-      - Beta4からのドキュメント上の差分調査まで完了
-      - 画面回転で広告表示が狂う件調査中
-      - CompatibilityFrameworkChanges確認中
-  - 位置情報機能削除関連
-    - Wiki・Sampleの修正まで完了
+    - Final版アップデートに伴なうバグ取りをひたすら
+    - 画面回転時のライフサイクル変更をIssue Trackerで問い合わせ
 - nendSDK-iOS
-  - CodeCovの最低限の設定と動作まで確認完了
-- 世界遺産ビューア
-  - テストコード作成
-  - ソースコードのリファクタ
-- 各種レビュー
-- 1on1
+  - CodeCovの設定継続
 
 #### 今週の対応予定
 - nendSDK-Android
-  - CompatibilityFrameworkChanges確認完了
+  - Stable版のPR出す予定
 - nendSDK-iOS
   - CodeCovの細かい設定実施
 - 世界遺産ビューア
+  - 溜まっているPRの再レビュー依頼実施
   - テストコード作成継続
 
 #### 問い合わせ対応
-- なし
+- 【#27647】CTRが極端に低い件
+  - 回答済み
 
 #### 問題点、課題
-- nendSDK-Android
-  - Android13で画面回転で広告表示が狂う件
-    - 別端末でも動作確認をお願いしたいです
-  - 別の広告媒体でも発生するか。AdMobやironSourceなど。
+- WebView形式でクリックが取れない件はWiki等に書く必要はないか？
+- nendSDK-iOS
+  - 複数の広告種別でテスト実行が失敗するが環境によるものなのか？
+    - バナーや動画インステなど
+      - テストコメントアウトで確認。テスト作り直しは追々対応
 
 ### 国本
 
 #### 先週の進捗
-- iOS 15.6.1 & iOS 16 Beta6 動作検証
+- iOS 16 Beta7 動作検証
     - 影響なし
 - issue対応
-    - [CoreTelephony]subscriberCellularProviderの非推奨 #884：指摘対応中
-    - iOSの最小サポートバージョンを9.0から10.0に上げる #843：指摘対応中
-        - 付随するWikiとSampleのPR作成
-    - AVFoundation.frameworkの非推奨APIの対応 #882：マージ済み
-    - NAD_SKA_REQUIRED_XCODE_VERSION を 13.0にする #858：着手中
+    - [CoreTelephony]subscriberCellularProviderの非推奨 #884：PR中
+    - iOSの最小サポートバージョンを9.0から10.0に上げる #843：PR中
+    - NAD_SKA_REQUIRED_XCODE_VERSION を 13.0にする #858：PR中
+    - Duplicate symbol encountered対策 #861：本日PR予定
+- 1on1面談
 
 #### 今週の対応予定
-- 指摘対応
-    - [CoreTelephony]subscriberCellularProviderの非推奨 #884
-    - iOSの最小サポートバージョンを9.0から10.0に上げる #843
 - レビュー
     - [UIKit]UIDevice.orientationの非推奨 #877
 - issue対応
-    - NAD_SKA_REQUIRED_XCODE_VERSION を 13.0にする #858
     - Duplicate symbol encountered対策 #861
     - 抽選レスポンスのSKANのerrorTrackingフィールド削除対応 #865
-- 1on1面談
+- 指摘対応
+    - [CoreTelephony]subscriberCellularProviderの非推奨 #884
+    - iOSの最小サポートバージョンを9.0から10.0に上げる #843
+    - NAD_SKA_REQUIRED_XCODE_VERSION を 13.0にする #858
 
 #### 問い合わせ対応
 - なし
@@ -290,12 +291,14 @@
 
 ### 決まったこと
 
-- なし
+- Githubのプロジェクトボード管理
+  - nendSDKとdev3rdをまとめるかまとめないか
+    - 古い方消す方針で進める
 
 ### 決まってないこと
 
-- Githubのプロジェクトボード管理
-  - nendSDKとdev3rdをまとめるかまとめないか
+- WebView形式でクリックが取れない件はWiki等に書く必要はないか？
+  - 福岡さんいる状態で議論
 
 --------------------------------------------------------------------------------
 
@@ -311,13 +314,13 @@
 ```
 
 - 国本さん
-  - 8/25 15時半早退
-- 福岡さん
-  - 8/26 有給
+  - 9/5,6 夏休み
+- 船越さん
+  - 9/2 夏休み
 
 ## 次回ファシリテーター（木南->外山->福岡->船越->馬場->国本の順番で）
 
-- 国本さん
+- 木南さん
   - 定例MTG、議事録の運用手順
   - <https://github.com/fan-ADN/nendSDK-Document-Private/wiki#定例mtg>
-- タイムキーパー → 木南さん
+- タイムキーパー → 外山さん
