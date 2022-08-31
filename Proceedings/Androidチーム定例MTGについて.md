@@ -20,20 +20,20 @@
 - ファシリテーターを回してやるほどでもないかなと思っているので主に毎週外山がやります
 - タイムキーパーも一旦なしで(必要そうだったらつけます)
 
-### 2022/08/10 議事録
+### 2022/08/31 議事録
 
 #### 1. Androidチーム内に関係するタスクの優先度の確認と進捗
 
 - ここでまとまった内容をSDKチームの定例MTGで共有します
   - 優先度あげてやるべきだと思うタスクなどもあればここで挙げる(ピン止めされているもの中心)
-  - [ ] Android 13対応
+  - [x] Android 13対応
     - 予測型バックジェスチャーについて
       - stable releaseにて確認済
-      - コールバック内部でfinish()を呼んでアクティビティを終了するように変更する必要あり
-    - `onWindowFocusChanged` を通った後に広告表示に影響がある件
-      - [該当箇所](https://github.com/fan-ADN/nendSDK-Android-source/blob/bea250dce3a49a07e25e8e50fff6a742d789e3a5/Android-NendSDK/lib-core/src/main/java/net/nend/android/internal/ui/views/interstitial/NendAdInterstitialView.java#L127-L133)
-        - クリック後にアプリに戻った後にcloseするロジックが今回の件で勝手に発動している
-        - 関連PR: https://github.com/fan-ADN/nendSDK-Android-source/pull/652
+      - 現在PRをDraftまで作成
+        - 明日(2022/09/01)にPR Open予定
+    - Android13の端末でonWindowFocusChangedの引数が想定外にfalseになる場合がある
+      - Issue Trackerまち
+      - 上記の対応に関わらず、こちら側で解決できないか検討・実装中
   - [x] らくらくスマートフォンについて
     - 検証端末を毎度買い足すのはあまりよろしくない
     - 根本から修正する必要あり
@@ -44,8 +44,21 @@
             - 今後サポートしないことに
             - サーバー側でやる
   - [x] 他にあれば
+    - `Unknown platform error occurred when running the UTP test suite. Please check logs for details` について
+      - `lib-core` 内のテストでよく起きる
+      - 原因は不明
+        - Android 13の動作異常？
+      - テストアプリの削除など、できそうなところはやってみる
+    - Code Coverage for iOS
+      - 一旦保留
+        - そもそもUIテストの一部が動かない
+          - 消してもいいかも by 木南さん
+        - botの連携(レポート出力など)まで完了している
+        - テストが全てpassするまでCodecovからレポートされない
 
 - [x] 手が空いてるときにやったタスクがレビュー待ちなどで滞っているものもあれば挙げる
+  - ironSourceカスタムアダプター
+    - インステUIテスト
 
 #### 2. 各自の実行中タスクの報告・確認
 
@@ -54,22 +67,16 @@
     - ironSourceカスタムアダプター
       - UIテストのインステ
     - nendSDK-Android-source
-      - (済) *-pubへのリリースページのDraft作成フローを半自動化するスクリプトを作成する
-        - 次回のリリースまでに使ってみよう
       - Android 13周りのエラーの調査
+      - Android 13周りのレビュー
   - 馬場さん
-    - 世界遺産ビューア
-      - ソースの修正
-      - テストの追加
-        - data層周りのリファクタリング
     - nendSDK
-      - (完) 位置情報の削除
-        - wiki, sample両方
       - Android 13周りのエラーの調査
-    - Code Coverage for iOS
-      - 一旦保留
-        - botの連携(レポート出力など)まで完了している
-        - テストが全てpassするまでCodecovからレポートされない
+    - 世界遺産ビューア
+      - AdMobリワード実装
+        - ソースの修正
+      - data層テストの追加
+        - data層周りのリファクタリング
 
 - [x] その他(以下は例)
   - 実装レベルで詳しく相談したいこと
