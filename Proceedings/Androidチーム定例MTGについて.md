@@ -20,21 +20,22 @@
 - ファシリテーターを回してやるほどでもないかなと思っているので主に毎週外山がやります
 - タイムキーパーも一旦なしで(必要そうだったらつけます)
 
-### 2022/08/31 議事録
+### 2022/09/07 議事録
 
 #### 1. Androidチーム内に関係するタスクの優先度の確認と進捗
 
 - ここでまとまった内容をSDKチームの定例MTGで共有します
   - 優先度あげてやるべきだと思うタスクなどもあればここで挙げる(ピン止めされているもの中心)
-  - [x] Android 13対応
+  - [x] [Android 13対応](https://github.com/fan-ADN/nendSDK-Android-source/issues/740)
     - 予測型バックジェスチャーについて
-      - stable releaseにて確認済
-      - 現在PRをDraftまで作成
-        - 明日(2022/09/01)にPR Open予定
+      - PR merge済
     - Android13の端末でonWindowFocusChangedの引数が想定外にfalseになる場合がある
-      - Issue Trackerまち
-      - 上記の対応に関わらず、こちら側で解決できないか検討・実装中
-  - [x] らくらくスマートフォンについて
+      - PR上がってます
+    - 上記が終わり次第、 `v9.0.0` のリリース準備を行う
+      - issue作成
+      - PR作成
+      - リリース準備
+  - [x] [らくらくスマートフォンについて](https://github.com/fan-ADN/nendSDK-Android-source/issues/672)
     - 検証端末を毎度買い足すのはあまりよろしくない
     - 根本から修正する必要あり
       1. 富士通の開発サポートに聞いてみる
@@ -44,11 +45,18 @@
             - 今後サポートしないことに
             - サーバー側でやる
   - [x] 他にあれば
+    - 今後のnendSDK-Androidの対応について
+      - テストの保守性を上げるための施策を考えて試行する
+      - コードをKotlinに置き換えて全体の可読性を上げる
+        - プロジェクト全体のクラス図があると今後の人も読みやすい
+      - ...etc
     - `Unknown platform error occurred when running the UTP test suite. Please check logs for details` について
       - `lib-core` 内のテストでよく起きる
       - 原因は不明
-        - Android 13の動作異常？
-      - テストアプリの削除など、できそうなところはやってみる
+      - 現状は回復している
+    - Code Coverage動いてなくね？
+      - 調査する
+        - 長びきそうならissue化して別途調査する
     - Code Coverage for iOS
       - 一旦保留
         - そもそもUIテストの一部が動かない
@@ -57,8 +65,7 @@
         - テストが全てpassするまでCodecovからレポートされない
 
 - [x] 手が空いてるときにやったタスクがレビュー待ちなどで滞っているものもあれば挙げる
-  - ironSourceカスタムアダプター
-    - インステUIテスト
+  - リワードの実装(世界遺産ビューア)
 
 #### 2. 各自の実行中タスクの報告・確認
 
@@ -66,21 +73,27 @@
   - 外山さん
     - ironSourceカスタムアダプター
       - UIテストのインステ
+      - 残ったしょぼいタスクの消化
     - nendSDK-Android-source
-      - Android 13周りのエラーの調査
       - Android 13周りのレビュー
   - 馬場さん
-    - nendSDK
-      - Android 13周りのエラーの調査
+    - nendSDK-Android-source
+      - Android 13周りのタスク
+      - (今週以降) `v9.0.0` リリース作業
     - 世界遺産ビューア
       - AdMobリワード実装
-        - ソースの修正
+        - レビュー待ち
       - data層テストの追加
         - data層周りのリファクタリング
+        - 引き続きやる
 
 - [x] その他(以下は例)
   - 実装レベルで詳しく相談したいこと
   - その他
+    - アイデア募集系のissueについて、案出しとか調査方針とかを決める
+      - (完) https://github.com/fan-ADN/nendSDK-Android-source/issues/780
+      - https://github.com/fan-ADN/nendSDK-Android-source/issues/750
+        - 次回やる
 
 #### 3. その他連絡
 
