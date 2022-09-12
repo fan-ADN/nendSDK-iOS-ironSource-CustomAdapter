@@ -113,18 +113,12 @@
   - [2021/10](https://fancs-dev.slack.com/archives/C2GCVN198/p1635469249002900)
 
 ### 1on1
-- 実施頻度は隔週（月2回を目安)
-- 事前レポート
-  - GoogleDriveで個別に提出、共有
-- 1回あたり30〜45分
-- 1on1で定例的に確認したい内容
-  - コンディションの確認
-  - 取り組んでいる内容や課題の整理、その認識の確認
-  - サポートの必要性の確認
-- その他、時期や状況に応じた話
+- 2022年下期からHRMOSで運用開始
+  - https://fancs-dev.slack.com/archives/C014J5WSVAA/p1653981269600359
 
 ## 開発環境関連
 * [検証端末](https://fancsdev.qiita.com/shared/items/286d004d351608bd09a3)
+* [開発部購入PC](https://docs.google.com/spreadsheets/d/1w0XRaWVvFHCDHUXrEI6KTXsZXUr_pRhu-Ncb9n_EoLQ/edit#gid=229157614)
 * [[Apple Developer デバイス登録|AppleDeveloperDevices]]
 * [[Apple証明書|AppleCertificate]]
 * [[共有マシン|Machines]]
