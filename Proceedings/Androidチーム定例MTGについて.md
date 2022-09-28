@@ -20,43 +20,38 @@
 - ファシリテーターを回してやるほどでもないかなと思っているので主に毎週外山がやります
 - タイムキーパーも一旦なしで(必要そうだったらつけます)
 
-### 2022/09/07 議事録
+### 2022/09/28 議事録
 
 #### 1. Androidチーム内に関係するタスクの優先度の確認と進捗
 
 - ここでまとまった内容をSDKチームの定例MTGで共有します
   - 優先度あげてやるべきだと思うタスクなどもあればここで挙げる(ピン止めされているもの中心)
-  - [x] [Android 13対応](https://github.com/fan-ADN/nendSDK-Android-source/issues/740)
-    - 予測型バックジェスチャーについて
-      - PR merge済
-    - Android13の端末でonWindowFocusChangedの引数が想定外にfalseになる場合がある
-      - PR上がってます
-    - 上記が終わり次第、 `v9.0.0` のリリース準備を行う
-      - issue作成
-      - PR作成
-      - リリース準備
   - [x] [らくらくスマートフォンについて](https://github.com/fan-ADN/nendSDK-Android-source/issues/672)
     - 検証端末を毎度買い足すのはあまりよろしくない
     - 根本から修正する必要あり
       1. 富士通の開発サポートに聞いてみる
-          - 富士通側の検証結果の連絡待ち
+          - 富士通側で検証した結果、修正パッチがなされるとのこと(1～2ヶ月以内に再度連絡が来る予定)
       1. らくらくスマートフォンを全て表示しないようにする
           - 草開さんにらくらくスマートフォンの対応自体をするしないかを決定するために、対応しないとした場合の影響値を確認してもらう
-            - 今後サポートしないことに
-            - サーバー側でやる
+            - 富士通の対応も踏まえて草開さんに判断を委ねる
+              - 今後サポートしないことにするのか
+                - サーバー側でやる
   - [x] 他にあれば
     - 今後のnendSDK-Androidの対応について
       - テストの保守性を上げるための施策を考えて試行する
+        - まずはAndroid 13対応で見つかったテスト周りのバグを修正するところから始める
+          - `Unknown platform error occurred when running the UTP test suite. Please check logs for details` について
+            - `lib-core` 内のテストでよく起きる
+              - デバイスの問題かも？
+                - 10/4(火)に出社して確認
+          - Code Coverage動いてなくね？
+            - 調査する
+              - 長びきそうならissue化して別途調査する
       - コードをKotlinに置き換えて全体の可読性を上げる
-        - プロジェクト全体のクラス図があると今後の人も読みやすい
+        - topic issue作成しました(https://github.com/fan-ADN/nendSDK-Android-source/issues/801)
+        - 既に作成済みのモデル周りのissueはすぐにやっても大丈夫
+        - Promise周りをどうするかは今後検討する必要あり
       - ...etc
-    - `Unknown platform error occurred when running the UTP test suite. Please check logs for details` について
-      - `lib-core` 内のテストでよく起きる
-      - 原因は不明
-      - 現状は回復している
-    - Code Coverage動いてなくね？
-      - 調査する
-        - 長びきそうならissue化して別途調査する
     - Code Coverage for iOS
       - 一旦保留
         - そもそもUIテストの一部が動かない
@@ -64,36 +59,39 @@
         - botの連携(レポート出力など)まで完了している
         - テストが全てpassするまでCodecovからレポートされない
 
-- [x] 手が空いてるときにやったタスクがレビュー待ちなどで滞っているものもあれば挙げる
-  - リワードの実装(世界遺産ビューア)
+- [ ] 手が空いてるときにやったタスクがレビュー待ちなどで滞っているものもあれば挙げる
+  - App module test https://github.com/fan-ADN/app-WorldHeritageViewer-Android/pull/40 (世界遺産ビューア)
 
 #### 2. 各自の実行中タスクの報告・確認
 
 - [x] 主にやっていた進捗
   - 外山さん
     - ironSourceカスタムアダプター
-      - UIテストのインステ
-      - 残ったしょぼいタスクの消化
-    - nendSDK-Android-source
-      - Android 13周りのレビュー
+      - v9.0.0.0リリース作業
+    - 今後のメインタスクの検討・作成
+    - Kotlinバージョンを 1.5.31 にアップデートする
+      - ironSource SDKがAndroid 13対応後にKotlinバージョンが上がっている確認
   - 馬場さん
     - nendSDK-Android-source
       - Android 13周りのタスク
-      - (今週以降) `v9.0.0` リリース作業
+        - [Android13環境で不安定になったテスト環境の改善](https://github.com/fan-ADN/nendSDK-Android-source/issues/797)
+      - AdMobメディエーションアダプターの検証
+        - v21.1.0, v21.2.0
+        - PRあげました
     - 世界遺産ビューア
       - AdMobリワード実装
-        - レビュー待ち
+        - レビュー修正中
       - data層テストの追加
         - data層周りのリファクタリング
         - 引き続きやる
+    - Kotlinバージョンを 1.5.31 にアップデートする
+      - ironSource SDKがAndroid 13対応後にKotlinバージョンが上がっている確認
 
 - [x] その他(以下は例)
   - 実装レベルで詳しく相談したいこと
   - その他
     - アイデア募集系のissueについて、案出しとか調査方針とかを決める
-      - (完) https://github.com/fan-ADN/nendSDK-Android-source/issues/780
-      - https://github.com/fan-ADN/nendSDK-Android-source/issues/750
-        - 次回やる
+      - [PR作成時に変更箇所のモジュールに対して依存性のアップデートチェックをしたい](https://github.com/fan-ADN/nendSDK-Android-source/issues/750)
 
 #### 3. その他連絡
 
