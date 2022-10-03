@@ -23,6 +23,7 @@
 1. [採用活動](#採用活動)
 1. [部門別オフィス利用体制](#部門別オフィス利用体制)
 1. [勤怠関係](#勤怠関係)
+1. [HRMOS](#HRMOS)
 
 ## 事業方針資料
 * [[事業方針|BusinessPlans]]
@@ -55,6 +56,9 @@
 - Discussion
   - https://github.com/fan-ADN/nendSDK-Document-Private/discussions
   - Discussion機能を使い、チーム内で意見を求めたり、議論して何かを決めたりする際に使います。
+- scheduled reminders
+  - https://docs.github.com/en/organizations/managing-organization-settings/managing-scheduled-reminders-for-your-organization
+  - OrganizationのSettingsにて、Slackへ通知する対象リポジトリを選択、設定しています。追加や変更などしたい場合はマネージャーへ依頼してください。
 
 ## Firebaseプロジェクト
 * [[3課で管理しているFirebaseプロジェクト一覧|FirebaseProjects]]
@@ -158,3 +162,8 @@
     - 体調不良で早退とかも同様です
   - 理由
     - 急ぎで連絡したい時にいつ出勤・退勤するか分からないと困るため
+
+## HRMOS
+※リンクを開くには社内VPN接続が必要です。
+- [HRMOS操作方法社員マニュアル（スタッフ・管理職共通）](http://video.fancs.com/etc/HRMOS%20_Staff.mp4)
+- [HRMOS操作方法社員マニュアル（管理職のみ）](http://video.fancs.com/etc/HRMOS_%20Management.mp4)
