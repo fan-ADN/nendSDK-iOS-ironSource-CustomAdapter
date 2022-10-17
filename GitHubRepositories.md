@@ -30,6 +30,7 @@
 ### Flutter
 - https://github.com/fan-ADN/nendSDK-Flutter
 - https://github.com/fan-ADN/nendSDK-Flutter-wiki
+  - Archived[(経緯)](https://fancs-dev.slack.com/archives/C0J80E2F8/p1665989391795239?thread_ts=1665987301.531489&cid=C0J80E2F8)
 - https://github.com/fan-ADN/nendSDK-Flutter-Private
 
 ### React Native
