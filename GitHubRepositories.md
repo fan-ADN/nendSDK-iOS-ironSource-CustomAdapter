@@ -114,6 +114,10 @@
 - https://github.com/fan-bot-a8kun/heroku-for-team-sdk-mocking
   - https://fancs-dev.slack.com/archives/C0J80E2F8/p1581042209001000?thread_ts=1580778181.001200&cid=C0J80E2F8
 
+## 3課オンボーディング用
+- https://github.com/fan-ADN/dev-3rd-onboarding-ios
+- https://github.com/fan-ADN/dev-3rd-onboarding-android
+
 ## 3課で管理しているアプリ
 ### nendサーバーサイド向け検証用アプリ
 - https://github.com/fan-ADN/app-From-SDKTeam-To-ServerTeam
