@@ -6,7 +6,7 @@
 1. [職務内容](#職務内容)
 1. [業務知識](#業務知識)
 1. [業務・担当マップ（miro）](#業務担当マップmiro)
-1. [新入社員向け準備項目](#新入社員向け準備項目)
+1. [オンボーディング資料](#オンボーディング資料)
 1. [アカウント関連](#アカウント関連)
 1. [GitHubリポジトリ](#GitHubリポジトリ)
 1. [Firebaseプロジェクト](#Firebaseプロジェクト)
@@ -40,9 +40,8 @@
 - タスク担当者マップ
   - https://miro.com/app/board/o9J_l7XSXo4=/
 
-## 新入社員向け準備項目
-- [オンボーディング-入社後の準備・説明項目](https://docs.google.com/spreadsheets/d/1SIkB-qQ8i1uztdORpsn1rP7cB8Y2FZ1Ay6a6QTyv_Yg/edit#gid=0)
-- [オンボーディング-SDK・アプリ開発の業務項目](https://docs.google.com/spreadsheets/d/1VSEeV0542WmI36tIg3yHrIB0O40awM4bKQnqTaRmmu8/edit#gid=601940104)
+## オンボーディング資料
+- https://drive.google.com/drive/folders/1Cz1Ynk68S3_S9oFi5sKV6NAMKj42XItD
 
 ## アカウント関連
 * [[動作検証、CI用などの共有アカウント|AccountInfo]]
