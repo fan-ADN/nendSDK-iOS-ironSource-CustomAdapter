@@ -20,7 +20,7 @@
 - ファシリテーターを回してやるほどでもないかなと思っているので主に毎週外山がやります
 - タイムキーパーも一旦なしで(必要そうだったらつけます)
 
-### 2022/10/19 議事録
+### 2022/10/25 議事録
 
 #### 1. Androidチーム内に関係するタスクの優先度の確認と進捗
 
@@ -29,9 +29,11 @@
   - [x] [らくらくスマートフォンについて](https://github.com/fan-ADN/nendSDK-Android-source/issues/672)
     - メディアから再連絡がきた
       - 草開さんに再度対応状況を確認中
-        - Slack にてメンションしてみてもいいかも
+        - Slack にメンション済み
       - 先手打って修正版を先方に渡す予定
         - デバイスを追加した修正パッチの SDK
+        - メディアに問い合わせ中
+          - 先方はメディエーション経由での使用なので組込む場合は別に使ってもらう必要がある
     - 検証端末を毎度買い足すのはあまりよろしくない
     - 根本から修正する必要あり
       1. 富士通の開発サポートに聞いてみる
@@ -42,29 +44,28 @@
             - 富士通の対応も踏まえて草開さんに判断を委ねる
               - 今後サポートしないことにするのか
                 - サーバー側でやる
+  - [ ] 現在の nendSDK-Android の対応について
+    - テストの保守性を上げるための施策を考えて試行する
+      - まずは Android 13 対応で見つかったテスト周りのバグを修正するところから始める
+        - [x] `Unknown platform error occurred when running the UTP test suite. Please check logs for details` について
+          - セルフホストランナーを変更して解決
+        - [x] Code Coverage 動いてなくね？
+          - レポートの表示まで確認
+          - 網羅率が低い件について、今後引き続き対応する
+    - コードを Kotlin に置き換えて全体の可読性を上げる
+      - topic issue 作成しました(https://github.com/fan-ADN/nendSDK-Android-source/issues/801)
+      - Kotlin 関連で考慮すべき問題が少しずつ出始めている
+      - 既に作成済みの issue はすぐにやっても大丈夫
+      - Promise 周りの issue 作成済み
+      - UI( View, Activity 周り)の作成
+    - ...etc
+  - Code Coverage for iOS
+    - しばらく保留
+      - そもそも UI テストの一部が動かない
+        - 消してもいいかも by 木南さん
+      - bot の連携(レポート出力など)まで完了している
+      - テストが全て pass するまで Codecov からレポートされない
   - [x] 他にあれば
-    - 今後の nendSDK-Android の対応について
-      - テストの保守性を上げるための施策を考えて試行する
-        - まずは Android 13 対応で見つかったテスト周りのバグを修正するところから始める
-          - [x] `Unknown platform error occurred when running the UTP test suite. Please check logs for details` について
-            - `lib-core` 内のテストでよく起きる
-            - 引き続きソースコード周りを調査する
-          - [x] Code Coverage 動いてなくね？
-            - 上記の問題が解決され、テストが成功すればこちらも正常に動作するかも
-            - 今後引き続き対応する
-      - コードを Kotlin に置き換えて全体の可読性を上げる
-        - topic issue 作成しました(https://github.com/fan-ADN/nendSDK-Android-source/issues/801)
-        - Kotlin 関連で考慮すべき問題が少しずつ出始めている
-        - 既に作成済みの issue はすぐにやっても大丈夫
-        - Promise 周りの issue 作成済み
-        - UI( View, Activity 周り)は問題が起きそうなので後回し
-      - ...etc
-    - Code Coverage for iOS
-      - しばらく保留
-        - そもそも UI テストの一部が動かない
-          - 消してもいいかも by 木南さん
-        - bot の連携(レポート出力など)まで完了している
-        - テストが全て pass するまで Codecov からレポートされない
 
 - [x] 手が空いてるときにやったタスクがレビュー待ちなどで滞っているものもあれば挙げる
   - App module test https://github.com/fan-ADN/app-WorldHeritageViewer-Android/pull/40 (世界遺産ビューア)
@@ -75,18 +76,15 @@
 - [x] 主にやっていた進捗
   - 外山さん
     - チーム周りのこと
-      - CircleCI の整備
       - オンボーディングの内容
         - Android 関連
       - Git-Flow 周りの導入
-        - [WIP]ドキュメント化したり
-    - nendSDK-Flutter
-      - リリースのお手伝い
-    - nendSDK-Android
-      - Release スクリプトの修正
+        - ドキュメント化したり
     - 今後のメインタスクの検討・作成
       - Kotlin 周り
         - Promise 周りの issue 作成しました
+    - ironSource SDK 7.2.5 のアップデート対応
+      - PR 待ち
     - Kotlin バージョンを 1.5.31 にアップデートする
       - ironSource SDK が Android 13 対応後に Kotlin バージョンが上がっている確認
       - バージョンが上がってなかったので保留
@@ -95,23 +93,26 @@
       - Android 13 周りのタスク
         - [Android13環境で不安定になったテスト環境の改善](https://github.com/fan-ADN/nendSDK-Android-source/issues/797)
           - Codecov のバグ
+            - Heroku 待ち
           - セルフホストランナーの切り替え
+            - レビュー待ち
       - AdMob メディエーションアダプターの検証
-        - v21.1.0, v21.2.0
-          - PR レビューマージ済み
         - v21.3.0
-          - リリースノート確認中
+          - テスト実施中
       - wiki の FAQ 修正
         - PR レビューマージ済み
-        - リリース日をいつにするか検討する(すぐ？次回リリース後でも問題ないか？)
+        - リリース日をいつにするか検討する
           - 草開さんに聞いてみる
+            - すぐにやってもいい
+            - 明日以降リリース予定
     - 世界遺産ビューア
       - AdMob リワード実装
-        - レビュー修正中
+        - マージ済
       - data 層テストの追加
         - data 層周りのリファクタリング
           - DI 導入中
             - Koin を導入検討中
+            - 来週中に PR 作成予定
     - Kotlin バージョンを 1.5.31 にアップデートする
       - ironSource SDK が Android 13 対応後に Kotlin バージョンが上がっている確認
 
