@@ -21,6 +21,8 @@ CIやリモートワークに使っているマシンに関する情報です。
   - macOS Big Sur
 - こちらにJenkins本体がインストールされています（master）
 - Adobeアカウントが必要な作業は、こちらのiMacを使います。
+- 資産管理番号
+  - F@N-SD0017
 
 ## Galleria（Windowsマシン、CI用）
 - コンピュータ名
@@ -58,6 +60,8 @@ CIやリモートワークに使っているマシンに関する情報です。
   - リモート用VPN設定情報
   - IPアドレス:192.168.88.32
   - Gateway(ルーター):192.168.88.1
+- サービス開発部の資産管理番号なし
+  - 情シスからのレンタル品
 
 ## mac mini（CI用、OpenSTF用）
 - コンピュータ名
@@ -74,6 +78,8 @@ CIやリモートワークに使っているマシンに関する情報です。
 - OSバージョン
   - macOS Catalina
 - OpenSTFとか使う用です
+- 資産管理番号
+  - F@N-SD0013
 
 ## mac mini（CI用）
 **動作遅くて限界のため、現在は電源OFFにしています。**
@@ -91,6 +97,8 @@ CIやリモートワークに使っているマシンに関する情報です。
   - Unityなど容量でかいものを置いておく場所
   - 比較的軽いビルドジョブ
   - 時間がやや掛かっても構わないジョブ
+- 資産管理番号
+  - F@N-SD0012
 
 ## mac mini M1（M1検証用、CI用）
 - コンピュータ名
@@ -106,6 +114,8 @@ CIやリモートワークに使っているマシンに関する情報です。
   - macOS Big Sur
 - GitHub ActionsのRunnerで使用したい場合
   - jobsで`runs-on: [self-hosted, macos, m1]`のようにラベルを指定する
+- 資産管理番号
+  - F@N-SD0028
 
 # Self-hosted runnersのマシン
 ![img](https://user-images.githubusercontent.com/9563506/170418519-12825d2a-04fb-4721-b2f9-0012fbe99fb9.png)
