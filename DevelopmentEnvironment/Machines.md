@@ -118,7 +118,7 @@ CIやリモートワークに使っているマシンに関する情報です。
   - F@N-SD0028
 
 # Self-hosted runnersのマシン
-![img](https://user-images.githubusercontent.com/9563506/170418519-12825d2a-04fb-4721-b2f9-0012fbe99fb9.png)
+![img](https://user-images.githubusercontent.com/9563506/198981844-4975da87-c23e-4582-8c69-e349a75b89c7.png)
 
 - GitHub Actionsの実行にこれらの共有PC（Windows/Mac）を利用しています。
 - [カスタムラベル](https://docs.github.com/ja/actions/hosting-your-own-runners/using-labels-with-self-hosted-runners)を作成して利用できます
