@@ -118,16 +118,14 @@ CIやリモートワークに使っているマシンに関する情報です。
   - F@N-SD0028
 
 # Self-hosted runnersのマシン
-![img](https://user-images.githubusercontent.com/9563506/198981844-4975da87-c23e-4582-8c69-e349a75b89c7.png)
+![img](https://user-images.githubusercontent.com/9563506/199214703-b386e72a-e637-4a06-8c60-71c2ef2f27b9.png)
 
 - GitHub Actionsの実行にこれらの共有PC（Windows/Mac）を利用しています。
 - [カスタムラベル](https://docs.github.com/ja/actions/hosting-your-own-runners/using-labels-with-self-hosted-runners)を作成して利用できます
   - GitHub ActionsのRunnerでカスタムラベルを使用したい場合
     - jobsで`runs-on: [self-hosted, macos, m1]`とか`runs-on: [self-hosted, Windows, laptop]`のようにラベルを指定する
   - ラベル追加や削除などしたい場合はマネージャーに依頼してください
-- SDxxx(WidnowsノートPC)はオフィスで共有マシンとしてではなく、自宅にてRunnerマシンとして割り当てて利用しています。
-  - 主に手元でAndroid向けのビルドやテストをするために使用しています
-  - 現在`SD0023`は`nnsnico`の家で動かしています
+- RNxxx/SDxxxなどは、支給PCをランナーのマシンとして割り当てて利用
 - `Offline`になっている場合の可能性
   - ネットワーク未接続
   - OSアップデートによる再起動後のログイン待ち
