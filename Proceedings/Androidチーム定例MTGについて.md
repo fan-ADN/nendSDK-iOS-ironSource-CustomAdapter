@@ -20,7 +20,7 @@
 - ファシリテーターを回してやるほどでもないかなと思っているので主に毎週外山がやります
 - タイムキーパーも一旦なしで(必要そうだったらつけます)
 
-### 2022/10/25 議事録
+### 2022/11/1 議事録
 
 #### 1. Androidチーム内に関係するタスクの優先度の確認と進捗
 
@@ -44,11 +44,9 @@
             - 富士通の対応も踏まえて草開さんに判断を委ねる
               - 今後サポートしないことにするのか
                 - サーバー側でやる
-  - [ ] 現在の nendSDK-Android の対応について
+  - [x] 現在の nendSDK-Android の対応について
     - テストの保守性を上げるための施策を考えて試行する
       - まずは Android 13 対応で見つかったテスト周りのバグを修正するところから始める
-        - [x] `Unknown platform error occurred when running the UTP test suite. Please check logs for details` について
-          - セルフホストランナーを変更して解決
         - [x] Code Coverage 動いてなくね？
           - レポートの表示まで確認
           - 網羅率が低い件について、今後引き続き対応する
@@ -57,7 +55,7 @@
       - Kotlin 関連で考慮すべき問題が少しずつ出始めている
       - 既に作成済みの issue はすぐにやっても大丈夫
       - Promise 周りの issue 作成済み
-      - UI( View, Activity 周り)の作成
+      - UI(View, Activity 周り)の作成
     - ...etc
   - Code Coverage for iOS
     - しばらく保留
@@ -69,7 +67,6 @@
 
 - [x] 手が空いてるときにやったタスクがレビュー待ちなどで滞っているものもあれば挙げる
   - App module test https://github.com/fan-ADN/app-WorldHeritageViewer-Android/pull/40 (世界遺産ビューア)
-  - Implementation of rewarded video ad https://github.com/fan-ADN/app-WorldHeritageViewer-Android/pull/38 (世界遺産ビューア)
 
 #### 2. 各自の実行中タスクの報告・確認
 
@@ -78,13 +75,9 @@
     - チーム周りのこと
       - オンボーディングの内容
         - Android 関連
-      - Git-Flow 周りの導入
-        - ドキュメント化したり
-    - 今後のメインタスクの検討・作成
-      - Kotlin 周り
-        - Promise 周りの issue 作成しました
     - ironSource SDK 7.2.5 のアップデート対応
-      - PR 待ち
+      - PR 対応
+      - リリース
     - Kotlin バージョンを 1.5.31 にアップデートする
       - ironSource SDK が Android 13 対応後に Kotlin バージョンが上がっている確認
       - バージョンが上がってなかったので保留
@@ -99,15 +92,7 @@
       - AdMob メディエーションアダプターの検証
         - v21.3.0
           - テスト実施中
-      - wiki の FAQ 修正
-        - PR レビューマージ済み
-        - リリース日をいつにするか検討する
-          - 草開さんに聞いてみる
-            - すぐにやってもいい
-            - 明日以降リリース予定
     - 世界遺産ビューア
-      - AdMob リワード実装
-        - マージ済
       - data 層テストの追加
         - data 層周りのリファクタリング
           - DI 導入中
