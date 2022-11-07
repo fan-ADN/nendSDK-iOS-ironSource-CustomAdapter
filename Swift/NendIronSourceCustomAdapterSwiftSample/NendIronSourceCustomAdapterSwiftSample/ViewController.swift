@@ -38,7 +38,7 @@ class ViewController: UIViewController, ISRewardedVideoDelegate, ISInterstitialD
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.versionLabel.text =  String(format: "%@%@", "sdk version: ", IronSource.sdkVersion());
+        self.versionLabel.text = String(format: "%@%@", "sdk version: ", IronSource.sdkVersion())
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -81,7 +81,7 @@ class ViewController: UIViewController, ISRewardedVideoDelegate, ISInterstitialD
     }
     
     func logFunctionName(string: String = #function) {
-        print("Nend ironSource custom adapter Swift Demo App: "+string)
+        print("Nend ironSource custom adapter Swift Demo App: " + string)
     }
     
     //MARK: ISInterstitialDelegate Functions
@@ -98,7 +98,7 @@ class ViewController: UIViewController, ISRewardedVideoDelegate, ISInterstitialD
      @param error The reason for the error
      */
     public func interstitialDidFailToShowWithError(_ error: Error!) {
-        showISButton.isEnabled=false
+        showISButton.isEnabled = false
         logFunctionName(string: String(describing: error.self))
     }
     
@@ -129,15 +129,15 @@ class ViewController: UIViewController, ISRewardedVideoDelegate, ISInterstitialD
      @param error The reason for the error
      */
     public func interstitialDidFailToLoadWithError(_ error: Error!) {
-        showISButton.isEnabled=false
-        logFunctionName(string: #function+String(describing: error.self))
+        showISButton.isEnabled = false
+        logFunctionName(string: #function + String(describing: error.self))
     }
     
     /**
      Called after an interstitial has been loaded
      */
     public func interstitialDidLoad() {
-        showISButton.isEnabled=true
+        showISButton.isEnabled = true
         logFunctionName()
     }
     
@@ -149,8 +149,8 @@ class ViewController: UIViewController, ISRewardedVideoDelegate, ISInterstitialD
      @param available The new rewarded video availability. YES if available and ready to be shown, NO otherwise.
      */
     public func rewardedVideoHasChangedAvailability(_ available: Bool) {
-        showRVButton.isEnabled=available
-        logFunctionName(string: #function+String(available.self))
+        showRVButton.isEnabled = available
+        logFunctionName(string: #function + String(available.self))
     }
     
     /**
@@ -193,7 +193,7 @@ class ViewController: UIViewController, ISRewardedVideoDelegate, ISInterstitialD
      @param error The reason for the error
      */
     public func rewardedVideoDidFailToShowWithError(_ error: Error!) {
-        logFunctionName(string: #function+String(describing: error.self))
+        logFunctionName(string: #function + String(describing: error.self))
     }
     
     /**
@@ -203,7 +203,7 @@ class ViewController: UIViewController, ISRewardedVideoDelegate, ISInterstitialD
      */
     public func didReceiveReward(forPlacement placementInfo: ISPlacementInfo!) {
         rvPlacementInfo = placementInfo
-        logFunctionName(string: #function+String(describing: placementInfo.self))
+        logFunctionName(string: #function + String(describing: placementInfo.self))
     }
     /**
      Called after a rewarded video has been clicked.
@@ -211,13 +211,13 @@ class ViewController: UIViewController, ISRewardedVideoDelegate, ISInterstitialD
      @param placementInfo An object that contains the placement's reward name and amount.
      */
     func didClickRewardedVideo(_ placementInfo: ISPlacementInfo!) {
-        logFunctionName(string: #function+String(describing: placementInfo.self))
+        logFunctionName(string: #function + String(describing: placementInfo.self))
     }
     
     
     //MARK: ISImpressionData Functions
     func impressionDataDidSucceed(_ impressionData: ISImpressionData!) {
-        logFunctionName(string: #function+String(describing: impressionData))
+        logFunctionName(string: #function + String(describing: impressionData))
     }
     
 }
