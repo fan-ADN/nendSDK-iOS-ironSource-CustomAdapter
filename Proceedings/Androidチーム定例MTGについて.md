@@ -20,7 +20,7 @@
 - ファシリテーターを回してやるほどでもないかなと思っているので主に毎週外山がやります
 - タイムキーパーも一旦なしで(必要そうだったらつけます)
 
-### 2022/11/8 議事録
+### 2022/11/15 議事録
 
 #### 1. Androidチーム内に関係するタスクの優先度の確認と進捗
 
@@ -28,12 +28,13 @@
   - 優先度あげてやるべきだと考えるタスクなどもあればここで挙げる(ピン止めされているもの中心)
   - [x] [らくらくスマートフォンについて](https://github.com/fan-ADN/nendSDK-Android-source/issues/672)
     - メディアから修正
+      - 今週は進捗なし
       - 修正パッチが一部のデバイスになされた
       - 今後の対応
         - 今後同じケースで起きた場合にどう対応するか(サーバー or SDK or サポート切る)
           - サーバー: すぐ対応できるか不透明、 SDK のリリースなしで対応完了できる
           - SDK: すぐに対応できる、リリースを頻繁に行えない
-          - サポート切る: すぐに対応できるが、ドキュメントの整備が必要？etc...
+          - サポート切る: すぐに対応できるが、ドキュメントの整備が必要？etc..
       - 先手打って修正版を先方に渡す予定
         - デバイスを追加した修正パッチの SDK
         - メディアに問い合わせ中
@@ -47,12 +48,14 @@
     - テストの保守性を上げるための施策を考えて試行する
       - まずは Android 13 対応で見つかったテスト周りのバグを修正するところから始める
         - [x] Code Coverage 動いてなくね？
-          - PR レビュー中
+          - PR を Pending
+          - 失敗したテストの修正中
     - コードを Kotlin に置き換えて全体の可読性を上げる
       - topic issue 作成しました(https://github.com/fan-ADN/nendSDK-Android-source/issues/801)
       - Kotlin 関連で考慮すべき問題が少しずつ出始めている
       - `internal` 内のパッケージ別に分けて取り組む。その際に都度 issue を作成することにする
       - 既に作成済みの issue はすぐにやっても大丈夫
+        - モデルの移行周りは既に調査中
       - Promise 周りの issue 作成済み
       - UI(View, Activity 周り)の作成
     - ...etc
@@ -75,27 +78,29 @@
   - 外山さん
     - チーム周りのこと
       - iOS オンボーディング(金曜日)
-    - かんたん issue を考える
-    - Kotlin 化 issue をひとつやってみる
-      - とりあえず 1 週間でやってみる
+    - デプロイスクリプトのリポジトリ移行計画を立てる
+    - Heorku のエンドポイント移行
+      - エンドポイントが確定次第、PR Open する
   - 馬場さん
     - Android 13 周りのタスク
       - [Android13環境で不安定になったテスト環境の改善](https://github.com/fan-ADN/nendSDK-Android-source/issues/797)
-        - CodeCov 側レビュー中
+        - CodeCov 側レビュー Pending
+      - [DOWNSCALED設定時、xml形式のバナー広告のインフォメーションボタンが見切れる](https://github.com/fan-ADN/nendSDK-Android-source/issues/759)
     - AdMob メディエーションアダプターの検証
       - [v21.3.0](https://github.com/fan-ADN/nendSDK-Android-admob-mediation-source/pull/102)
-        - レビュー中
+        - マージ済
     - 世界遺産ビューア
       - data 層テストの追加
-        - 今週中に PR 作成予定
+        - PR 作成
+        - リファクタリングの PR 後検討
+    - GitHub Discussions でレビュー効率化のための議論
+      - Flutter, Unity
 
 - [x] その他(以下は例)
   - 実装レベルで詳しく相談したいこと
   - その他
     - アイデア募集系の issue について、案出しとか調査方針とかを決める
       - なにかあれば
-    - SDK の動作確認の作業に時間がかかるのを何とかしたい
-      - https://github.com/fan-ADN/nendSDK-Document-Private/discussions/62
 
 #### 3. その他連絡
 
