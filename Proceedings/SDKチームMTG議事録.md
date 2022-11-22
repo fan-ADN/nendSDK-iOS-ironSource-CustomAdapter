@@ -137,7 +137,58 @@
 
 ### 木南
 
-- お休みのためスキップ
+#### 先週の進捗
+
+- ironSource カスタムアダプター
+  - Unityプラグイン対応
+    - README作成
+      - PR作成
+- iOS 16.1 検証
+  - SKAdNetwork 4.0 Web to App 検証についての対応
+    - SKAdNetwork team に Feedbackで質問 (鮫島さん)
+      - 今のところ回答なし
+- nendSDK-iOS
+  - herokuを使用している箇所をインフラの用意したAPIに変更
+    - レビュー完了 developブランチにmerge済み
+  - CIのHost-Runnerから返却予定のMacを外す
+    - レビュー完了 developブランチにmerge済み
+  - XCFramework対応
+    - Unit test, UI test 完了
+    - PRをOpen
+  - nadRewardVideoAdDidCloseのコールバックが2回呼ばれることがある
+    - 原因調査
+      - MRAIDのコンテンツがcloseを複数回呼び出すことを想定していなかった
+- オンボーディング
+  - 馬場さんの進捗確認
+
+#### 今週の対応予定
+
+- ironSource カスタムアダプター
+  - Unity プラグイン実装案内
+    - レビュー
+    - 可能であればリリース
+- nendSDK-iOS
+  - XCframework 対応
+  - 次回バージョンに優先して盛り込みたい機能の開発、レビュー
+  - SKAN 4.0 仕様検討,調整
+  - CI環境整備
+  - 細かい Issue 対応
+    - レビュー
+- オンボーディング関連
+  - iOSのレビュー,サポート
+  - フェーズ１
+    - Android のアプリを作って広告を組み込む
+  - フェーズ３の準備
+    - 内容を精査していく
+    - 各種資料の作成
+
+#### 問い合わせ対応
+
+- なし
+
+#### 問題点、課題
+
+- なし
 
 ### 外山
 
