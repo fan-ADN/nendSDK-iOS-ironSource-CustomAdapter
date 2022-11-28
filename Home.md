@@ -127,6 +127,14 @@
 * [[共有マシン|Machines]]
 * [Jenkinsセットアップ](https://github.com/fan-ADN/nendSDK-CI-CD-backups/wiki/Jenkinsの使い方)
 * [[リモートワーク中のVPNから可能なこと|AvailablesForRemoteWork]]
+* SDKテストサーバー
+  * https://teamsdk-api-mock.dev.nend.work/
+  * 上記サーバーに https://github.com/fan-bot-a8kun/heroku-for-team-sdk-mocking をデプロイして運用している
+  * サーバーの再起動やデプロイなどは、インフラ1課へ依頼する
+    * https://fancs-dev.slack.com/archives/C0J80E2F8/p1669604347000649?thread_ts=1669022978.426229&cid=C0J80E2F8
+  * 経緯
+    * https://fancs-dev.slack.com/archives/C0J80E2F8/p1667291926218949
+    * https://fancs-dev.slack.com/archives/C0J80E2F8/p1669022978426229
 
 ## 採用活動
 - [[採用活動についての説明|RecruitmentActivity]]
