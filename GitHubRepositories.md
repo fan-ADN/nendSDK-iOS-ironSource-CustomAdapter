@@ -110,9 +110,12 @@
 - https://github.com/fan-ADN/nend-mraid-js
   - mraid.jsの様々な検証に使うリポジトリなのか？（詳細は要確認）
 
-### mockサーバー(herokuと連携)
+### SDKのMockテストサーバー
 - https://github.com/fan-bot-a8kun/heroku-for-team-sdk-mocking
-  - https://fancs-dev.slack.com/archives/C0J80E2F8/p1581042209001000?thread_ts=1580778181.001200&cid=C0J80E2F8
+- デプロイ先サーバー
+  - https://teamsdk-api-mock.dev.nend.work/
+- 詳細
+  - https://github.com/fan-ADN/nendSDK-Document-Private/wiki#開発環境関連
 
 ## 3課オンボーディング用
 - https://github.com/fan-ADN/dev-3rd-onboarding-ios
