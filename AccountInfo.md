@@ -66,7 +66,7 @@ GitHubにプッシュする都合上、念の為パスワード類はzip暗号�
 * PW
   * 別ファイル参照
 * 2FA
-  * 検証端末`Fan-SD99`で電話番号登録してSMS認証に利用
+  * 検証端末`Fan-SD199`で電話番号登録してSMS認証に利用
   * [他の複数の検証端末](https://docs.google.com/spreadsheets/d/1w0XRaWVvFHCDHUXrEI6KTXsZXUr_pRhu-Ncb9n_EoLQ/edit#gid=1946028988)でAuthyアプリを利用して認証に利用
   * ログイン時は、上記のSMS認証かAuthyでトークン認証を利用する
 
