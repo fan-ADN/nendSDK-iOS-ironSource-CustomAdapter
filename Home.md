@@ -129,7 +129,7 @@
 * [[リモートワーク中のVPNから可能なこと|AvailablesForRemoteWork]]
 * SDKテストサーバー
   * https://teamsdk-api-mock.dev.nend.work/
-  * 上記サーバーに https://github.com/fan-bot-a8kun/heroku-for-team-sdk-mocking をデプロイして運用している
+  * 上記サーバーに https://github.com/fan-bot-a8kun/nendSDK-mock-video-server をデプロイして運用している
   * サーバーの再起動やデプロイなどは、インフラ1課へ依頼する
     * https://fancs-dev.slack.com/archives/C0J80E2F8/p1669604347000649?thread_ts=1669022978.426229&cid=C0J80E2F8
   * 経緯

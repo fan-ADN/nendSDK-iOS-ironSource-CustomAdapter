@@ -111,7 +111,7 @@
   - mraid.jsの様々な検証に使うリポジトリなのか？（詳細は要確認）
 
 ### SDKのMockテストサーバー
-- https://github.com/fan-bot-a8kun/heroku-for-team-sdk-mocking
+- https://github.com/fan-bot-a8kun/nendSDK-mock-video-server
 - デプロイ先サーバー
   - https://teamsdk-api-mock.dev.nend.work/
 - 詳細
