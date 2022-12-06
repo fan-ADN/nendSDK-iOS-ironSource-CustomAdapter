@@ -20,20 +20,25 @@
 - ファシリテーターを回してやるほどでもないかなと思っているので主に毎週外山がやります
 - タイムキーパーも一旦なしで(必要そうだったらつけます)
 
-### 2022/11/22 議事録
+### 2022/12/6 議事録
 
 #### 1. Androidチーム内に関係するタスクの優先度の確認と進捗
 
 - ここでまとまった内容を SDK チームの定例 MTG で共有します
   - 優先度あげてやるべきだと考えるタスクなどもあればここで挙げる(ピン止めされているもの中心)
+  - [x] [一部の第三者配信バナー広告が表示できない問い合わせの調査](https://github.com/fan-ADN/nendSDK-Android-source/issues/826)
+    - 根上さんから過去の類似の問い合わせ内容をもらったので、それと紐付く内容か確認する
+    - 上記で無理そうなら PHP 側と連携して第三者配信用の広告のみテストできる枠を用意してもらう
+  - [x] [MAXメディエーションアダプターでWebViewバナーを表示する方法を調査する](https://github.com/fan-ADN/nendSDK-Android-source/issues/827)
+    - 参考(MAX メディエーションアダプターのソース): https://github.com/AppLovin/AppLovin-MAX-SDK-Android
   - [x] [らくらくスマートフォンについて](https://github.com/fan-ADN/nendSDK-Android-source/issues/672)
     - メディアから修正
-      - 今週は進捗なし
       - 修正パッチが一部のデバイスになされた
       - 今後の対応
         - 今後同じケースで起きた場合にどう対応するか(サーバー or SDK or サポート切る)
           - 11 月中旬以降に動作確認後、草開さんに相談する
-          - 先手打って修正版を先方に渡す予定
+            - 12 月になったが連絡がないので、こちらから確認してみる
+          - サーバーサイドの修正前に先手打って修正版を先方に渡す予定
             - デバイスを追加した修正パッチの SDK
             - メディアに問い合わせ中
             - 先に修正パッチがきたので改善できていると思われる旨を連絡してもらう
@@ -41,20 +46,22 @@
     - テストの保守性を上げるための施策を考えて試行する
       - まずは Android 13 対応で見つかったテスト周りのバグを修正するところから始める
         - [x] Code Coverage 動いてなくね？
-          - PR を Pending
+          - ↓がマージされたので PR のレビューを再アサイン
           - 失敗したテストの修正
-            - PR レビュー中
+            - PR マージ済
     - コードを Kotlin に置き換えて全体の可読性を上げる
       - topic issue 作成しました(https://github.com/fan-ADN/nendSDK-Android-source/issues/801)
       - Kotlin 関連で考慮すべき問題が少しずつ出始めている
       - `internal` 内のパッケージ別に分けて取り組む。その際に都度 issue を作成することにする
       - 既に作成済みの issue はすぐにやっても大丈夫
         - モデルの移行周りは既に調査終わり
-        - タスク実施中
+        - ほぼ完了済、テストも問題なさそう
+        - この PR 内で CodeCov の内容を確認したいので CodeCov の修正 PR のマージ後に Open
       - Promise 周りの issue 作成済み
       - UI(View, Activity 周り)の作成
     - ...etc
   - Kotlin バージョンを 1.5.31 にアップデートする
+    - そろそろ上げてもいいかも
     - ironSource SDK が Android 13 対応後に Kotlin バージョンが上がっている確認
   - Code Coverage for iOS
     - しばらく保留
@@ -63,6 +70,7 @@
       - bot の連携(レポート出力など)まで完了している
       - テストが全て pass するまで Codecov からレポートされない
   - [x] 他にあれば
+    - 特になし
 
 - [x] 手が空いてるときにやったタスクがレビュー待ちなどで滞っているものもあれば挙げる
   - なし
@@ -71,39 +79,48 @@
 
 - [x] 主にやっていた進捗
   - 外山さん
-    - Heorku のエンドポイント移行
-      - エンドポイントが確定次第、PR Open する
-        - アプリケーションサーバー側を修正する
-        - 修正後インフラ側へデプロイの依頼
-    - レビュー
-      - ironSource-CustomAdapter-Unity
+    - 問い合わせ対応
+      - 一部の第三者配信バナー広告が表示できない問い合わせの調査
+        - 1 週間以内に着地点を見つけておきたい(過去の問い合わせだけで解決するのか or PHP 側にテスト枠の用意をしてもらう必要があるのか)
+      - MAX メディエーションアダプターで WebView バナーを表示する方法を調査する
     - デプロイスクリプトのリポジトリ移行計画を立てる
-    - チーム周りのこと
-      - iOS オンボーディング(月・金)
+    - Heroku のエンドポイント移行
+      - エンドポイントが確定次第、PR Open する
+        - マージ済
+      - サーバーアプリケーションの更新対応
+        - マージ済
+      - 修正後インフラ側へデプロイの依頼
+        - デプロイの完了待ち
+          - イベントのエンドポイントの変更のみなので今の状態でも基本的に問題はない
   - 馬場さん
     - Android 13 周りのタスク
       - [Android13環境で不安定になったテスト環境の改善](https://github.com/fan-ADN/nendSDK-Android-source/issues/797)
-        - CodeCov 側レビュー Pending
+        - CodeCov 側レビュー依頼中
+        - 来週マージ目標
       - [Modify expected value to true in CommandHandlerTest](https://github.com/fan-ADN/nendSDK-Android-source/pull/825)
-        - PR レビュー中
-        - 来週の頭まで
+        - PR マージ済
       - [DOWNSCALED設定時、xml形式のバナー広告のインフォメーションボタンが見切れる](https://github.com/fan-ADN/nendSDK-Android-source/issues/759)
-        - PR レビュー中
-        - 来週の頭まで
+        - PR マージ済
     - Kotlin 化対応
       - Model 周りを置き換え中
-      - 来週までに PR オープン
+      - 来週までに PR オープン目標
     - 世界遺産ビューア
       - data 層テストの追加
         - リファクタリングしたソースコードをベースにして再実装
+          - キリの良いところまで作業してブランチを push しておく
+          - 該当する issue にブランチ名とタスクの進捗だけ追記して後は保留
     - チーム周りのこと
         - iOS オンボーディング
     - GitHub Discussions でレビュー効率化のための議論
-      - Flutter, Unity について引き続きルールを詰める
+      - Flutter, Unity についてのルールを Discussions 内に追記
+        - wiki に Discussions の内容を追加した上で Discussions 自体も close する
 
 - [x] その他(以下は例)
   - 実装レベルで詳しく相談したいこと
   - その他
+    - 次回から MRAID の輪読会をしてみる(Android 定例内の 30 分間で)
+      - https://www.iab.com/wp-content/uploads/2015/08/IAB_MRAID_v2_FINAL.pdf
+      - 国本さんと船越さんも誘ってみる？
     - アイデア募集系の issue について、案出しとか調査方針とかを決める
       - なにかあれば
 
