@@ -33,7 +33,8 @@
   - Archived[(経緯)](https://fancs-dev.slack.com/archives/C0J80E2F8/p1665989391795239?thread_ts=1665987301.531489&cid=C0J80E2F8)
 - https://github.com/fan-ADN/nendSDK-Flutter-Private
 
-### React Native
+### React Native(Archived)
+[Archivedの経緯](https://github.com/fan-ADN/nendSDK-request/issues/22)
 - https://github.com/fan-ADN/nendSDK-react-native
 - https://github.com/fan-ADN/nendSDK-react-native-wiki
 - https://github.com/fan-ADN/nendSDK-react-native-private
@@ -120,6 +121,7 @@
 ## 3課オンボーディング用
 - https://github.com/fan-ADN/dev-3rd-onboarding-ios
 - https://github.com/fan-ADN/dev-3rd-onboarding-android
+- https://github.com/fan-ADN/dev-3rd-onboarding-adapters-plugins
 
 ## 3課で管理しているアプリ
 ### nendサーバーサイド向け検証用アプリ
@@ -150,14 +152,17 @@
   - 何度もAppleにリジェクトされてリリースを断念
 
 ## 新規事業アプリ
-### ハイパーカジュアルゲーム（2022年3月〜）
+### ハイパーカジュアルゲーム（2022年3月〜11月）
 - https://github.com/fan-ADN/app-fanglobal-game-dev-docs
 - https://github.com/fan-ADN/app-fanglobal-mock-riseup
 - https://github.com/fan-ADN/app-fanglobal-mock-stack
 - https://github.com/fan-ADN/app-fanglobal-mock-cubes-control
 - https://github.com/fan-ADN/app-fanglobal-mock-bounce-and-collect
+- https://github.com/fan-ADN/app-fanglobal-mock-block-balls
+- https://github.com/fan-ADN/app-fanglobal-mock-time-locker
+- 2022年11月で3課の開発リソース提供は終了
 
-### GERA
+### GERA（〜2021年）
 - https://github.com/fan-ADN/gera-flutter
   - 2021年いっぱいで3課から開発へのアサインは一旦終了。
   - 今後は何かサポートが必要な時に協力する。
