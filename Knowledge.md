@@ -74,6 +74,7 @@
 ### SKAN説明会(SKAdNetwork)
 - 開発3課内の説明会
   - [SKANについての資料(超初級編)](https://github.com/fan-ADN/nendSDK-Document-Private/blob/master/nendSDK-Study-Material/AboutSKAdNetwork/AboutSKAN.key)
+  - [SKANについての資料(nendSDK内での利用方法)](https://github.com/fan-ADN/nendSDK-Document-Private/blob/master/nendSDK-Study-Material/SKAdNetwork_in_nendSDK/SKAdNetwork_in_nendSDK.key)
 - サービス開発部内の説明会
   - [目的・アジェンダ](https://fancs-dev.slack.com/archives/C2GCVN198/p1646191147079299)
   - [スライド資料](https://fancs-dev.slack.com/archives/C2GCVN198/p1647399795933679?thread_ts=1646191147.079299&cid=C2GCVN198)
