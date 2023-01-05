@@ -104,3 +104,15 @@
 - [teamsdk-nend-api-mock](https://dashboard.heroku.com/apps/teamsdk-nend-api-mock)
   - mockデータを返すSDKのテスト用途のアプリ
   - https://github.com/fan-ADN/nendSDK-Document-Private/wiki/GitHubRepositories#mockサーバーherokuと連携
+
+## JetBrain
+- アカウント
+  - `fancs.adndev01@gmail.com`
+  - パスワード
+    - https://github.com/fan-ADN/nendSDK-Document-Private/blob/master/Account-zippings/JetBrains_id_fancs.adndev01%40_pw_for_intellij.zip
+- 用途
+  - AdobeAirプラグイン開発でIntelliJ IDEA（Ultimate Edition）を利用するために使っていたもの
+- ライセンス
+  - もし必要になった時は、Slackの`#intellij-license`で部長orマネージャーに依頼する
+  - 過去のライセンスのバックアップ
+    - https://github.com/fan-ADN/nendSDK-Document-Private/blob/master/Account-zippings/IntelliJ-License.zip
