@@ -81,6 +81,7 @@
 * [[プルリクエストのテンプレート運用ルール|PullRequestTemplateRule]]
 * [[nendの公開サンプルアプリのコメント運用ルール|CommentRuleInSample]]
 * [CI/CD](https://github.com/fan-ADN/nendSDK-CI-CD-backups/wiki)
+  - Bitrise,CircleCI,各種アカウントなど
 * [[Code Coverage|CodeCoverage]]
 * [Serverチームへの提供アプリなど](https://github.com/fan-ADN/app-From-SDKTeam-To-ServerTeam/wiki)
 
