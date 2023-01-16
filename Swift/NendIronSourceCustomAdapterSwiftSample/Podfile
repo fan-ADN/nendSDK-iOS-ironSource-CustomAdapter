@@ -6,7 +6,7 @@ target 'NendIronSourceCustomAdapterSwiftSample' do
   use_frameworks!
 
   # Pods for NendIronSourceCustomAdapterSwiftSample
-  pod 'IronSourceNendCustomAdapter','7.4.0.1'
+  pod 'IronSourceNendCustomAdapter','7.4.0.2'
 
 end
 
