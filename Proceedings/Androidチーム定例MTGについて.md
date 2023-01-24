@@ -20,7 +20,7 @@
 - ファシリテーターを回してやるほどでもないかなと思っているので主に毎週外山がやります
 - タイムキーパーも一旦なしで(必要そうだったらつけます)
 
-## 2023/01/17 議事録
+## 2023/01/24 議事録
 
 ### 1. Androidチーム内に関係するタスクの優先度の確認と進捗
 
@@ -50,8 +50,8 @@
           - デバイスを追加した修正パッチの SDK
           - メディアに問い合わせ中
           - 先に修正パッチがきたので改善できていると思われる旨を連絡してもらう
-- 🎖️ ironSource アダプターリリース対応( `v9.0.0.2` )
-  - リリース完了
+- 🚴 ironSource アダプターリリース対応( `v9.0.0.3` )
+  - ironSource SDK 7.2.7 のアップデート対応
 - 🚴 現在の nendSDK-Android の対応について
   - コードを Kotlin に置き換えて全体の可読性を上げる
     - topic issue 作成しました(https://github.com/fan-ADN/nendSDK-Android-source/issues/801)
@@ -59,9 +59,11 @@
     - `internal` 内のパッケージ別に分けて取り組む。その際に都度 issue を作成することにする
     - 既に作成済みの issue はすぐにやっても大丈夫
       - モデルの移行周りを一部レビュー対応中
-        - App, Screen, Device 周りの PR をマージ済
-        - NendConstants 周りレビュー中
+        - NendConstants マージ済
+        - NendAdContoller , Enum クラスの PR をレビュー対応中
       - ユーティリティクラス周りの issue を一部優先して行う(オンボーディングのレビューとして使いたいため)
+        - AssetUtil と IntentUtil クラスの置き換え
+          - レビュー対応中
   - ...etc
 - 🪧 Kotlin バージョンを 1.5.31 にアップデートする
   - そろそろ上げてもいいかも
@@ -73,7 +75,9 @@
     - bot の連携(レポート出力など)まで完了している
     - テストが全て pass するまで Codecov からレポートされない
 - 他にあれば
-  - 特になし
+  - 🚴🌋 [問い合わせ対応](https://pjmanage.adn-mobasia.net/issues/27700)
+    - 広告が問題かを線引きするための調査をする
+      - 動画広告サーバーチーム(@ all_nend2_dev)に聞いてみる
 
 ### 2. 手が空いてるときにやったタスクがレビュー待ちなどで滞っているものもあれば挙げる
 
@@ -87,26 +91,25 @@
 
 - レビュー
 - Android オンボーディングフェーズ 3
-  - フェーズ 3 の課題を考える
-  - 1 月中までに終わらせる
-- 国本さんに Android 13(Pixel 4a) を渡す
+  - (済) フェーズ 3 の課題を考える
+    - https://github.com/fan-ADN/dev-3rd-onboarding-android/tree/fase3-sample
+    - https://github.com/fan-ADN/dev-3rd-onboarding-android/wiki/nendSDK-Android-%E3%81%AE%E5%9F%BA%E7%A4%8E%E7%9F%A5%E8%AD%98
+  - 残りの期間で出来るところまで課題のステップなどを考える(あわよくば資料化まで)
+- (済) 国本さんに Android 13(Pixel 4a) を渡す
 
 ##### 馬場
 
 - Kotlin 化対応
   - Model 周りを置き換え
-  - NendAd Request 周りの PR
-    - マージ済
-  - NendConstants 周りの PR
-    - レビュー対応中
-    - 今週中に完了予定
   - AssetUtils の Kotlin 化
     - レビュー中
   - NendAdContoller の Kotlin 化
-    - 置き換え中
+    - レビュー中
+  - Enum class の Kotlin 化
+    - レビュー中
 - ironSource カスタムアダプター
-  - リリース済
-- 世界遺産ビューア
+  - ironSource SDK 7.2.7 アップデート対応中
+- 世界遺産ビューア(保留)
   - data 層テストの追加
   - 保留中
   - リファクタリングしたソースコードをベースにして再実装
