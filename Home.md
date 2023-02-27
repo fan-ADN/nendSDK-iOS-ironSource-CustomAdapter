@@ -88,7 +88,7 @@
 ## 定例
 ### SDKチームMTG
 - 開発3課全員参加
-- 毎週月曜日11時〜12時
+- 毎週月曜日 15時〜16時
   - 祝日、休みの人が過半数などの場合は別日に実施
 - [[議事録|SDKチームMTG議事録]]
 - 議事録の運用手順
@@ -99,8 +99,7 @@
     1. [SDKチームMTG議事録.md](https://github.com/fan-ADN/nendSDK-Document-Private/blob/master/Proceedings/SDKチームMTG議事録.md)ファイルを編集する
   - 議事録をwikiに反映する  
     1. masterブランチにコミット, プッシュする
-    2. [mirroring-to-wiki.command](https://github.com/fan-ADN/nendSDK-Document-Private/blob/master/mirroring-to-wiki.command)コマンドを実行する
-- [[タイムキーパー運用ルール|タイムキーパー運用ルール]]
+    - CIで[mirroring-to-wiki.command](https://github.com/fan-ADN/nendSDK-Document-Private/blob/master/mirroring-to-wiki.command)が動いてwikiに反映される
 
 ### AndroidチームMTG
 
