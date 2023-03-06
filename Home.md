@@ -153,9 +153,10 @@
     1. masterブランチにコミット, プッシュする
     - CIで[mirroring-to-wiki.command](https://github.com/fan-ADN/nendSDK-Document-Private/blob/master/mirroring-to-wiki.command)が動いてwikiに反映される
 
-### AndroidチームMTG
+### プラットフォーム別MTG
 
-- [[Androidチーム定例MTGについて|Androidチーム定例MTGについて]]
+- [[Android定例|Androidチーム定例MTGについて]]
+- [[iOS定例|iOS定例MTG]]
 
 ### サービス開発部全体会議
 - サービス開発部全員参加
