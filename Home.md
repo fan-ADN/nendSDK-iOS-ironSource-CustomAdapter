@@ -84,6 +84,7 @@
   - Bitrise,CircleCI,各種アカウントなど
 * [[Code Coverage|CodeCoverage]]
 * [Serverチームへの提供アプリなど](https://github.com/fan-ADN/app-From-SDKTeam-To-ServerTeam/wiki)
+* [[バージョニングの運用方針|Versioning-Policy]]
 
 ## 定例
 ### SDKチームMTG
