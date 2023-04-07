@@ -122,9 +122,9 @@
  */
 - (void)didCloseWithAdInfo:(ISAdInfo *)adInfo {
     NSLog(@"%s", __PRETTY_FUNCTION__);
-    NSString *message = [NSString stringWithFormat:@"You have been rewarded %@ %@", self.rvPlacementInfo.rewardAmount, self.rvPlacementInfo.rewardName];
     if ([adInfo.ad_unit isEqualToString:@"rewarded_video"]) {
         if (self.rvPlacementInfo) {
+            NSString *message = [NSString stringWithFormat:@"You have been rewarded %@ %@", self.rvPlacementInfo.rewardAmount, self.rvPlacementInfo.rewardName];
             UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Video Reward"
                                                                                      message:message
                                                                               preferredStyle:UIAlertControllerStyleAlert];

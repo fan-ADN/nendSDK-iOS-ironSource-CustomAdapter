@@ -136,9 +136,9 @@ extension ViewController : LevelPlayRewardedVideoDelegate, LevelPlayInterstitial
      */
     func didClose(with adInfo: ISAdInfo!) {
         logFunctionName(string: #function)
-        let message = "You have been rewarded " + rvPlacementInfo.rewardName! + ": \(String(describing: rvPlacementInfo.rewardAmount!))"
         if (adInfo.ad_unit == "rewarded_video") {
             print("rewarded_video")
+            let message = "You have been rewarded " + rvPlacementInfo.rewardName! + ": \(String(describing: rvPlacementInfo.rewardAmount!))"
             let action = UIAlertAction.init(title: "OK", style: .cancel)
             let alert = UIAlertController.init(title:"Video Reward",
                                                message: message,
