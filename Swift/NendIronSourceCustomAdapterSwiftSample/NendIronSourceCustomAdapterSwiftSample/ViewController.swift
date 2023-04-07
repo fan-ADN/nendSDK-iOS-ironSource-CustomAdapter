@@ -137,14 +137,16 @@ extension ViewController : LevelPlayRewardedVideoDelegate, LevelPlayInterstitial
     func didClose(with adInfo: ISAdInfo!) {
         logFunctionName(string: #function)
         if (adInfo.ad_unit == "rewarded_video") {
-            print("rewarded_video")
-            let message = "You have been rewarded " + rvPlacementInfo.rewardName! + ": \(String(describing: rvPlacementInfo.rewardAmount!))"
-            let action = UIAlertAction.init(title: "OK", style: .cancel)
-            let alert = UIAlertController.init(title:"Video Reward",
-                                               message: message,
-                                               preferredStyle: .alert)
-            alert.addAction(action)
-            self.present(alert, animated: true)
+            if let placementInfo = rvPlacementInfo {
+                print("rewarded_video")
+                let message = "You have been rewarded " + placementInfo.rewardName! + ": \(String(describing: placementInfo.rewardAmount!))"
+                let action = UIAlertAction.init(title: "OK", style: .cancel)
+                let alert = UIAlertController.init(title:"Video Reward",
+                                                   message: message,
+                                                   preferredStyle: .alert)
+                alert.addAction(action)
+                self.present(alert, animated: true)
+            }
         } else if (adInfo.ad_unit == "interstitial"){
             print("interstitial")
         } else {
