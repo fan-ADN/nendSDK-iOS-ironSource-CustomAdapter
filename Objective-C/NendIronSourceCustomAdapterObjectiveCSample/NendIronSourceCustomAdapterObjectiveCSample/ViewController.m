@@ -11,26 +11,187 @@
 
 #define APPKEY @"YOUR_APP_KEY"
 
-@interface ViewController () <ISRewardedVideoDelegate ,ISInterstitialDelegate>
+@interface ViewController ()
 
+@property (nonatomic) ViewControllerCallback *delegate;
 @property (weak, nonatomic) IBOutlet UIButton *showRVButton;
 @property (weak, nonatomic) IBOutlet UIButton *showISButton;
 @property (weak, nonatomic) IBOutlet UIButton *loadISButton;
 @property (weak, nonatomic) IBOutlet UILabel  *versionLabel;
 
-@property (nonatomic, strong) ISPlacementInfo   *rvPlacementInfo;
+@end
+
+@interface ViewControllerCallback () <LevelPlayRewardedVideoDelegate, LevelPlayInterstitialDelegate>
+
+@property (nonatomic) ISPlacementInfo *rvPlacementInfo;
+@property (nonatomic) ViewController *viewController;
+
+@end
+
+@implementation ViewControllerCallback
+
+- (id)initWithViewController:(ViewController *)viewController
+{
+    self = [super init];
+    if (self) {
+        self.viewController = viewController;
+    }
+    return self;
+}
+
+#pragma mark - Rewarded Video Delegate Functions
+
+/**
+ Called after a rewarded video has been clicked.
+ @param placementInfo An object that contains the placement's reward name and amount.
+ @param adInfo The info of the ad.
+ */
+- (void)didClick:(ISPlacementInfo *)placementInfo withAdInfo:(ISAdInfo *)adInfo {
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+}
+
+/**
+ Called after a rewarded video has been viewed completely and the user is eligible for a reward.
+ @param placementInfo An object that contains the placement's reward name and amount.
+ @param adInfo The info of the ad.
+ */
+- (void)didReceiveRewardForPlacement:(ISPlacementInfo *)placementInfo withAdInfo:(ISAdInfo *)adInfo {
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+    self.rvPlacementInfo = placementInfo;
+}
+
+/**
+ Called after a rewarded video has changed its availability to true.
+ @param adInfo The info of the ad.
+ */
+- (void)hasAvailableAdWithAdInfo:(ISAdInfo *)adInfo {
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.viewController.showRVButton setEnabled:true];
+    });
+}
+
+/**
+ Called after a rewarded video has changed its availability to false.
+ */
+- (void)hasNoAvailableAd {
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.viewController.showRVButton setEnabled:false];
+    });
+}
+
+#pragma mark - Common Rewarded and Interstitial Delegate Functions
+
+/**
+ Called after a rewarded video has attempted to show but failed.
+ Called after an interstitial has attempted to show but failed.
+ @param error The reason for the error
+ @param adInfo The info of the ad.
+ */
+- (void)didFailToShowWithError:(NSError *)error andAdInfo:(ISAdInfo *)adInfo {
+    NSLog(@"%s, error:%@",__PRETTY_FUNCTION__,error);
+    if ([adInfo.ad_unit isEqualToString:@"rewarded_video"]) {
+        NSLog(@"rewarded_video");
+    } else if ([adInfo.ad_unit isEqualToString:@"interstitial"]) {
+       NSLog(@"interstitial");
+   } else {
+       NSLog(@"other format");
+   }
+}
+
+/**
+ Called after a rewarded video has been opened.
+ Called after an interstitial has been opened.
+ @param adInfo The info of the ad.
+ */
+- (void)didOpenWithAdInfo:(ISAdInfo *)adInfo {
+    NSLog(@"%s",__PRETTY_FUNCTION__);
+    if ([adInfo.ad_unit isEqualToString:@"rewarded_video"]) {
+        NSLog(@"rewarded_video");
+    } else if ([adInfo.ad_unit isEqualToString:@"interstitial"]) {
+       NSLog(@"interstitial");
+   } else {
+       NSLog(@"other format");
+   }
+}
+
+/**
+ Called after a rewarded video has been dismissed.
+ @param adInfo The info of the ad.
+ */
+- (void)didCloseWithAdInfo:(ISAdInfo *)adInfo {
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+    NSString *message = [NSString stringWithFormat:@"You have been rewarded %@ %@", self.rvPlacementInfo.rewardAmount, self.rvPlacementInfo.rewardName];
+    if ([adInfo.ad_unit isEqualToString:@"rewarded_video"]) {
+        if (self.rvPlacementInfo) {
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Video Reward"
+                                                                                     message:message
+                                                                              preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *action = [UIAlertAction actionWithTitle:@"OK"
+                                                             style:UIAlertActionStyleCancel
+                                                           handler:nil];
+            [alertController addAction:action];
+            [self.viewController presentViewController:alertController
+                               animated:YES
+                             completion:nil];
+            self.rvPlacementInfo = nil;
+        }
+        NSLog(@"rewarded_video");
+    } else if ([adInfo.ad_unit isEqualToString:@"interstitial"]) {
+        NSLog(@"interstitial");
+    } else {
+        NSLog(@"other format");
+    }
+}
+
+#pragma mark - Interstitial Delegate Functions
+
+/**
+ Called after an interstitial has been clicked.
+ @param adInfo The info of the ad.
+ */
+- (void)didClickWithAdInfo:(ISAdInfo *)adInfo {
+    NSLog(@"%s",__PRETTY_FUNCTION__);
+}
+
+/**
+ Called after an interstitial has attempted to load but failed.
+ @param error The reason for the error
+ */
+- (void)didFailToLoadWithError:(NSError *)error {
+    NSLog(@"%s, error:%@",__PRETTY_FUNCTION__,error);
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.viewController.showISButton setEnabled:false];
+    });
+}
+
+/**
+ Called after an interstitial has been loaded
+ @param adInfo The info of the ad.
+ */
+- (void)didLoadWithAdInfo:(ISAdInfo *)adInfo {
+    NSLog(@"%s",__PRETTY_FUNCTION__);
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.viewController.showISButton setEnabled:true];
+    });
+}
+
+- (void)didShowWithAdInfo:(ISAdInfo *)adInfo {
+    NSLog(@"%s",__PRETTY_FUNCTION__);
+}
 
 @end
 
 @implementation ViewController
 
-#pragma mark -
 #pragma mark ViewLifecycle Functions
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.versionLabel.text = [NSString stringWithFormat:@"sdk version %@", [IronSource sdkVersion]];
+    self.delegate = [[ViewControllerCallback alloc] initWithViewController:self];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -43,7 +204,6 @@
     }
 }
 
-#pragma mark -
 #pragma mark Private Functions
 - (void)usingATTConsentDialog API_AVAILABLE(ios(14.0)) {
     dispatch_async(dispatch_get_main_queue(), ^{
@@ -69,13 +229,12 @@
 - (void)setupIronSourceSdk {
     [ISIntegrationHelper validateIntegration];
     
-    [IronSource setRewardedVideoDelegate:self];
-    [IronSource setInterstitialDelegate:self];
+    [IronSource setLevelPlayRewardedVideoDelegate:self.delegate];
+    [IronSource setLevelPlayInterstitialDelegate:self.delegate];
     
     [IronSource initWithAppKey:APPKEY];
 }
 
-#pragma mark -
 #pragma mark Interface Handling
 
 - (IBAction)showRVButtonTapped:(id)sender {
@@ -100,115 +259,5 @@
     // Videos there are no placements.
     [IronSource loadInterstitial];
 }
-
-#pragma mark - Rewarded Video Delegate Functions
-
-// This method lets you know whether or not there is a video
-// ready to be presented. It is only after this method is invoked
-// with 'hasAvailableAds' set to 'YES' that you can should 'showRV'.
-- (void)rewardedVideoHasChangedAvailability:(BOOL)available {
-    NSLog(@"%s", __PRETTY_FUNCTION__);
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self.showRVButton setEnabled:available];
-    });
-}
-
-// This method gets invoked after the user has been rewarded.
-- (void)didReceiveRewardForPlacement:(ISPlacementInfo *)placementInfo {
-    NSLog(@"%s", __PRETTY_FUNCTION__);
-    self.rvPlacementInfo = placementInfo;
-}
-
-// This method gets invoked when there is a problem playing the video.
-// If it does happen, check out 'error' for more information and consult
-// our knowledge center for help.
-- (void)rewardedVideoDidFailToShowWithError:(NSError *)error {
-    NSLog(@"%s, error:%@",__PRETTY_FUNCTION__,error);
-}
-
-// This method gets invoked when we take control, but before
-// the video has started playing.
-- (void)rewardedVideoDidOpen {
-    NSLog(@"%s", __PRETTY_FUNCTION__);
-}
-
-// This method gets invoked when we return controlback to your hands.
-// We chose to notify you about rewards here and not in 'didReceiveRewardForPlacement'.
-// This is because reward can occur in the middle of the video.
-- (void)rewardedVideoDidClose {
-    NSLog(@"%s", __PRETTY_FUNCTION__);
-    if (self.rvPlacementInfo) {
-        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Video Reward"
-                                                                                 message:[NSString stringWithFormat:@"You have been rewarded %d %@", [self.rvPlacementInfo.rewardAmount intValue], self.rvPlacementInfo.rewardName]
-                                                                          preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction *action = [UIAlertAction actionWithTitle:@"OK"
-                                                         style:UIAlertActionStyleCancel
-                                                       handler:nil];
-        [alertController addAction:action];
-        [self presentViewController:alertController
-                           animated:YES
-                         completion:nil];
-        self.rvPlacementInfo = nil;
-    }
-}
-
-// This method gets invoked when the video has started playing.
-- (void)rewardedVideoDidStart {
-    NSLog(@"%s", __PRETTY_FUNCTION__);
-}
-
-// This method gets invoked when the video has stopped playing.
-- (void)rewardedVideoDidEnd {
-    NSLog(@"%s", __PRETTY_FUNCTION__);
-}
-
-// This method gets invoked after a video has been clicked
-- (void)didClickRewardedVideo:(ISPlacementInfo *)placementInfo {
-    NSLog(@"%s", __PRETTY_FUNCTION__);
-}
-
-#pragma mark - Interstitial Delegate Functions
-
-- (void)interstitialDidLoad {
-    NSLog(@"%s",__PRETTY_FUNCTION__);
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self.showISButton setEnabled:YES];
-    });
-}
-
-- (void)interstitialDidFailToLoadWithError:(NSError *)error {
-    NSLog(@"%s, error:%@",__PRETTY_FUNCTION__,error);
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self.showISButton setEnabled:NO];
-    });
-}
-
-- (void)interstitialDidOpen {
-    NSLog(@"%s",__PRETTY_FUNCTION__);
-}
-
-// The method will be called each time the Interstitial windows has opened successfully.
-- (void)interstitialDidShow {
-    NSLog(@"%s",__PRETTY_FUNCTION__);
-}
-
-// This method gets invoked after a failed attempt to load Interstitial.
-// If it does happen, check out 'error' for more information and consult our
-// Knowledge center.
-- (void)interstitialDidFailToShowWithError:(NSError *)error {
-    NSLog(@"%s, error:%@",__PRETTY_FUNCTION__,error);
-}
-
-// This method will be called each time the user had clicked the Interstitial ad.
-- (void)didClickInterstitial {
-    NSLog(@"%s",__PRETTY_FUNCTION__);
-}
-
-// This method get invoked after the Interstitial window had closed and control
-// returns to your application.
-- (void)interstitialDidClose {
-    NSLog(@"%s",__PRETTY_FUNCTION__);
-}
-
 
 @end

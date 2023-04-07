@@ -12,7 +12,7 @@ import AppTrackingTransparency
 
 let APPKEY = "YOUR_APP_KEY"
 
-class ViewController: UIViewController, ISRewardedVideoDelegate, ISInterstitialDelegate, ISImpressionDataDelegate {
+class ViewController: UIViewController, ISImpressionDataDelegate {
     
     //MARK: IBOutlets
     @IBOutlet weak var showRVButton: UIButton!
@@ -73,8 +73,8 @@ class ViewController: UIViewController, ISRewardedVideoDelegate, ISInterstitialD
     }
     
     func setupIronSourceSdk() {
-        IronSource.setRewardedVideoDelegate(self)
-        IronSource.setInterstitialDelegate(self)
+        IronSource.setLevelPlayRewardedVideoDelegate(self)
+        IronSource.setLevelPlayInterstitialDelegate(self)
         IronSource.add(self)
         
         IronSource.initWithAppKey(APPKEY)
@@ -84,141 +84,141 @@ class ViewController: UIViewController, ISRewardedVideoDelegate, ISInterstitialD
         print("Nend ironSource custom adapter Swift Demo App: " + string)
     }
     
-    //MARK: ISInterstitialDelegate Functions
-    /**
-     Called after an interstitial has been clicked.
-     */
-    public func didClickInterstitial() {
-        logFunctionName()
-    }
-    
-    /**
-     Called after an interstitial has attempted to show but failed.
-     
-     @param error The reason for the error
-     */
-    public func interstitialDidFailToShowWithError(_ error: Error!) {
-        showISButton.isEnabled = false
-        logFunctionName(string: String(describing: error.self))
-    }
-    
-    /**
-     Called after an interstitial has been displayed on the screen.
-     */
-    public func interstitialDidShow() {
-        logFunctionName()
-    }
-    
-    /**
-     Called after an interstitial has been dismissed.
-     */
-    public func interstitialDidClose() {
-        logFunctionName()
-    }
-    
-    /**
-     Called after an interstitial has been opened.
-     */
-    public func interstitialDidOpen() {
-        logFunctionName()
-    }
-    
-    /**
-     Called after an interstitial has attempted to load but failed.
-     
-     @param error The reason for the error
-     */
-    public func interstitialDidFailToLoadWithError(_ error: Error!) {
-        showISButton.isEnabled = false
-        logFunctionName(string: #function + String(describing: error.self))
-    }
-    
-    /**
-     Called after an interstitial has been loaded
-     */
-    public func interstitialDidLoad() {
-        showISButton.isEnabled = true
-        logFunctionName()
-    }
-    
-    
-    //MARK: ISRewardedVideoDelegate Functions
-    /**
-     Called after a rewarded video has changed its availability.
-     
-     @param available The new rewarded video availability. YES if available and ready to be shown, NO otherwise.
-     */
-    public func rewardedVideoHasChangedAvailability(_ available: Bool) {
-        showRVButton.isEnabled = available
-        logFunctionName(string: #function + String(available.self))
-    }
-    
-    /**
-     Called after a rewarded video has finished playing.
-     */
-    public func rewardedVideoDidEnd() {
-        logFunctionName()
-    }
-    
-    /**
-     Called after a rewarded video has started playing.
-     */
-    public func rewardedVideoDidStart() {
-        logFunctionName()
-    }
-    
-    /**
-     Called after a rewarded video has been dismissed.
-     */
-    public func rewardedVideoDidClose() {
-        logFunctionName()
-        let action = UIAlertAction.init(title: "OK", style: .cancel)
-        let alert = UIAlertController.init(title:"Video Reward",
-                                           message:"You have been rewarded " + rvPlacementInfo.rewardName! + ": \(String(describing: rvPlacementInfo.rewardAmount))",
-                                       preferredStyle: .alert)
-        alert.addAction(action)
-        self.present(alert, animated: true)
-    }
-    
-    /**
-     Called after a rewarded video has been opened.
-     */
-    public func rewardedVideoDidOpen() {
-        logFunctionName()
-    }
-    
-    /**
-     Called after a rewarded video has attempted to show but failed.
-     
-     @param error The reason for the error
-     */
-    public func rewardedVideoDidFailToShowWithError(_ error: Error!) {
-        logFunctionName(string: #function + String(describing: error.self))
-    }
-    
-    /**
-     Called after a rewarded video has been viewed completely and the user is eligible for reward.
-     
-     @param placementInfo An object that contains the placement's reward name and amount.
-     */
-    public func didReceiveReward(forPlacement placementInfo: ISPlacementInfo!) {
-        rvPlacementInfo = placementInfo
-        logFunctionName(string: #function + String(describing: placementInfo.self))
-    }
-    /**
-     Called after a rewarded video has been clicked.
-     
-     @param placementInfo An object that contains the placement's reward name and amount.
-     */
-    func didClickRewardedVideo(_ placementInfo: ISPlacementInfo!) {
-        logFunctionName(string: #function + String(describing: placementInfo.self))
-    }
-    
-    
     //MARK: ISImpressionData Functions
     func impressionDataDidSucceed(_ impressionData: ISImpressionData!) {
         logFunctionName(string: #function + String(describing: impressionData))
     }
-    
 }
-
+    
+extension ViewController : LevelPlayRewardedVideoDelegate, LevelPlayInterstitialDelegate {
+    //MARK: LevelPlayRewardedVideoDelegate Functions
+    /**
+     Called after a rewarded video has changed its availability to true.
+     @param adInfo The info of the ad.
+     */
+    func hasAvailableAd(with adInfo: ISAdInfo!) {
+        showRVButton.isEnabled = true
+        logFunctionName(string: #function)
+    }
+    
+    /**
+     Called after a rewarded video has changed its availability to false.
+     */
+    func hasNoAvailableAd() {
+        logFunctionName()
+    }
+    
+    //MARK: LevelPlayRewardedVideoBaseDelegate Functions
+    /**
+     Called after a rewarded video has been viewed completely and the user is eligible for a reward.
+     @param placementInfo An object that contains the placement's reward name and amount.
+     @param adInfo The info of the ad.
+     */
+    func didReceiveReward(forPlacement placementInfo: ISPlacementInfo!, with adInfo: ISAdInfo!) {
+        rvPlacementInfo = placementInfo
+        logFunctionName(string: #function + String(describing: placementInfo.self))
+    }
+    
+    /**
+     Called after a rewarded video has been clicked.
+     @param placementInfo An object that contains the placement's reward name and amount.
+     @param adInfo The info of the ad.
+     */
+    func didClick(_ placementInfo: ISPlacementInfo!, with adInfo: ISAdInfo!) {
+        logFunctionName(string: #function + String(describing: placementInfo.self))
+    }
+    
+    //MARK: Common LevelPlayRewardedVideoBaseDelegate and LevelPlayInterstitialDelegate Functions
+    /**
+     Called after a rewarded video has been dismissed.
+     Called after an interstitial has been dismissed.
+     @param adInfo The info of the ad.
+     */
+    func didClose(with adInfo: ISAdInfo!) {
+        logFunctionName(string: #function)
+        let message = "You have been rewarded " + rvPlacementInfo.rewardName! + ": \(String(describing: rvPlacementInfo.rewardAmount!))"
+        if (adInfo.ad_unit == "rewarded_video") {
+            print("rewarded_video")
+            let action = UIAlertAction.init(title: "OK", style: .cancel)
+            let alert = UIAlertController.init(title:"Video Reward",
+                                               message: message,
+                                               preferredStyle: .alert)
+            alert.addAction(action)
+            self.present(alert, animated: true)
+        } else if (adInfo.ad_unit == "interstitial"){
+            print("interstitial")
+        } else {
+            print("other format")
+        }
+    }
+    
+    /**
+     Called after a rewarded video has been opened.
+     Called after an interstitial has been opened.
+     @param adInfo The info of the ad.
+     */
+    func didOpen(with adInfo: ISAdInfo!) {
+        logFunctionName(string: #function)
+        if (adInfo.ad_unit == "rewarded_video") {
+            print("rewarded_video")
+        } else if (adInfo.ad_unit == "interstitial"){
+            print("interstitial")
+        } else {
+            print("other format")
+        }
+    }
+    
+    /**
+     Called after a rewarded video has attempted to show but failed.
+     Called after an interstitial has attempted to show but failed.
+     @param error The reason for the error
+     @param adInfo The info of the ad.
+     */
+    func didFailToShowWithError(_ error: Error!, andAdInfo adInfo: ISAdInfo!) {
+        logFunctionName(string: #function + String(describing: error.self))
+        if (adInfo.ad_unit == "rewarded_video") {
+            print("rewarded_video")
+        } else if (adInfo.ad_unit == "interstitial"){
+            showISButton.isEnabled = false
+            print("interstitial")
+        } else {
+            print("other format")
+        }
+        
+    }
+    
+    //MARK: LevelPlayInterstitialDelegate Functions
+    /**
+     Called after an interstitial has been clicked.
+     @param adInfo The info of the ad.
+     */
+    func didClick(with adInfo: ISAdInfo!) {
+        logFunctionName(string: #function)
+    }
+    
+    /**
+     Called after an interstitial has been loaded
+     @param adInfo The info of the ad.
+     */
+    func didLoad(with adInfo: ISAdInfo!) {
+        showISButton.isEnabled = true
+        logFunctionName(string: #function)
+    }
+    
+    /**
+     Called after an interstitial has attempted to load but failed.
+     @param error The reason for the error
+     */
+    func didFailToLoadWithError(_ error: Error!) {
+        showISButton.isEnabled = false
+        logFunctionName(string: #function)
+    }
+    
+    /**
+     Called after an interstitial has been displayed on the screen.
+     @param adInfo The info of the ad.
+     */
+    func didShow(with adInfo: ISAdInfo!) {
+        logFunctionName(string: #function)
+    }
+}

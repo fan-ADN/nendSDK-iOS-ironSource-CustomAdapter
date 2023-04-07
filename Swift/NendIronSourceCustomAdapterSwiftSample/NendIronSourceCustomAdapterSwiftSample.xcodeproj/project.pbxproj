@@ -164,6 +164,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		D847532B8820479ED8337ED7 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);

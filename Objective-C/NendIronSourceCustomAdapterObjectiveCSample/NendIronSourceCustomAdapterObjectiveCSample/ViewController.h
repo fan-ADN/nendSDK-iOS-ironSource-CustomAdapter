@@ -9,6 +9,9 @@
 
 @interface ViewController : UIViewController
 
+@end
+
+@interface ViewControllerCallback : NSObject
 
 @end
 
