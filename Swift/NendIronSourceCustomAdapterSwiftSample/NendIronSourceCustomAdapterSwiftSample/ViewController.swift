@@ -9,6 +9,7 @@ import UIKit
 import Foundation
 import ObjectiveC.runtime
 import AppTrackingTransparency
+import IronSource
 
 let APPKEY = "YOUR_APP_KEY"
 
