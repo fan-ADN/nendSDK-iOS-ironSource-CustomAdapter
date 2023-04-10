@@ -1,4 +1,4 @@
-# 2023/04/03 SDKチームMTG議事録
+# 2023/04/10 SDKチームMTG議事録
 
 ## 参加者
 
@@ -11,15 +11,15 @@
 --------------------------------------------------------------------------------
 ## 共有、連絡事項
 
-- 出勤簿申請は月末最後の退勤時に申請することを徹底する
-  - https://fancs-dev.slack.com/archives/C0J08LR7F/p1680225535479479
+- Android 14の検証端末を1台購入済み
+  - Pixel 6a
+- 4/13障害対応の振り返りMTGまでに、事前に調べておく
+  - https://fancs-dev.slack.com/archives/C0J80E2F8/p1680854997679319?thread_ts=1680851442.692219&cid=C0J80E2F8
 - インターン受け入れに伴う休暇の日程調整のお願い
-  - https://fancs-dev.slack.com/archives/C0J08LR7F/p1680234081959409
-- ironSourceのアダプターの互換性についての方針検討（4/7までなる早で）
-  - https://fancs-dev.slack.com/archives/C01NR0327A5/p1680234175684949
-- 【依頼】　2023年運賃改定に伴う、「通勤交通費 変更届」の申請について
-  - 期限 4/3まで
-  - 3/10 に`employee@fancs.com`宛にメールが `【依頼】　2023年運賃改定に伴う、「通勤交通費 変更届」の申請について` というメールが届いているので各自Agileで申請を行うこと
+  - 以下の日程で確定
+  - 1回目：8/28(月)~9/1(金)
+  - 2回目：9/11(月)~9/15(金)
+  - 9/1、9/15はオフィスで発表会、懇親会を実施予定
 
 --------------------------------------------------------------------------------
 
@@ -29,31 +29,19 @@
 
 ## 先週の進捗
 - nendSDK-iOS
-  - 抽選レスポンス`adm`が3,500文字程度になる件について問題が発生しないか
-    - 抽選レスポンスの`adm`をサンプルURLに差し替えて実際の動きを確認
-      - 動画広告は事前に`NSURLRequest`で素材をダウンロードする仕組みとなっている
-        - ファイルのダウンロードは問題なく行えた
-      - MRAIDの場合は`WKWebView`でキャッシュされたファイルを`load`する仕組みとなっている
-        - こちらも該当の素材が問題なく再生され、ログ等にエラーメッセージも出力されなかったため問題ないと考える
-- ironSourceカスタムアダプター
-  - 主にサンプル側の実装に関しての相談
+  - v8.0.1
+    - リリース完了
+- Unityプラグイン, ironSourceカスタムアダプターレビュー
+  - それぞれ nendSDK v8.0.1 に対応させたもの
+- ポストモーテム事前準備
+  - SDKのリスクに対してサーバーサイドでできることを考える
 
 ## 課題、困っていること、気になっていること
-- 特になし
+- なし
 
 ## 今週の予定
-- 一部の広告にてSKANでクリックしてもストア起動が発生しない
-  - SDK起因の不具合のため最優先で対応(v8.0.1)
-- Unityプラグイン
-  - wiki, サンプル
-    - v5.0.0 リリース準備
-  - nendSDK-iOS v8.0.1と同時にリリースできるように準備を進める
-- irouSourceカスタムアダプター
-  - dependencyが カスタムアダプターとironSourceSDKで1対1で設定されている問題
-    - 互換性の範囲を広げる方針で検討を進める
-  - v8.0.1.0 リリースのサポート
-    - Podspecファイルを変更するだけなので上の対応を入れても良いかもしれない
-  - nendSDK-iOS v8.0.1と同時にリリースできるように準備を進める
+- 一部のSKAN広告がクリックできない件のポストモーテム
+- 各種プラグインアップデートのサポート
 - nendSDK-iOS
   - v8.1.0 対応
     - Xcode 14.1 対応
@@ -68,172 +56,137 @@
 ## 船越
 
 ## 先週の進捗
-
 - Issue
   - Unity-source
-    - spotId修正 完
-    - interstitial.delegate差替え　完
-    - isOutputLog レビュー待ち
-    - iOSv8.0.0 接続確認まで
-    - Androidv9.0.1接続確認まで
-- レビュー
-  - ironSource-private 完
-  - Unity-wiki　完
-  - Flutter 動作確認まで済み
+    - nendSDK-iOS v8.0.0取り込みまでレビュー完了
+    - 全体の課題を一つのIssueにまとめた。
+  - Unity-sample v5.0.0ドラフトPR
+  - Unity-wiki PR一部修正
+- 各種レビュー
 - MTG
-  - 輪読会
   - ワイン会
-    - 料理等調査
-  - サ開定例
 - オンボーディング
   - 進捗なし
 - お問い合わせ
-  - #project_video_dev adm文字数の拡大
-    - 仕様の調査、動作確認
-
+  - #project_video_dev adm文字数の拡大　完了
 
 ## 課題、困っていること、気になっていること
 
-- 特になし
+- Unity対応にて、aarのgit差分が出ない
+  - そもそも変更点がない可能性
 
 ## 今週の予定
-- お問い合わせ
-  - #project_video_dev adm文字数の拡大
-    - 調査結果の報告
-    - Nend2ApiChecker更新作業の優先度について確認(高めであれば作業も)
 - Unity-source
-  - isOutputLog レビュー待ち 
-  - iOS v8.0.0動作確認
-  - iOS v8.0.1アップデート 
-  - Android v9.0.1アップデート (~4/7)
-  - プラグインv5.0.0リリース
+  - v5.0.0 リリース(13日 木)
 - 各種レビュー
+  - ironSource
+  - Flutter
+  - Android
 - MTG
   - 輪読会
-  - ワイン会
-  - 1on1
+  - ポストモーテム
+  - インボイス説明会
 
 ## 馬場
 
-## 先週/先々週の進捗 (★: 先週予定していたタスク, ●: 追加で実施したタスク ×: 未達成のタスク)
+## 先週の進捗 (★: 先週予定していたタスク, ●: 追加で実施したタスク ×: 未達成のタスク)
 - nendSDK-Android-source
-  - singleTaskモードでクローズのコールバックが呼ばれない場合がある　●
-    - レビュー中
+  - v9.0.1リリース完了　★
 - nendSDK-Android-ironSource-CustomAdapter
-  - ironSource v7.3.0.1組み込みおよびサンプル実装修正　★
-  - バナー広告対応に関する調査　★
-  - nendSDK v9.0.1組み込み確認　●
+  - v9.0.0.1リリース作業(以下PR出しています)　★
+    - Wiki修正
+    - nendSDK Android v9.0.1組み込み
 - nendSDK-Flutter-Private
   - Flutter v2.0.0対応　●
-    - nendSDK-iOS v8.0.0組み込み
-    - nendSDK-Android v9.0.1組み込み
-    - UserId, UserFeature削除
-  - nendSDK iOS v8.0.1リリース後の作業
-  - バナー広告テスト追加　★
-    - 各サイズのロード→表示のケースのみ
-      - 異常系や準正常系のテストも追加したらPR作成予定
-- nendSDK-iOS-Unity-sample, wiki
-  - レビュー ★
+    - レビュー対応
+  - 静止画インステ・動画インステ・動画リワードのテスト作成　●
 - iOSオンボーディング
-  - 端末によってフルボード広告が見切れる件　★
-    - PR作成
-  - 動画ネイティブ広告の横向き表示レイアウト変更　★
-    - レビュー中
+  - 動画ネイティブ広告の横向き表示レイアウト変更　×
+
+## 予定していたタスクが終わらなかった理由
+- 優先度の高いリリース作業を優先し、オンボーディングに関する作業に取り掛れなかったため
 
 ## 課題、困っていること、気になっていること
-- サーバーチームから来たURL文字数確認の件は結局船越さんにお願いしてしまって良いのでしょうか...？
+- オンボーディングPhase2に関する作業計画を立てたい -> 別途木南さんとMTG時間設けさせて下さい
+  - ポストモーテム後に実施
+- Flutter(というかUnityも？)のテスト観点について
+  - SDKをブリッジしてるだけなので表示だけ確認できればOK？
+  - それともきちんとコールバック取得や異常系まで考慮すべき？
+    - この場合、既存のテストアプリの書き換えも必要
+      - Wikiに記載されているインターフェイス部分はテストにすべき
 
 ## 今週の予定
-- nendSDK-Android-source
-  - v9.0.1 リリース準備およびリリース作業
+- nendSDK-Flutter-private
+  - nendSDK-iOS v8.0.1組み込み
+    - PR済み
+  - リリース作業
 - nendSDK-Android-ironSource-CustomAdapter
-  - v9.0.1.0 リリース準備
+  - v9.0.1.0 リリース作業
 - iOSオンボーディング
   - 動画ネイティブ広告の横向き表示レイアウト変更 PR作成まで
-- nendSDK-Flutter-Private
-  - Flutter v2.0.0対応　レビュー対応
 
 ## 国本
 
 ## 先週の進捗
-- iOS 16.4 RC, iOS 16.5 beta  動作検証
-    - 共にnendへの影響なし
 - レビュー
     - Unity関連
-- ironSource-Unity v7.2.7対応
-    - 3/24(金)リリース済み
-- ironSource-iOS v8.0.0.1 対応
-    - 主にサンプルアプリの非推奨対応を実施
-    - 残りのタスクはprivate, wiki, sample のリリース用PRの作成
-    - 予定通り、4/5(水) にリリースできる見込みで進められている
-- nendSDK-Flutter v2.0.0対応
-    - Issue作成とPR途中まで実施。馬場さんに引き継ぎ
+    - Flutter関連
+    - Android v9.0.1
+    - iOS v8.0.1
+- ironSource-iOS v8.0.1.0 対応
+    - 主に公開サンプルの非推奨対応の実施
+    - wiki,sample,privateのPRを出した
 - Androidオンボーディング
-    - 動画広告のレビューを出してコメント頂いている状態
+    - 動画広告のレビュー指摘修正着手中
 
 ## 課題、困っていること、気になっていること
-- 端末容量オーバーでiOS 15.7.4 にアップデートできない件は、時間あるときにAppleに問い合わせしようと思っています。
+- なし
 
 ## 今週の予定
+- 一部のSKAN広告がクリックできない件のポストモーテム
 - レビュー
-    - nendSDK iOS v8.0.1
-    - Android関連
     - Unity関連
-    - Kotlin化
+    - Flutter関連
 - ironSource-iOS v8.0.1.0 対応
-    - 4/5(水)にリリース予定。↓詳細な予定
-    - https://github.com/fan-ADN/nendSDK-iOS-ironSource-CustomAdapter-private/issues/35#issuecomment-1482549734
-    - nendSDK iOS v8.0.1リリースと並行してリリースできるよう作業進める
-- ironSource-Unity v7.3.0 対応
+    - 4/12(水)にリリース予定
+    - [予定](https://github.com/fan-ADN/nendSDK-iOS-ironSource-CustomAdapter-private/issues/35#issuecomment-1482549734)
+- ironSource-Unity v7.3.0.1 対応
     - iOS/Androidのアダプターアップデートが完了したら動作検証を実施
-- nendSDK-Flutter v2.0.0対応
-    - README.mdの修正など
-- AdMob v10.2.0対応
-    - 追加プロパティ（isMuted）の検証
-    - nendアダプター 8.0.0.0 取り込んで動作検証
-    - v10.3.0 もリリースされているのでチェック
-- Issue対応
-    - nendSDK-iOS-sourse
-        - CTCarrierの非推奨
-        - nendSpotIDのcopy属性を外す
-    - nendSDK-iOS-wiki
-        - nendSpotIDのcopy属性を外す
 - Androidオンボーディング
     - 動画広告のレビュー指摘修正
-    - 残りのフォーマットはフルボード広告のみ
+    - 残りはフルボード広告
 
 ## 福岡
 
 ## 先週の進捗
 - レビュー済み
-  - UnityプラグインのisOutputLog削除対応
+  - iOSのnendSDK v8.0.1対応関連
+  - AndroidのnendSDK v9.0.1対応
+  - UnityプラグインのnendSDK-iOS v8.0.0対応
+  - FlutterプラグインのAndroid側のUserFeature対応
+  - FlutterプラグインのiOSのUserFeature対応
+  - FlutterプラグインのAndroidのnendSDK更新
+  - Unityプラグインのwiki v5.0.0対応
 - レビュー中
-  - Androidのコールバックの修正
-- 直近のリリース対応のスケジュールを調整
-  - https://fancs-dev.slack.com/archives/C0J80E2F8/p1679988787000789
-- インタラクティブ広告の調査依頼の要件整理と対応依頼
-  - https://fancs-dev.slack.com/archives/C0J80E2F8/p1679971895750259
+  - AndroidのironSource SDK更新対応
+  - AndroidのSDKの改修
+- 障害対応関連
+  - チケット作成、更新を継続中
+  - 振り返りMTGの調整
 - 25卒採用PJ
-  - インターン課題内容、受け入れ時期などMTGで協議中
-- バージョニング運用方針を3課wikiに追記
-  - https://github.com/fan-ADN/nendSDK-Document-Private/wiki/Versioning-Policy
+  - インターン実施時期を確定
+- 組織課題PJ-MTG
+  - 4月のサービス開発部全体会議から進行や運用を巻き取って進める
+- ironSourceアダプターの運用方針について協議し、営業へ連絡済み
+  - https://fancs-dev.slack.com/archives/C01NR0327A5/p1680601295529949?thread_ts=1680234175.684949&cid=C01NR0327A5
 
 
 ## 課題、困っていること、気になっていること
+（前回と同じ）
 - 本来のオンボーディングの計画通りの順番でフェーズ2（アダプター、プラグインの課題）に取り組むことが難しい
   - オンボーディングよりも先に実業務を分担して対応している状況のため、後追いでも調整するなどして、着実に業務知識やスキル向上に繋がるようにしたい
 
-- 最近のOS関連ニュースのキャッチアップ
-  - https://fancs-dev.slack.com/archives/C8ZVCLTJL/p1680025907087369
-    - 4/25以降、App Storeに提出するアプリはXcode14.1以降でビルドが必須
-    - Swift5.8リリース
-    - 他はこういうサイトからも情報を入手できる https://ios-osushi.github.io/posts/051-20230403/ 
-
 ## 今週の予定
-- ironSourceアダプターの運用方針について検討する（今週中）
-  - https://fancs-dev.slack.com/archives/C01NR0327A5/p1680234175684949
-  - 今週中なる早で天川さんに見解をまとめて連絡する
-- Android14検証端末購入
 - 各種レビュー
 - オンボーディング・勉強会の準備
   - フェーズ2準備(admob、Unity)
@@ -246,14 +199,7 @@
 ## 今日のMTGで決まったこと、決まらなかったことなど
 
 ### 決まったこと
-- nendSDK-iOS v8.0.1について
-  - レビュアーにアサインされた場合は最優先で確認する。
-    - SKAN動作確認のアサイン予定 → 国本さん・船越さん
-    - リリース時の確認は全員
-  - 影響を受けるironSource(iOS), UnityはnendSDKのリリースと並行してリリース作業を進められるように準備を進める。Flutterの作業優先度はironSource(iOS), Unityよりも下。
-- ironSourceカスタムアダプター(iOS)
-  - 草開さん・天川さんに伝えていたリリース予定日が後ろにずれる
-      - リリース遅延に関してはお二人にも連絡する(国本さん)
+- 特になし
 
 ### 決まってないこと
 - 特になし
@@ -261,13 +207,15 @@
 --------------------------------------------------------------------------------
 
 ## その他
-- 馬場
-  - 4/6(木) 午後から勤務予定
+- 国本
+  - 18(火) お休み
+- 福岡さん
+  - 12(水)AM 健康診断で不在
 
 ## 次回議事録担当（木南->福岡->船越->馬場->国本の順番で）
 
-- 次回は 4/10 (月)
-- 国本さん
+- 次回は 4/17 (月)
+- 木南さん
   - 議事録の運用手順
   - <https://github.com/fan-ADN/nendSDK-Document-Private/wiki#定例mtg>
 - ファシリテーター
